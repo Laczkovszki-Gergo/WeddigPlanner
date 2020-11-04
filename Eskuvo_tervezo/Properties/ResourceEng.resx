@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BT_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="BT_Reg" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="CB_Lan" xml:space="preserve">
+    <value>Hungarian</value>
+  </data>
+  <data name="LB_Passwd" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="LB_Title" xml:space="preserve">
+    <value>Wedding Planner</value>
+  </data>
+  <data name="LB_Title_reg" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="LB_User" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Message_Reg" xml:space="preserve">
+    <value>This username is reserved</value>
+  </data>
+  <data name="Tbl_Reg" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="Title_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Title_Reg" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="BT_Back" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="BT_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="BT_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Are you sure you want to quit?</value>
+  </data>
+  <data name="ExitWarning" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="LB_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="SuccessfulLog" xml:space="preserve">
+    <value>Your log is sucessfull</value>
+  </data>
+  <data name="Tb_Reg_Tooltip" xml:space="preserve">
+    <value>At least 4 characters</value>
+  </data>
+  <data name="LB_TitleHome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="T_Passwd_Tooltip" xml:space="preserve">
+    <value>At least 6 characters</value>
+  </data>
+  <data name="Tbl_Error" xml:space="preserve">
+    <value>The username or password is incorrect!</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Menu_Logout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="Menu_Title" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="Menu_Ceremony" xml:space="preserve">
+    <value>Ceremony</value>
+  </data>
+  <data name="Menu_Contact" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="Menu_Cosmetic" xml:space="preserve">
+    <value>Cosmetics</value>
+  </data>
+  <data name="Menu_DiaryDate" xml:space="preserve">
+    <value>Diary Date</value>
+  </data>
+  <data name="Menu_Dress" xml:space="preserve">
+    <value>Dress</value>
+  </data>
+  <data name="Menu_Expenses" xml:space="preserve">
+    <value>Expenses</value>
+  </data>
+  <data name="Menu_ExpensesAdvance" xml:space="preserve">
+    <value>Advance</value>
+  </data>
+  <data name="Menu_ExpensesPlanned" xml:space="preserve">
+    <value>Planned expenses</value>
+  </data>
+  <data name="Menu_Flowers" xml:space="preserve">
+    <value>Flowers</value>
+  </data>
+  <data name="Menu_Freight" xml:space="preserve">
+    <value>Freight</value>
+  </data>
+  <data name="Menu_Guests" xml:space="preserve">
+    <value>Guests</value>
+  </data>
+  <data name="Menu_GuestWelcome" xml:space="preserve">
+    <value>Guest welcome</value>
+  </data>
+  <data name="Menu_Honeymoon" xml:space="preserve">
+    <value>Honeymoon</value>
+  </data>
+  <data name="Menu_Photographer" xml:space="preserve">
+    <value>Photographer</value>
+  </data>
+  <data name="Menu_Planning" xml:space="preserve">
+    <value>Planning</value>
+  </data>
+  <data name="BT_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Message_Delete_Title" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Message_Delete" xml:space="preserve">
+    <value>Are you sure you want to delete this log entry?</value>
+  </data>
+  <data name="LB_Diary" xml:space="preserve">
+    <value>Diary</value>
+  </data>
+  <data name="LB_Entry" xml:space="preserve">
+    <value>Log entry</value>
+  </data>
+  <data name="LB_Modify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="BT_Modification" xml:space="preserve">
+    <value>Modification</value>
+  </data>
+  <data name="Tooltip_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Tooltip_Modification" xml:space="preserve">
+    <value>Modification</value>
+  </data>
+  <data name="LB_Contact" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="LB_Email" xml:space="preserve">
+    <value>E-mail address</value>
+  </data>
+  <data name="LB_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="LB_Phone" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="Tooltip_InvalidEmailCharacters" xml:space="preserve">
+    <value>xyxy@xyxy.hu</value>
+  </data>
+  <data name="Tooltip_InvalidNameCharacters" xml:space="preserve">
+    <value>At least three character</value>
+  </data>
+  <data name="Tooltip_InvalidNormalTextCharacters" xml:space="preserve">
+    <value>At least two characters, do not include ( ) " / ' &lt; &gt; : ; signs</value>
+  </data>
+  <data name="Tooltip_InvalidPasswordCharacters" xml:space="preserve">
+    <value>At least eight characters, at least one letter and one number</value>
+  </data>
+  <data name="Tooltip_InvalidPhoneCharacters" xml:space="preserve">
+    <value>+36 22 333 4444 , 22 333 4444 , +36-22-333-444</value>
+  </data>
+  <data name="LB_Guests" xml:space="preserve">
+    <value>Guests</value>
+  </data>
+  <data name="LB_Bride" xml:space="preserve">
+    <value>Bride</value>
+  </data>
+  <data name="LB_BrideCount" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="LB_BrideName" xml:space="preserve">
+    <value>Name, family</value>
+  </data>
+  <data name="LB_Groom" xml:space="preserve">
+    <value>Groom</value>
+  </data>
+  <data name="LB_GroomCount" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="LB_GroomName" xml:space="preserve">
+    <value>Name, family</value>
+  </data>
+  <data name="Tooltip_InvalidNumberCharacters" xml:space="preserve">
+    <value>Only numbers are allowed</value>
+  </data>
+  <data name="BT_SaveBride" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="BT_SaveGroom" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="LB_BrideGuestCount" xml:space="preserve">
+    <value>Counts of guests</value>
+  </data>
+  <data name="LB_GroomGuestCount" xml:space="preserve">
+    <value>Counts of guests</value>
+  </data>
+  <data name="LB_FirstSteps" xml:space="preserve">
+    <value>First steps</value>
+  </data>
+  <data name="LB_WeddingDay" xml:space="preserve">
+    <value>Wedding day</value>
+  </data>
+  <data name="Tooltip_InvalidDateTimeCharacters" xml:space="preserve">
+    <value>Invalid date format</value>
+  </data>
+  <data name="Menu_FirstSteps" xml:space="preserve">
+    <value>First steps</value>
+  </data>
+  <data name="LB_Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="LB_Expenses" xml:space="preserve">
+    <value>Expenses</value>
+  </data>
+  <data name="LB_Budget" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+  <data name="LB_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="LB_Offer" xml:space="preserve">
+    <value>Offer</value>
+  </data>
+  <data name="LB_Venue" xml:space="preserve">
+    <value>Wedding venue</value>
+  </data>
+  <data name="LB_Address" xml:space="preserve">
+    <value>Adress</value>
+  </data>
+  <data name="BT_BrowsePicture" xml:space="preserve">
+    <value>Browse picture</value>
+  </data>
+  <data name="LB_VenueName" xml:space="preserve">
+    <value>Wedding venue name</value>
+  </data>
+  <data name="LB_Venues" xml:space="preserve">
+    <value>Wedding venues</value>
+  </data>
+  <data name="BT_SavePics" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Menu_Venue" xml:space="preserve">
+    <value>Venues</value>
+  </data>
+  <data name="LB_Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="BT_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Message_DeleteVenue" xml:space="preserve">
+    <value>Are you sure you want to delete this wedding venue including these pictures?</value>
+  </data>
+  <data name="Message_DeletePics" xml:space="preserve">
+    <value>Are you sure you want to delete this picture?</value>
+  </data>
+  <data name="LB_Cost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="LB_Expense" xml:space="preserve">
+    <value>Expense</value>
+  </data>
+  <data name="Message_DeleteExp" xml:space="preserve">
+    <value>Are you sure you want to delete this expense?</value>
+  </data>
+  <data name="LB_Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="Menu_Comparsion" xml:space="preserve">
+    <value>Comparsion</value>
+  </data>
+  <data name="RB_Actual" xml:space="preserve">
+    <value>Actual dates</value>
+  </data>
+  <data name="LB_EndingInterval" xml:space="preserve">
+    <value>Ending interval</value>
+  </data>
+  <data name="LB_StartingInterval" xml:space="preserve">
+    <value>Starting interval</value>
+  </data>
+  <data name="RB_All" xml:space="preserve">
+    <value>All dates</value>
+  </data>
+  <data name="RB_Interval" xml:space="preserve">
+    <value>Date interval</value>
+  </data>
+  <data name="BT_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="LB_FirstOffer" xml:space="preserve">
+    <value>First offer</value>
+  </data>
+  <data name="LB_SecondOffer" xml:space="preserve">
+    <value>Second offer</value>
+  </data>
+  <data name="LB_Comparsion" xml:space="preserve">
+    <value>Comparsion</value>
+  </data>
+  <data name="LB_FirstAmount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="LB_SecondAmount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Message_DeleteExpense" xml:space="preserve">
+    <value>Are you sure you want to delete this wedding venue including these expenses?</value>
+  </data>
+  <data name="LB_RemainingDays" xml:space="preserve">
+    <value>Remaining days:</value>
+  </data>
+  <data name="LB_PasswdAgain" xml:space="preserve">
+    <value>Password again</value>
+  </data>
+  <data name="Tooltip_PasswordsAreNotEqual" xml:space="preserve">
+    <value>The passwords are not equals</value>
+  </data>
+  <data name="Tbl_RePassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="Send_EmailFrom" xml:space="preserve">
+    <value>infogwedding@gmail.com</value>
+  </data>
+  <data name="Send_EmailFromPassword" xml:space="preserve">
+    <value>WeddingPlanner01</value>
+  </data>
+  <data name="Send_EmailHost" xml:space="preserve">
+    <value>smtp.gmail.com</value>
+  </data>
+  <data name="Send_EmailSubject" xml:space="preserve">
+    <value>WeddingPlanner account password changing</value>
+  </data>
+  <data name="Send_EmailBody1" xml:space="preserve">
+    <value>Dear </value>
+  </data>
+  <data name="Send_EmailBody2" xml:space="preserve">
+    <value>You can access to your account with this password, please change it later.</value>
+  </data>
+  <data name="Send_EmailBody3" xml:space="preserve">
+    <value>Best Regards:
+Weddig Planner</value>
+  </data>
+  <data name="LB_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Menu_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Message_RenewPassword" xml:space="preserve">
+    <value>Are you sure you want a new password? We will send your new password to your specified email address.</value>
+  </data>
+  <data name="Message_RenewPasswordTitle" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="LB_NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="LB_NewPasswordAgain" xml:space="preserve">
+    <value>New password again</value>
+  </data>
+  <data name="LB_OldPassword" xml:space="preserve">
+    <value>Old password</value>
+  </data>
+  <data name="Tooltip_InvalidOldPassword" xml:space="preserve">
+    <value>This is not your old password</value>
+  </data>
+  <data name="BT_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="BT_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Message_DeleteContact" xml:space="preserve">
+    <value>Are you sure you want to delete this contact?</value>
+  </data>
+  <data name="Message_DeleteGuest" xml:space="preserve">
+    <value>Are you sure you want to delete this guest?</value>
+  </data>
+  <data name="MessageBoxSaveText" xml:space="preserve">
+    <value>Successfully saved!</value>
+  </data>
+  <data name="MessageBoxSaveTitle" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveFileDialogFilter" xml:space="preserve">
+    <value>Excel files (*.xlsx)|*.xlsx</value>
+  </data>
+  <data name="SaveFileDialogTitle" xml:space="preserve">
+    <value>Export Excel file to</value>
+  </data>
+  <data name="Message_FileIsOpenText" xml:space="preserve">
+    <value>The file is opened!</value>
+  </data>
+  <data name="Message_FileIsOpenTitle" xml:space="preserve">
+    <value>Unsuccessfully save!</value>
+  </data>
+  <data name="BT_ExportToExcel" xml:space="preserve">
+    <value>Export to Excel file</value>
+  </data>
+  <data name="Message_LogoutText" xml:space="preserve">
+    <value>Are you sure you want logout?</value>
+  </data>
+  <data name="Message_LogoutTitle" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="LB_Radio" xml:space="preserve">
+    <value>Radio</value>
+  </data>
+  <data name="LB_RadioList" xml:space="preserve">
+    <value>Radio list</value>
+  </data>
+  <data name="LB_StreamLink" xml:space="preserve">
+    <value>Stream link</value>
+  </data>
+  <data name="Menu_Radio" xml:space="preserve">
+    <value>Radio</value>
+  </data>
+  <data name="LB_RadioChannelName" xml:space="preserve">
+    <value>Radio channel's name</value>
+  </data>
+  <data name="LB_Volume" xml:space="preserve">
+    <value>Volume:</value>
+  </data>
+  <data name="BT_SaveRadioChannel" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Message_DeleteRadioChannel" xml:space="preserve">
+    <value>Are you sure that you want delete this channel?</value>
+  </data>
+  <data name="Tooltip_Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="BT_DownloadPicture" xml:space="preserve">
+    <value>Download pictures</value>
+  </data>
+  <data name="Dialog_ImageFiles" xml:space="preserve">
+    <value>Image Files</value>
+  </data>
+  <data name="Tooltip_ImageReset" xml:space="preserve">
+    <value>Delete image</value>
+  </data>
+  <data name="Tooltip_IconRadioChannelLeft" xml:space="preserve">
+    <value>Previous channel</value>
+  </data>
+  <data name="Tooltip_IconRadioChannelRight" xml:space="preserve">
+    <value>Next channel</value>
+  </data>
+</root>

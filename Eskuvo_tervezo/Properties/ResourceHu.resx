@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BT_Login" xml:space="preserve">
+    <value>Belépés</value>
+  </data>
+  <data name="BT_Reg" xml:space="preserve">
+    <value>Jelentkezés</value>
+  </data>
+  <data name="CB_Lan" xml:space="preserve">
+    <value>Magyar</value>
+  </data>
+  <data name="LB_Passwd" xml:space="preserve">
+    <value>Jelszó</value>
+  </data>
+  <data name="LB_Title" xml:space="preserve">
+    <value>Esküvő tervező</value>
+  </data>
+  <data name="LB_Title_reg" xml:space="preserve">
+    <value>Regisztráció</value>
+  </data>
+  <data name="LB_User" xml:space="preserve">
+    <value>Felhasználó név</value>
+  </data>
+  <data name="Message_Reg" xml:space="preserve">
+    <value>A felhasználónév foglalt</value>
+  </data>
+  <data name="Tbl_Reg" xml:space="preserve">
+    <value>Regisztráció</value>
+  </data>
+  <data name="Title_Login" xml:space="preserve">
+    <value>Bejelentkezés</value>
+  </data>
+  <data name="Title_Reg" xml:space="preserve">
+    <value>Regisztráció</value>
+  </data>
+  <data name="BT_Back" xml:space="preserve">
+    <value>Kijelentkezés</value>
+  </data>
+  <data name="BT_Exit" xml:space="preserve">
+    <value>Kilépés</value>
+  </data>
+  <data name="BT_Cancel" xml:space="preserve">
+    <value>Mégsem</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Biztosan ki akar lépni?</value>
+  </data>
+  <data name="ExitWarning" xml:space="preserve">
+    <value>Kilépés</value>
+  </data>
+  <data name="LB_Back" xml:space="preserve">
+    <value>Vissza</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="SuccessfulLog" xml:space="preserve">
+    <value>Sikeres bejelentkezés</value>
+  </data>
+  <data name="Tb_Reg_Tooltip" xml:space="preserve">
+    <value>Legalább 4 karakter</value>
+  </data>
+  <data name="LB_TitleHome" xml:space="preserve">
+    <value>Üdvözöllek</value>
+  </data>
+  <data name="T_Passwd_Tooltip" xml:space="preserve">
+    <value>Legalább 6 karakter</value>
+  </data>
+  <data name="Tbl_Error" xml:space="preserve">
+    <value>Hibás felhasználó vagy jelszó!</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Igen</value>
+  </data>
+  <data name="Menu_Exit" xml:space="preserve">
+    <value>Kilépés</value>
+  </data>
+  <data name="Menu_Logout" xml:space="preserve">
+    <value>Kijelentkezés</value>
+  </data>
+  <data name="Menu_Title" xml:space="preserve">
+    <value>Menü</value>
+  </data>
+  <data name="Menu_Ceremony" xml:space="preserve">
+    <value>Szertartás</value>
+  </data>
+  <data name="Menu_Contact" xml:space="preserve">
+    <value>Kapcsolattartás</value>
+  </data>
+  <data name="Menu_Cosmetic" xml:space="preserve">
+    <value>Szépítő</value>
+  </data>
+  <data name="Menu_DiaryDate" xml:space="preserve">
+    <value>Dátum napló</value>
+  </data>
+  <data name="Menu_Dress" xml:space="preserve">
+    <value>Öltözék</value>
+  </data>
+  <data name="Menu_Expenses" xml:space="preserve">
+    <value>Költségek</value>
+  </data>
+  <data name="Menu_ExpensesAdvance" xml:space="preserve">
+    <value>Előleg</value>
+  </data>
+  <data name="Menu_ExpensesPlanned" xml:space="preserve">
+    <value>Tervezett költségek</value>
+  </data>
+  <data name="Menu_Flowers" xml:space="preserve">
+    <value>Virágok</value>
+  </data>
+  <data name="Menu_Freight" xml:space="preserve">
+    <value>Fuvar</value>
+  </data>
+  <data name="Menu_Guests" xml:space="preserve">
+    <value>Vendégek</value>
+  </data>
+  <data name="Menu_GuestWelcome" xml:space="preserve">
+    <value>Vendégfogadás</value>
+  </data>
+  <data name="Menu_Honeymoon" xml:space="preserve">
+    <value>Nászút</value>
+  </data>
+  <data name="Menu_Photographer" xml:space="preserve">
+    <value>Fotós</value>
+  </data>
+  <data name="Menu_Planning" xml:space="preserve">
+    <value>Tervezés</value>
+  </data>
+  <data name="BT_Save" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="Message_Delete_Title" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="Message_Delete" xml:space="preserve">
+    <value>Biztosan törli ezt a bejegyzést?</value>
+  </data>
+  <data name="LB_Diary" xml:space="preserve">
+    <value>Napló</value>
+  </data>
+  <data name="LB_Entry" xml:space="preserve">
+    <value>Bejegyzés</value>
+  </data>
+  <data name="LB_Modify" xml:space="preserve">
+    <value>Módosítás</value>
+  </data>
+  <data name="BT_Modification" xml:space="preserve">
+    <value>Módosítás</value>
+  </data>
+  <data name="Tooltip_Delete" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="Tooltip_Modification" xml:space="preserve">
+    <value>Módosítás</value>
+  </data>
+  <data name="LB_Contact" xml:space="preserve">
+    <value>Kapcsolatok</value>
+  </data>
+  <data name="LB_Email" xml:space="preserve">
+    <value>Email cím</value>
+  </data>
+  <data name="LB_Name" xml:space="preserve">
+    <value>Név</value>
+  </data>
+  <data name="LB_Phone" xml:space="preserve">
+    <value>Telefonszám</value>
+  </data>
+  <data name="Tooltip_InvalidEmailCharacters" xml:space="preserve">
+    <value>xyxy@xyxy.hu</value>
+  </data>
+  <data name="Tooltip_InvalidNameCharacters" xml:space="preserve">
+    <value>Legalább három karakter</value>
+  </data>
+  <data name="Tooltip_InvalidNormalTextCharacters" xml:space="preserve">
+    <value>Legalább kettő karakter, ne tartalmazzon ( ) " / ' &lt; &gt; : ; jeleket</value>
+  </data>
+  <data name="Tooltip_InvalidPasswordCharacters" xml:space="preserve">
+    <value>Legalább nyolc karakter, legalább egy betű, legalább egy szám</value>
+  </data>
+  <data name="Tooltip_InvalidPhoneCharacters" xml:space="preserve">
+    <value>+36 22 333 4444 , 22 333 4444 , +36-22-333-444</value>
+  </data>
+  <data name="LB_Guests" xml:space="preserve">
+    <value>Vendégek</value>
+  </data>
+  <data name="LB_Bride" xml:space="preserve">
+    <value>Menyasszony</value>
+  </data>
+  <data name="LB_BrideCount" xml:space="preserve">
+    <value>Fő</value>
+  </data>
+  <data name="LB_BrideName" xml:space="preserve">
+    <value>Név, család</value>
+  </data>
+  <data name="LB_Groom" xml:space="preserve">
+    <value>Vőlegény</value>
+  </data>
+  <data name="LB_GroomCount" xml:space="preserve">
+    <value>Fő</value>
+  </data>
+  <data name="LB_GroomName" xml:space="preserve">
+    <value>Név, család</value>
+  </data>
+  <data name="Tooltip_InvalidNumberCharacters" xml:space="preserve">
+    <value>Számot adjon meg</value>
+  </data>
+  <data name="BT_SaveBride" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="BT_SaveGroom" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="LB_BrideGuestCount" xml:space="preserve">
+    <value>Vendégek száma</value>
+  </data>
+  <data name="LB_GroomGuestCount" xml:space="preserve">
+    <value>Vendégek száma</value>
+  </data>
+  <data name="LB_FirstSteps" xml:space="preserve">
+    <value>Első lépések</value>
+  </data>
+  <data name="LB_WeddingDay" xml:space="preserve">
+    <value>Esküvő napja</value>
+  </data>
+  <data name="Tooltip_InvalidDateTimeCharacters" xml:space="preserve">
+    <value>Nem megfelelő dátum formátum</value>
+  </data>
+  <data name="Menu_FirstSteps" xml:space="preserve">
+    <value>Első lépések</value>
+  </data>
+  <data name="LB_Today" xml:space="preserve">
+    <value>Ma</value>
+  </data>
+  <data name="LB_Expenses" xml:space="preserve">
+    <value>Költségek</value>
+  </data>
+  <data name="LB_Budget" xml:space="preserve">
+    <value>Keretösszeg</value>
+  </data>
+  <data name="LB_Amount" xml:space="preserve">
+    <value>Összeg</value>
+  </data>
+  <data name="LB_Offer" xml:space="preserve">
+    <value>Ajánlat</value>
+  </data>
+  <data name="LB_Venue" xml:space="preserve">
+    <value>Esküvői helyszín</value>
+  </data>
+  <data name="LB_Address" xml:space="preserve">
+    <value>Cím</value>
+  </data>
+  <data name="BT_BrowsePicture" xml:space="preserve">
+    <value>Kép tallózása</value>
+  </data>
+  <data name="LB_VenueName" xml:space="preserve">
+    <value>Esküvői helyszín neve</value>
+  </data>
+  <data name="LB_Venues" xml:space="preserve">
+    <value>Esküvői helyszínek</value>
+  </data>
+  <data name="BT_SavePics" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="Menu_Venue" xml:space="preserve">
+    <value>Helyszínek</value>
+  </data>
+  <data name="LB_Welcome" xml:space="preserve">
+    <value>Üdvözlet</value>
+  </data>
+  <data name="BT_Delete" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="Message_DeleteVenue" xml:space="preserve">
+    <value>Biztosan törli ezt a helyszínt minden hozzátartozó képpel együtt?</value>
+  </data>
+  <data name="Message_DeletePics" xml:space="preserve">
+    <value>Biztosan törli ezt a képet?</value>
+  </data>
+  <data name="LB_Cost" xml:space="preserve">
+    <value>Ár</value>
+  </data>
+  <data name="LB_Expense" xml:space="preserve">
+    <value>Költség</value>
+  </data>
+  <data name="Message_DeleteExp" xml:space="preserve">
+    <value>Biztosan törli ezt a költséget?</value>
+  </data>
+  <data name="LB_Count" xml:space="preserve">
+    <value>Darab</value>
+  </data>
+  <data name="Menu_Comparsion" xml:space="preserve">
+    <value>Összehasonlítás</value>
+  </data>
+  <data name="RB_Actual" xml:space="preserve">
+    <value>Aktuális dátumok</value>
+  </data>
+  <data name="LB_EndingInterval" xml:space="preserve">
+    <value>Vég intervallum</value>
+  </data>
+  <data name="LB_StartingInterval" xml:space="preserve">
+    <value>Kezdő intervallum</value>
+  </data>
+  <data name="RB_All" xml:space="preserve">
+    <value>Minden dátum</value>
+  </data>
+  <data name="RB_Interval" xml:space="preserve">
+    <value>Idő intervallum</value>
+  </data>
+  <data name="BT_Search" xml:space="preserve">
+    <value>Keresés</value>
+  </data>
+  <data name="LB_FirstOffer" xml:space="preserve">
+    <value>Első ajánlat</value>
+  </data>
+  <data name="LB_SecondOffer" xml:space="preserve">
+    <value>Második ajánlat</value>
+  </data>
+  <data name="LB_Comparsion" xml:space="preserve">
+    <value>Összehasonlítás</value>
+  </data>
+  <data name="LB_FirstAmount" xml:space="preserve">
+    <value>Összeg</value>
+  </data>
+  <data name="LB_SecondAmount" xml:space="preserve">
+    <value>Összeg</value>
+  </data>
+  <data name="Message_DeleteExpense" xml:space="preserve">
+    <value>Biztosan törli ezt a helyszínt minden hozzátartozó költséggel együtt?</value>
+  </data>
+  <data name="LB_RemainingDays" xml:space="preserve">
+    <value>Hátralévő napok:</value>
+  </data>
+  <data name="LB_PasswdAgain" xml:space="preserve">
+    <value>Jelszó ismét</value>
+  </data>
+  <data name="Tooltip_PasswordsAreNotEqual" xml:space="preserve">
+    <value>A jelszavak nem azonosak</value>
+  </data>
+  <data name="Tbl_RePassword" xml:space="preserve">
+    <value>Elfelejtette a jelszavát?</value>
+  </data>
+  <data name="Send_EmailFrom" xml:space="preserve">
+    <value>infogwedding@gmail.com</value>
+  </data>
+  <data name="Send_EmailFromPassword" xml:space="preserve">
+    <value>WeddingPlanner01</value>
+  </data>
+  <data name="Send_EmailHost" xml:space="preserve">
+    <value>smtp.gmail.com</value>
+  </data>
+  <data name="Send_EmailSubject" xml:space="preserve">
+    <value>WeddingPlanner fiók jelszó változtatás</value>
+  </data>
+  <data name="Send_EmailBody1" xml:space="preserve">
+    <value>Kedves </value>
+  </data>
+  <data name="Send_EmailBody2" xml:space="preserve">
+    <value>Ezzel az új jelszóval be tud lépni, kérem változtassa meg a jelszót miután belépett.
+</value>
+  </data>
+  <data name="Send_EmailBody3" xml:space="preserve">
+    <value>Üdvözlettel:
+WeddingPlanner.</value>
+  </data>
+  <data name="LB_Settings" xml:space="preserve">
+    <value>Beállítások</value>
+  </data>
+  <data name="Menu_Settings" xml:space="preserve">
+    <value>Beállítások</value>
+  </data>
+  <data name="Message_RenewPassword" xml:space="preserve">
+    <value>Biztosan új jelszót akar kérni? A megadott email címére fogjuk kiküldeni az új jelszavát.</value>
+  </data>
+  <data name="Message_RenewPasswordTitle" xml:space="preserve">
+    <value>Új jelszó</value>
+  </data>
+  <data name="LB_NewPassword" xml:space="preserve">
+    <value>Új jelszó</value>
+  </data>
+  <data name="LB_NewPasswordAgain" xml:space="preserve">
+    <value>Új jelszó ismét</value>
+  </data>
+  <data name="LB_OldPassword" xml:space="preserve">
+    <value>Régi jelszó</value>
+  </data>
+  <data name="Tooltip_InvalidOldPassword" xml:space="preserve">
+    <value>Nem ez a régi jelszava</value>
+  </data>
+  <data name="BT_No" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="BT_Yes" xml:space="preserve">
+    <value>Igen</value>
+  </data>
+  <data name="Message_DeleteContact" xml:space="preserve">
+    <value>Biztosan törli ezt a kapcsolatot?</value>
+  </data>
+  <data name="Message_DeleteGuest" xml:space="preserve">
+    <value>Biztosan törli ezt a vendéget?</value>
+  </data>
+  <data name="MessageBoxSaveText" xml:space="preserve">
+    <value>Sikerült a mentés!</value>
+  </data>
+  <data name="MessageBoxSaveTitle" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="SaveFileDialogFilter" xml:space="preserve">
+    <value>Excel fájlok (*.xlsx)|*.xlsx</value>
+  </data>
+  <data name="SaveFileDialogTitle" xml:space="preserve">
+    <value>Exportálás Excel fájlba</value>
+  </data>
+  <data name="Message_FileIsOpenText" xml:space="preserve">
+    <value>A fájl meg van nyitva!</value>
+  </data>
+  <data name="Message_FileIsOpenTitle" xml:space="preserve">
+    <value>Sikertelen mentés!</value>
+  </data>
+  <data name="BT_ExportToExcel" xml:space="preserve">
+    <value>Exportálás Excel fájlba</value>
+  </data>
+  <data name="Message_LogoutText" xml:space="preserve">
+    <value>Biztosan kijelentkezik?</value>
+  </data>
+  <data name="Message_LogoutTitle" xml:space="preserve">
+    <value>Kijelentkezés</value>
+  </data>
+  <data name="LB_Radio" xml:space="preserve">
+    <value>Rádió</value>
+  </data>
+  <data name="LB_RadioList" xml:space="preserve">
+    <value>Rádiólista</value>
+  </data>
+  <data name="LB_StreamLink" xml:space="preserve">
+    <value>Stream link</value>
+  </data>
+  <data name="Menu_Radio" xml:space="preserve">
+    <value>Rádió</value>
+  </data>
+  <data name="LB_RadioChannelName" xml:space="preserve">
+    <value>Rádió csatorna neve</value>
+  </data>
+  <data name="LB_Volume" xml:space="preserve">
+    <value>Hangerő:</value>
+  </data>
+  <data name="BT_SaveRadioChannel" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="Message_DeleteRadioChannel" xml:space="preserve">
+    <value>Biztosan törli ezt a csatornát?</value>
+  </data>
+  <data name="Tooltip_Download" xml:space="preserve">
+    <value>Letöltés</value>
+  </data>
+  <data name="BT_DownloadPicture" xml:space="preserve">
+    <value>Képek letöltése</value>
+  </data>
+  <data name="Dialog_ImageFiles" xml:space="preserve">
+    <value>Kép fájlok</value>
+  </data>
+  <data name="Tooltip_ImageReset" xml:space="preserve">
+    <value>Kép törlése</value>
+  </data>
+  <data name="Tooltip_IconRadioChannelLeft" xml:space="preserve">
+    <value>Előző csatorna</value>
+  </data>
+  <data name="Tooltip_IconRadioChannelRight" xml:space="preserve">
+    <value>Következő csatorna</value>
+  </data>
+</root>

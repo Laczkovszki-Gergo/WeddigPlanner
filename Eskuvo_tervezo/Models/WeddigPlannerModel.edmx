@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WeddingPlannerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Calendar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CalendarLogEntrys">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CalID" Type="int" Nullable="false" />
+          <Property Name="LogEntry" Type="nchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contacts">
+          <Key>
+            <PropertyRef Name="Con_ID" />
+          </Key>
+          <Property Name="Con_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_Id" Type="int" Nullable="false" />
+          <Property Name="Con_Name" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Con_Phone" Type="nchar" MaxLength="30" />
+          <Property Name="Con_Email" Type="nchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="Guests">
+          <Key>
+            <PropertyRef Name="Guest_ID" />
+          </Key>
+          <Property Name="Guest_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Wedding_ID" Type="int" Nullable="false" />
+          <Property Name="Guest_Name" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Guest_Count" Type="int" Nullable="false" />
+          <Property Name="Bride_Groom" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="IDLog" />
+          </Key>
+          <Property Name="IDLog" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="WindowsUser" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="IP_Address" Type="nchar" MaxLength="20" />
+          <Property Name="Mac_Address" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="IDLogin" />
+          </Key>
+          <Property Name="IDLogin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Password" Type="nchar" MaxLength="120" Nullable="false" />
+          <Property Name="EmailAddress" Type="nchar" MaxLength="120" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Radio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="StreamLink" Type="nchar" MaxLength="120" Nullable="false" />
+          <Property Name="ChannelName" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Chosen" Type="bit" />
+          <Property Name="Volume" Type="int" />
+        </EntityType>
+        <EntityType Name="WeddingData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Wedding_Date" Type="datetime" Nullable="false" />
+          <Property Name="BrideName" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="GroomName" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Budget" Type="int" />
+          <Property Name="Image" Type="image" />
+        </EntityType>
+        <EntityType Name="WeddingExpenses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VenueID" Type="int" Nullable="false" />
+          <Property Name="ExpenseName" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Expense" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WeddingVenue">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WeddingID" Type="int" Nullable="false" />
+          <Property Name="Wedding_Venue" Type="nchar" MaxLength="60" Nullable="false" />
+          <Property Name="Venue_Address" Type="nchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WeddingVenueImages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WeddingVenueID" Type="int" Nullable="false" />
+          <Property Name="Image" Type="image" Nullable="false" />
+          <Property Name="ImageName" Type="nchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Calendar_Login">
+          <End Role="Login" Type="Self.Login" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Calendar" Type="Self.Calendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="Calendar">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CalendarLogEntrys_Calendar1">
+          <End Role="Calendar" Type="Self.Calendar" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CalendarLogEntrys" Type="Self.CalendarLogEntrys" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Calendar">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CalendarLogEntrys">
+              <PropertyRef Name="CalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contacts_Login">
+          <End Role="Login" Type="Self.Login" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Contacts" Type="Self.Contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="Contacts">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Guests_WeddingData">
+          <End Role="WeddingData" Type="Self.WeddingData" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Guests" Type="Self.Guests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeddingData">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Guests">
+              <PropertyRef Name="Wedding_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Log_Login">
+          <End Role="Login" Type="Self.Login" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Log" Type="Self.Log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="Log">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Radio_Login1">
+          <End Role="Login" Type="Self.Login" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Radio" Type="Self.Radio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="Radio">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeddingData_Login">
+          <End Role="Login" Type="Self.Login" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="WeddingData" Type="Self.WeddingData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="WeddingData">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeddingExpenses_WeddingVenue">
+          <End Role="WeddingVenue" Type="Self.WeddingVenue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="WeddingExpenses" Type="Self.WeddingExpenses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeddingVenue">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeddingExpenses">
+              <PropertyRef Name="VenueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeddingVenue_WeddingData">
+          <End Role="WeddingData" Type="Self.WeddingData" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="WeddingVenue" Type="Self.WeddingVenue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeddingData">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeddingVenue">
+              <PropertyRef Name="WeddingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeddingVenueImages_WeddingVenue">
+          <End Role="WeddingVenue" Type="Self.WeddingVenue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="WeddingVenueImages" Type="Self.WeddingVenueImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeddingVenue">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeddingVenueImages">
+              <PropertyRef Name="WeddingVenueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WeddingPlannerModelStoreContainer">
+          <EntitySet Name="Calendar" EntityType="Self.Calendar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CalendarLogEntrys" EntityType="Self.CalendarLogEntrys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Guests" EntityType="Self.Guests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Radio" EntityType="Self.Radio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WeddingData" EntityType="Self.WeddingData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WeddingExpenses" EntityType="Self.WeddingExpenses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WeddingVenue" EntityType="Self.WeddingVenue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WeddingVenueImages" EntityType="Self.WeddingVenueImages" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Calendar_Login" Association="Self.FK_Calendar_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Calendar" EntitySet="Calendar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CalendarLogEntrys_Calendar1" Association="Self.FK_CalendarLogEntrys_Calendar1">
+            <End Role="Calendar" EntitySet="Calendar" />
+            <End Role="CalendarLogEntrys" EntitySet="CalendarLogEntrys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contacts_Login" Association="Self.FK_Contacts_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Contacts" EntitySet="Contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Guests_WeddingData" Association="Self.FK_Guests_WeddingData">
+            <End Role="WeddingData" EntitySet="WeddingData" />
+            <End Role="Guests" EntitySet="Guests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Log_Login" Association="Self.FK_Log_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Log" EntitySet="Log" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Radio_Login1" Association="Self.FK_Radio_Login1">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Radio" EntitySet="Radio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeddingData_Login" Association="Self.FK_WeddingData_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="WeddingData" EntitySet="WeddingData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeddingExpenses_WeddingVenue" Association="Self.FK_WeddingExpenses_WeddingVenue">
+            <End Role="WeddingVenue" EntitySet="WeddingVenue" />
+            <End Role="WeddingExpenses" EntitySet="WeddingExpenses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeddingVenue_WeddingData" Association="Self.FK_WeddingVenue_WeddingData">
+            <End Role="WeddingData" EntitySet="WeddingData" />
+            <End Role="WeddingVenue" EntitySet="WeddingVenue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeddingVenueImages_WeddingVenue" Association="Self.FK_WeddingVenueImages_WeddingVenue">
+            <End Role="WeddingVenue" EntitySet="WeddingVenue" />
+            <End Role="WeddingVenueImages" EntitySet="WeddingVenueImages" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WeddingPlannerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="WeddingPlannerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Calendar" EntityType="WeddingPlannerModel.Calendar" />
+          <EntitySet Name="CalendarLogEntrys" EntityType="WeddingPlannerModel.CalendarLogEntrys" />
+          <EntitySet Name="Contacts" EntityType="WeddingPlannerModel.Contacts" />
+          <EntitySet Name="Guests" EntityType="WeddingPlannerModel.Guests" />
+          <EntitySet Name="Log" EntityType="WeddingPlannerModel.Log" />
+          <EntitySet Name="Login" EntityType="WeddingPlannerModel.Login" />
+          <EntitySet Name="Radio" EntityType="WeddingPlannerModel.Radio" />
+          <EntitySet Name="WeddingData" EntityType="WeddingPlannerModel.WeddingData" />
+          <EntitySet Name="WeddingExpenses" EntityType="WeddingPlannerModel.WeddingExpenses" />
+          <EntitySet Name="WeddingVenue" EntityType="WeddingPlannerModel.WeddingVenue" />
+          <EntitySet Name="WeddingVenueImages" EntityType="WeddingPlannerModel.WeddingVenueImages" />
+          <AssociationSet Name="FK_Calendar_Login" Association="WeddingPlannerModel.FK_Calendar_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Calendar" EntitySet="Calendar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CalendarLogEntrys_Calendar1" Association="WeddingPlannerModel.FK_CalendarLogEntrys_Calendar1">
+            <End Role="Calendar" EntitySet="Calendar" />
+            <End Role="CalendarLogEntrys" EntitySet="CalendarLogEntrys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Contacts_Login" Association="WeddingPlannerModel.FK_Contacts_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Contacts" EntitySet="Contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Guests_WeddingData" Association="WeddingPlannerModel.FK_Guests_WeddingData">
+            <End Role="WeddingData" EntitySet="WeddingData" />
+            <End Role="Guests" EntitySet="Guests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Log_Login" Association="WeddingPlannerModel.FK_Log_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Log" EntitySet="Log" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Radio_Login1" Association="WeddingPlannerModel.FK_Radio_Login1">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="Radio" EntitySet="Radio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeddingData_Login" Association="WeddingPlannerModel.FK_WeddingData_Login">
+            <End Role="Login" EntitySet="Login" />
+            <End Role="WeddingData" EntitySet="WeddingData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeddingVenue_WeddingData" Association="WeddingPlannerModel.FK_WeddingVenue_WeddingData">
+            <End Role="WeddingData" EntitySet="WeddingData" />
+            <End Role="WeddingVenue" EntitySet="WeddingVenue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeddingExpenses_WeddingVenue" Association="WeddingPlannerModel.FK_WeddingExpenses_WeddingVenue">
+            <End Role="WeddingVenue" EntitySet="WeddingVenue" />
+            <End Role="WeddingExpenses" EntitySet="WeddingExpenses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WeddingVenueImages_WeddingVenue" Association="WeddingPlannerModel.FK_WeddingVenueImages_WeddingVenue">
+            <End Role="WeddingVenue" EntitySet="WeddingVenue" />
+            <End Role="WeddingVenueImages" EntitySet="WeddingVenueImages" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Calendar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Login" Relationship="WeddingPlannerModel.FK_Calendar_Login" FromRole="Calendar" ToRole="Login" />
+          <NavigationProperty Name="CalendarLogEntrys" Relationship="WeddingPlannerModel.FK_CalendarLogEntrys_Calendar1" FromRole="Calendar" ToRole="CalendarLogEntrys" />
+        </EntityType>
+        <EntityType Name="CalendarLogEntrys">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CalID" Type="Int32" Nullable="false" />
+          <Property Name="LogEntry" Type="String" Nullable="false" MaxLength="250" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Calendar" Relationship="WeddingPlannerModel.FK_CalendarLogEntrys_Calendar1" FromRole="CalendarLogEntrys" ToRole="Calendar" />
+        </EntityType>
+        <EntityType Name="Contacts">
+          <Key>
+            <PropertyRef Name="Con_ID" />
+          </Key>
+          <Property Name="Con_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_Id" Type="Int32" Nullable="false" />
+          <Property Name="Con_Name" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <Property Name="Con_Phone" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Con_Email" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Login" Relationship="WeddingPlannerModel.FK_Contacts_Login" FromRole="Contacts" ToRole="Login" />
+        </EntityType>
+        <EntityType Name="Guests">
+          <Key>
+            <PropertyRef Name="Guest_ID" />
+          </Key>
+          <Property Name="Guest_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Wedding_ID" Type="Int32" Nullable="false" />
+          <Property Name="Guest_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Guest_Count" Type="Int32" Nullable="false" />
+          <Property Name="Bride_Groom" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="WeddingData" Relationship="WeddingPlannerModel.FK_Guests_WeddingData" FromRole="Guests" ToRole="WeddingData" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="IDLog" />
+          </Key>
+          <Property Name="IDLog" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="WindowsUser" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IP_Address" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Mac_Address" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Login" Relationship="WeddingPlannerModel.FK_Log_Login" FromRole="Log" ToRole="Login" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="IDLogin" />
+          </Key>
+          <Property Name="IDLogin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="120" FixedLength="true" Unicode="true" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="120" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Calendar" Relationship="WeddingPlannerModel.FK_Calendar_Login" FromRole="Login" ToRole="Calendar" />
+          <NavigationProperty Name="Contacts" Relationship="WeddingPlannerModel.FK_Contacts_Login" FromRole="Login" ToRole="Contacts" />
+          <NavigationProperty Name="Log" Relationship="WeddingPlannerModel.FK_Log_Login" FromRole="Login" ToRole="Log" />
+          <NavigationProperty Name="Radio" Relationship="WeddingPlannerModel.FK_Radio_Login1" FromRole="Login" ToRole="Radio" />
+          <NavigationProperty Name="WeddingData" Relationship="WeddingPlannerModel.FK_WeddingData_Login" FromRole="Login" ToRole="WeddingData" />
+        </EntityType>
+        <EntityType Name="Radio">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="StreamLink" Type="String" Nullable="false" MaxLength="120" FixedLength="true" Unicode="true" />
+          <Property Name="ChannelName" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Login" Relationship="WeddingPlannerModel.FK_Radio_Login1" FromRole="Radio" ToRole="Login" />
+          <Property Name="Chosen" Type="Boolean" />
+          <Property Name="Volume" Type="Int32" />
+        </EntityType>
+        <EntityType Name="WeddingData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Wedding_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BrideName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="GroomName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="Budget" Type="Int32" />
+          <NavigationProperty Name="Guests" Relationship="WeddingPlannerModel.FK_Guests_WeddingData" FromRole="WeddingData" ToRole="Guests" />
+          <NavigationProperty Name="Login" Relationship="WeddingPlannerModel.FK_WeddingData_Login" FromRole="WeddingData" ToRole="Login" />
+          <NavigationProperty Name="WeddingVenue" Relationship="WeddingPlannerModel.FK_WeddingVenue_WeddingData" FromRole="WeddingData" ToRole="WeddingVenue" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="WeddingExpenses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VenueID" Type="Int32" Nullable="false" />
+          <Property Name="ExpenseName" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <Property Name="Expense" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="WeddingVenue" Relationship="WeddingPlannerModel.FK_WeddingExpenses_WeddingVenue" FromRole="WeddingExpenses" ToRole="WeddingVenue" />
+        </EntityType>
+        <EntityType Name="WeddingVenue">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WeddingID" Type="Int32" Nullable="false" />
+          <Property Name="Wedding_Venue" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <Property Name="Venue_Address" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="WeddingData" Relationship="WeddingPlannerModel.FK_WeddingVenue_WeddingData" FromRole="WeddingVenue" ToRole="WeddingData" />
+          <NavigationProperty Name="WeddingExpenses" Relationship="WeddingPlannerModel.FK_WeddingExpenses_WeddingVenue" FromRole="WeddingVenue" ToRole="WeddingExpenses" />
+          <NavigationProperty Name="WeddingVenueImages" Relationship="WeddingPlannerModel.FK_WeddingVenueImages_WeddingVenue" FromRole="WeddingVenue" ToRole="WeddingVenueImages" />
+        </EntityType>
+        <EntityType Name="WeddingVenueImages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WeddingVenueID" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ImageName" Type="String" Nullable="false" MaxLength="200" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="WeddingVenue" Relationship="WeddingPlannerModel.FK_WeddingVenueImages_WeddingVenue" FromRole="WeddingVenueImages" ToRole="WeddingVenue" />
+        </EntityType>
+        <Association Name="FK_Calendar_Login">
+          <End Type="WeddingPlannerModel.Login" Role="Login" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WeddingPlannerModel.Calendar" Role="Calendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="Calendar">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CalendarLogEntrys_Calendar1">
+          <End Type="WeddingPlannerModel.Calendar" Role="Calendar" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WeddingPlannerModel.CalendarLogEntrys" Role="CalendarLogEntrys" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Calendar">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CalendarLogEntrys">
+              <PropertyRef Name="CalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Contacts_Login">
+          <End Type="WeddingPlannerModel.Login" Role="Login" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WeddingPlannerModel.Contacts" Role="Contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="Contacts">
+              <PropertyRef Name="User_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Guests_WeddingData">
+          <End Type="WeddingPlannerModel.WeddingData" Role="WeddingData" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WeddingPlannerModel.Guests" Role="Guests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeddingData">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Guests">
+              <PropertyRef Name="Wedding_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Log_Login">
+          <End Type="WeddingPlannerModel.Login" Role="Login" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WeddingPlannerModel.Log" Role="Log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="Log">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Radio_Login1">
+          <End Type="WeddingPlannerModel.Login" Role="Login" Multiplicity="1" />
+          <End Type="WeddingPlannerModel.Radio" Role="Radio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="Radio">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeddingData_Login">
+          <End Type="WeddingPlannerModel.Login" Role="Login" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WeddingPlannerModel.WeddingData" Role="WeddingData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login">
+              <PropertyRef Name="IDLogin" />
+            </Principal>
+            <Dependent Role="WeddingData">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeddingVenue_WeddingData">
+          <End Type="WeddingPlannerModel.WeddingData" Role="WeddingData" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WeddingPlannerModel.WeddingVenue" Role="WeddingVenue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeddingData">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeddingVenue">
+              <PropertyRef Name="WeddingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeddingExpenses_WeddingVenue">
+          <End Type="WeddingPlannerModel.WeddingVenue" Role="WeddingVenue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WeddingPlannerModel.WeddingExpenses" Role="WeddingExpenses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeddingVenue">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeddingExpenses">
+              <PropertyRef Name="VenueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WeddingVenueImages_WeddingVenue">
+          <End Type="WeddingPlannerModel.WeddingVenue" Role="WeddingVenue" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="WeddingPlannerModel.WeddingVenueImages" Role="WeddingVenueImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WeddingVenue">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WeddingVenueImages">
+              <PropertyRef Name="WeddingVenueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WeddingPlannerModelStoreContainer" CdmEntityContainer="WeddingPlannerEntities">
+          <EntitySetMapping Name="Calendar">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.Calendar">
+              <MappingFragment StoreEntitySet="Calendar">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CalendarLogEntrys">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.CalendarLogEntrys">
+              <MappingFragment StoreEntitySet="CalendarLogEntrys">
+                <ScalarProperty Name="LogEntry" ColumnName="LogEntry" />
+                <ScalarProperty Name="CalID" ColumnName="CalID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.Contacts">
+              <MappingFragment StoreEntitySet="Contacts">
+                <ScalarProperty Name="Con_Email" ColumnName="Con_Email" />
+                <ScalarProperty Name="Con_Phone" ColumnName="Con_Phone" />
+                <ScalarProperty Name="Con_Name" ColumnName="Con_Name" />
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+                <ScalarProperty Name="Con_ID" ColumnName="Con_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Guests">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.Guests">
+              <MappingFragment StoreEntitySet="Guests">
+                <ScalarProperty Name="Bride_Groom" ColumnName="Bride_Groom" />
+                <ScalarProperty Name="Guest_Count" ColumnName="Guest_Count" />
+                <ScalarProperty Name="Guest_Name" ColumnName="Guest_Name" />
+                <ScalarProperty Name="Wedding_ID" ColumnName="Wedding_ID" />
+                <ScalarProperty Name="Guest_ID" ColumnName="Guest_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Log">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="Mac_Address" ColumnName="Mac_Address" />
+                <ScalarProperty Name="IP_Address" ColumnName="IP_Address" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="WindowsUser" ColumnName="WindowsUser" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="IDLog" ColumnName="IDLog" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="IDLogin" ColumnName="IDLogin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Radio">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.Radio">
+              <MappingFragment StoreEntitySet="Radio">
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="Chosen" ColumnName="Chosen" />
+                <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+                <ScalarProperty Name="StreamLink" ColumnName="StreamLink" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WeddingData">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingData">
+              <MappingFragment StoreEntitySet="WeddingData">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Budget" ColumnName="Budget" />
+                <ScalarProperty Name="GroomName" ColumnName="GroomName" />
+                <ScalarProperty Name="BrideName" ColumnName="BrideName" />
+                <ScalarProperty Name="Wedding_Date" ColumnName="Wedding_Date" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WeddingExpenses">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingExpenses">
+              <MappingFragment StoreEntitySet="WeddingExpenses">
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="Expense" ColumnName="Expense" />
+                <ScalarProperty Name="ExpenseName" ColumnName="ExpenseName" />
+                <ScalarProperty Name="VenueID" ColumnName="VenueID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WeddingVenue">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingVenue">
+              <MappingFragment StoreEntitySet="WeddingVenue">
+                <ScalarProperty Name="Venue_Address" ColumnName="Venue_Address" />
+                <ScalarProperty Name="Wedding_Venue" ColumnName="Wedding_Venue" />
+                <ScalarProperty Name="WeddingID" ColumnName="WeddingID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WeddingVenueImages">
+            <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingVenueImages">
+              <MappingFragment StoreEntitySet="WeddingVenueImages">
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="WeddingVenueID" ColumnName="WeddingVenueID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

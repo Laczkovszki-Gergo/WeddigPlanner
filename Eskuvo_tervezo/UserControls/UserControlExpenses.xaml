@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Eskuvo_tervezo.UserControls.UserControlExpenses"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Eskuvo_tervezo.UserControls"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:properties="clr-namespace:Eskuvo_tervezo.Properties" 
+             >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <materialDesign:PackIcon x:Name="Tooltip_Delete" DataContext="{Binding Path=ID}" Grid.Column="4" Kind="Delete" Width="25" Height="25" Margin="5,16" HorizontalAlignment="Right" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" 
+                                 PreviewMouseLeftButtonDown="Tooltip_Delete_PreviewMouseLeftButtonDown" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Delete }" Panel.ZIndex="5" />
+        <materialDesign:PackIcon x:Name="Tooltip_Modification" DataContext="{Binding Path=ID}" Grid.Column="4" Kind="Pen" Width="25" Height="25" Margin="5,16,35,16" HorizontalAlignment="Right" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" 
+                                 PreviewMouseLeftButtonDown="Tooltip_Modification_PreviewMouseLeftButtonDown" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Modification }" Panel.ZIndex="4"/>
+        <ListBoxItem x:Name="ListViewItemMenu1" Content="{Binding Path=Expanse}" Grid.Column="0" Margin="5,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" 
+                     HorizontalAlignment="Stretch" Foreground="{DynamicResource TextForeColors}" FontSize="15"/>
+        <ListBoxItem x:Name="ListViewItemMenu2" Content="{Binding Path=Cost}" Grid.Column="1" Margin="5,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" 
+                     HorizontalAlignment="Stretch"
+                     Foreground="{DynamicResource TextForeColors}" FontSize="15" Panel.ZIndex="1" />
+        <ListBoxItem x:Name="ListViewItemMenu3" Content="{Binding Path=Count}" Grid.Column="2" Margin="5,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" 
+                     HorizontalAlignment="Stretch"
+                     Foreground="{DynamicResource TextForeColors}" FontSize="15" Panel.ZIndex="2" />
+        <ListBoxItem x:Name="ListViewItemMenu4" Content="{Binding Path=Amount}" Grid.Column="3" Margin="5,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" 
+                     HorizontalAlignment="Stretch"
+                     Foreground="{DynamicResource TextForeColors}" FontSize="15" Panel.ZIndex="3" />
+    </Grid> 
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Eskuvo_tervezo.UserControls.UsercontrolDates"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Eskuvo_tervezo.UserControls"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:properties="clr-namespace:Eskuvo_tervezo.Properties"
+             MaxHeight="150"
+             Margin="0,5"
+             >
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="0" Margin="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left">
+            <ListBoxItem x:Name="ListViewItemMenu1" Grid.Column="0" Content="{Binding Path=Day}" Margin="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"
+                         Foreground="{DynamicResource TextForeColors}" FontSize="15" Cursor="Hand" PreviewMouseDown="ListViewItemMenu1_PreviewMouseDown" />
+        </ScrollViewer>
+        <ScrollViewer  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="1" Margin="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left">
+            <ListBoxItem x:Name="ListViewItemMenu2" Grid.Column="1" Content="{Binding Path=Entry}" Margin="10,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"
+                         Foreground="{DynamicResource TextForeColors}" FontSize="15" Cursor="Hand" PreviewMouseDown="ListViewItemMenu1_PreviewMouseDown"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

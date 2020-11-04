@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="37218f0226e44b5fa9ad01d66c1346b8" Name="Diagram1" ZoomLevel="29">
+        <EntityTypeShape EntityType="WeddingPlannerModel.Calendar" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.CalendarLogEntrys" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.Contacts" Width="1.5" PointX="3" PointY="19" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.Guests" Width="1.5" PointX="5.25" PointY="7.625" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.Log" Width="1.5" PointX="3" PointY="1.75" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.Login" Width="1.5" PointX="0.75" PointY="10.125" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.Radio" Width="1.5" PointX="3" PointY="16.25" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.WeddingData" Width="1.5" PointX="3" PointY="10.125" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.WeddingExpenses" Width="1.5" PointX="7.5" PointY="13.25" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.WeddingVenue" Width="1.5" PointX="5.25" PointY="11.875" />
+        <EntityTypeShape EntityType="WeddingPlannerModel.WeddingVenueImages" Width="1.5" PointX="7.5" PointY="10.5" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_Calendar_Login" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_CalendarLogEntrys_Calendar1" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_Contacts_Login" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_Guests_WeddingData" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_Log_Login" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_Radio_Login1" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_WeddingData_Login" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_WeddingVenue_WeddingData" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_WeddingExpenses_WeddingVenue" />
+        <AssociationConnector Association="WeddingPlannerModel.FK_WeddingVenueImages_WeddingVenue" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="Eskuvo_tervezo.Windows.ImageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:properties="clr-namespace:Eskuvo_tervezo.Properties" 
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Eskuvo_tervezo.Windows"
+        mc:Ignorable="d"
+        MaxHeight="{Binding SystemParameters.PrimaryScreenHeight}" 
+        MaxWidth="{Binding SystemParameters.PrimaryScreenWidth}"
+        Title="ImageView" 
+        Height="auto" 
+        Width="auto"
+        Background="Transparent"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        PreviewKeyDown="Grid_PreviewKeyDown"
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/ResourceDictionary/LabelDictionary.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid Background="Transparent">
+        <materialDesign:PackIcon x:Name="IconEscape" Kind="CloseCircleOutline" Width="50" Height="50" Margin="10" 
+                                 HorizontalAlignment="Right" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="15" PreviewMouseLeftButtonDown="IconEscape_PreviewMouseLeftButtonDown" Cursor="Hand" />
+        <materialDesign:PackIcon x:Name="IconNext" DataContext="{Binding Path=IconId}" Kind="ArrowRightBoldBoxOutline" Width="50" Height="50" Margin="15" 
+                                 HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="15" PreviewMouseLeftButtonDown="IconNext_PreviewMouseLeftButtonDown" Cursor="Hand"/>
+        <materialDesign:PackIcon x:Name="IconBack" DataContext="{Binding Path=IconId}" Kind="ArrowLeftBoldBoxOutline" Width="50" Height="50" Margin="15" 
+                                 HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="15" PreviewMouseLeftButtonDown="IconBack_PreviewMouseLeftButtonDown" Cursor="Hand"/>
+        <Image x:Name="ImagePics" Width="auto" Height="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown" Margin="40"></Image>
+        <Label Grid.Row="0" Grid.Column="0" x:Name="LB_Pics" VerticalAlignment="Bottom" FontSize="24" Margin="0,0,0,0" Content="0/0" Foreground="{DynamicResource SpecialIconBackGround}"/>
+    </Grid>
+</Window>

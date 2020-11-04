@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Eskuvo_tervezo.UserControls.UserControlComparsion"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Eskuvo_tervezo.UserControls"
+             mc:Ignorable="d" 
+             Width="auto" Height="auto">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+                <ListBoxItem x:Name="ListViewItemMenu1" Grid.Column="0" Content="{Binding Path=ExpenseName}" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" 
+                         Foreground="{DynamicResource TextForeColors}" FontSize="15"/>
+        <ListBoxItem x:Name="ListViewItemMenu2" Grid.Column="1" Content="{Binding Path=Expense}" Margin="10,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" 
+                         Foreground="{DynamicResource TextForeColors}" FontSize="15"/>
+    </Grid>
+</UserControl>

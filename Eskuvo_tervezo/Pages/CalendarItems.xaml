@@ -1,0 +1,59 @@
+﻿<Page x:Class="Eskuvo_tervezo.Pages.CalendarItems"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Eskuvo_tervezo.Pages"
+      xmlns:properties="clr-namespace:Eskuvo_tervezo.Properties" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Foreground="White"
+      FontFamily="Comic Sans MS"   
+      Title="CalendarItems"
+      >
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/ResourceDictionary/LabelDictionary.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Label  Grid.Row="0" x:Name="LB_Diary" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top" Margin="10" HorizontalAlignment="Center" 
+                Content="{x:Static properties:ResourceHu.LB_Contact}" Foreground="{DynamicResource TextForeColors}" FontSize="34"/>
+        <Label  Grid.Row="0" x:Name="LB_Date" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Bottom" Margin="10" HorizontalAlignment="Center" 
+                Content="{x:Static properties:ResourceHu.LB_Diary}" Foreground="{DynamicResource TextForeColors}" FontSize="30"/>
+        <Label  Grid.Row="1" x:Name="LB_Entry" Content="{x:Static properties:ResourceHu.LB_Entry}" HorizontalAlignment="Stretch" Margin="40,0,160,40"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                Foreground="{DynamicResource TextForeColors}" FontSize="16"
+                />
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+                  Height="auto" Grid.Row="1" Margin="40,20,160,0" x:Name="TB_LogEntry" 
+                  Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_LogEntry_PreviewKeyDown" Panel.ZIndex="1"/>
+        <materialDesign:PackIcon Kind="BookAdd" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="1" Foreground="{DynamicResource TextForeColors}" FontSize="20"></materialDesign:PackIcon>
+        <Button Grid.Row="1" x:Name="BT_Save" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Right" Cursor="Hand" Panel.ZIndex="2" 
+                    materialDesign:ButtonAssist.CornerRadius="20" Margin="20,25,20,0" Width="120" Height="40" FontWeight="UltraBlack"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                    BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}" Click="BT_Save_Click"/>
+        <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="0" Grid.RowSpan="6" Margin="20" BorderBrush="{DynamicResource ScrollViewerBorderBrush}" BorderThickness="2" Panel.ZIndex="3">
+            <StackPanel x:Name="Items" Grid.Row="1" Grid.RowSpan="10" Grid.Column="2"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

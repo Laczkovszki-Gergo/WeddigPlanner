@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Eskuvo_tervezo.UserControls.UserControlCalItems"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Eskuvo_tervezo.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:properties="clr-namespace:Eskuvo_tervezo.Properties" 
+             mc:Ignorable="d" 
+             >
+    <Grid>
+        <materialDesign:PackIcon x:Name="Tooltip_Delete" DataContext="{Binding Path=IconId}" Kind="Delete" Width="25" Height="25" Margin="5,16" HorizontalAlignment="Right" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" 
+                                 PreviewMouseLeftButtonDown="Icon_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Delete }" Panel.ZIndex="2"/>
+        <materialDesign:PackIcon x:Name="Tooltip_Modification" DataContext="{Binding Path=IconId}" Kind="Pen" Width="25" Height="25" Margin="35,16" HorizontalAlignment="Right" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" 
+                                 PreviewMouseLeftButtonDown="Icon2_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Modification }" Panel.ZIndex="1"/>
+        <ListBoxItem x:Name="ListViewItemMenu" Content="{Binding Path=LogEntry}" Padding="37 13" Margin="0,0,65,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" VerticalAlignment="Center"
+                     Foreground="{DynamicResource TextForeColors}" FontSize="15"/>
+    </Grid>
+</UserControl>

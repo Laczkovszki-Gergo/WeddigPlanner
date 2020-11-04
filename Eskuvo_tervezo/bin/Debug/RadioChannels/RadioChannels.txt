@@ -1,0 +1,10 @@
+﻿http://stream.radio1.hu/high.mp3.xspf;Rádió1
+http://stream.retroradio.hu/mid.mp3;Retró rádió
+https://icast.connectmedia.hu/4738/mr2.mp3;Petőfi
+http://stream.klubradio.hu:8080/bpstream;Klubrádió
+https://gamershouse.hu:8080/livemega.mp3;MegaDance rádió
+http://188.165.11.30:8080/risefm_hq;Rise FM
+https://powerhitz.com/powerhitz.asx;Powerhitz
+https://icast.connectmedia.hu/4736/mr1.mp3;Kossuth Rádió
+https://stream1.bestfmbudapest.hu:443/bestfm_128.mp3;Best FM
+http://195.56.65.180:8000/aktiv.mp3;Aktív Rádió

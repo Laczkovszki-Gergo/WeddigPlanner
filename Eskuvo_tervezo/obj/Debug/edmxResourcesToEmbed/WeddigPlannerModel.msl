@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WeddingPlannerModelStoreContainer" CdmEntityContainer="WeddingPlannerEntities">
+    <EntitySetMapping Name="Log">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="WindowsUser" ColumnName="WindowsUser" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="IDLog" ColumnName="IDLog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="IDLogin" ColumnName="IDLogin" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
