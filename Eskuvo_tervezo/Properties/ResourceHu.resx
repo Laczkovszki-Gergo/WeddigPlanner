@@ -584,4 +584,7 @@ WeddingPlanner.</value>
   <data name="Tooltip_IconRadioChannelRight" xml:space="preserve">
     <value>Következő csatorna</value>
   </data>
+  <data name="DateOfWedding" xml:space="preserve">
+    <value>Az esküvő napja</value>
+  </data>
 </root>

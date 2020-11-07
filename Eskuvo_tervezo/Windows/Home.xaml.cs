@@ -39,8 +39,9 @@ namespace Eskuvo_tervezo.Windows
 
         DoubleAnimation doubleAnimation = new DoubleAnimation();
         ResourceManager rm;
-        Style HighlightedDate = null;
-        Style NormalDate = null;
+        Style HighlightedDateStyle = null;
+        Style BigDayStyle = null;
+        Style NormalDateStyle = null;
         DateTime DayOfWedding;
         bool Hun = true;
         bool sound;
@@ -56,13 +57,14 @@ namespace Eskuvo_tervezo.Windows
             ResourceNames = _ResourceNames;
             Hun = hun;
             ActualUser = _ActualUser;
-            HighlightedDate = (Style)FindResource("CalendarDayButtonStyleHighlighted");
-            NormalDate = (Style)FindResource("CalendarDayButtonStyle");
+            HighlightedDateStyle = (Style)FindResource("CalendarDayButtonStyleHighlighted");
+            NormalDateStyle = (Style)FindResource("CalendarDayButtonStyle");
+            BigDayStyle = (Style)FindResource("CalendarDayButtonStyleHighlightedBigDay");
             main = _main;
             sound = _sound;
             //TODO Framework háttérkép
             //FrameContent.Background = f.CreateImageBrush(@"D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\1.jpg");
-            //FrameContent.BorderBrush = Brushes.DarkGray;
+            //FrameContent.BorderBrush = System.Windows.Media.Brushes.DarkGray;
             //FrameContent.BorderThickness = new Thickness(2);
         }
         void Window_Loaded(object sender, RoutedEventArgs e)
@@ -187,17 +189,23 @@ namespace Eskuvo_tervezo.Windows
             Menu.Children.Add(new UserControlMenuItem(item9, this, rm));
             Menu.Children.Add(new UserControlMenuItem(item10, this, rm));
 
+
         }
         internal void HighlightDay(CalendarDayButton button, DateTime date)
         {
             if (significantDates.Contains(date))
             {
-                button.Style = HighlightedDate;
+                button.Style = HighlightedDateStyle;
                 DateTooltips(button, date);
+            }
+            else if (DayOfWedding.Equals(date))
+            {
+                button.Style = BigDayStyle;
+                button.ToolTip = rm.GetString("DateOfWedding");
             }
             else
             {
-                button.Style = NormalDate;
+                button.Style = NormalDateStyle;
                 button.ToolTip = null;
             }
         }

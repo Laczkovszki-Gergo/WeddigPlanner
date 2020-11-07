@@ -30,8 +30,8 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    
-    <Border Background="{DynamicResource BorderBackground}" CornerRadius="30" BorderThickness="5" BorderBrush="{DynamicResource DayNamesForeCorol}">
+
+    <Border Background="{DynamicResource BorderBackground}" CornerRadius="30" BorderThickness="3" BorderBrush="{DynamicResource ButtonBorderBrush}">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
@@ -48,7 +48,8 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
-                <RowDefinition Height="10*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="1*"/>
                 <RowDefinition Height="5*"/>
             </Grid.RowDefinitions>
             
@@ -70,9 +71,9 @@
             </Image>
             <materialDesign:PackIcon x:Name="IconVolumeOnOff" Kind="VolumeHigh" Grid.Column="3" Width="27" Height="27" HorizontalAlignment="Right" Margin="10,8,65,10" VerticalAlignment="Top" Cursor="Hand" 
                                      Foreground="{DynamicResource SpecialIconBackGround}" MouseDown="IconVolumeOnOff_MouseDown"></materialDesign:PackIcon>
-            <Label Grid.Row="0" Grid.Column="0" x:Name="LB_Time" VerticalAlignment="Top" FontSize="24" Margin="0,0,0,10" Content="Idő"/>
+            <Label Grid.Row="0" Grid.Column="0" x:Name="LB_Time" VerticalAlignment="Top" FontSize="30" Margin="0,0,0,10" Content="Idő"/>
 
-            <Border  Grid.Column="0" Grid.Row="1" Grid.RowSpan="6" HorizontalAlignment="Stretch" Margin="10" VerticalAlignment="Stretch" BorderBrush="{DynamicResource ButtonBorderBrush}" BorderThickness="2" CornerRadius="10" >
+            <Border  Grid.Column="0" Grid.Row="1" Grid.RowSpan="6" HorizontalAlignment="Stretch" Margin="10,0" VerticalAlignment="Stretch" BorderBrush="{DynamicResource ButtonBorderBrush}" BorderThickness="2" CornerRadius="30" >
                 <Image x:Name="ImageBetrothed" Cursor="Hand" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" PreviewMouseLeftButtonDown="ImageBetrothed_PreviewMouseDown" PreviewMouseRightButtonDown="ImageBetrothed_PreviewMouseRightButtonDown">
                     <Image.Source>
                         <BitmapImage UriSource="/Resources/Betrothed.png"/>
@@ -88,12 +89,13 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
-                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1.5*"/>
                 </Grid.RowDefinitions>
-                <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BorderBrush="{DynamicResource DayNamesForeCorol}" BorderThickness="2" CornerRadius="30">
+                
+                    <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,5" BorderBrush="{DynamicResource DayNamesForeCorol}" BorderThickness="2" CornerRadius="30">
                 </Border>
                 
-                <Canvas ClipToBounds="True" Name="canMain" Grid.Row="1" Grid.Column="1">
+                <Canvas ClipToBounds="True" Name="canMain" Grid.Row="1" Grid.Column="1" Margin="5">
                     <TextBlock  x:Name="Tbl_Radio" FontSize="24" Text="♫ Rádio ♫" />
                 </Canvas>
 
@@ -107,22 +109,31 @@
             <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0">
                 
                 <Label Grid.Row="0" Grid.Column="1" x:Name="LB_TitleHome" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,0" Content="{x:Static properties:ResourceHu.LB_TitleHome }" FontSize="30" />
-                <Label Grid.Row="0" Grid.Column="0" x:Name="LB_RemainingDays" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,0" Content="{x:Static properties:ResourceHu.LB_RemainingDays }" Foreground="LightPink" FontSize="24" />
+                <Label Grid.Row="0" Grid.Column="0" x:Name="LB_RemainingDays" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,-5,0,0" Content="{x:Static properties:ResourceHu.LB_RemainingDays }" Foreground="LightPink" FontSize="24" />
             </StackPanel>
             
             <Label Grid.Row="7" Grid.Column="0" x:Name="LB_Diary" VerticalAlignment="Top" FontSize="24" Margin="0,0,0,0" Content="{x:Static properties:ResourceHu.LB_Diary }" />
-            <Label Grid.Row="8" Grid.Column="0" x:Name="LB_Today" VerticalAlignment="Bottom" FontSize="24" Margin="0,0,0,0" Content="{x:Static properties:ResourceHu.LB_Today }" Cursor="Hand" PreviewMouseDown="LB_Today_PreviewMouseDown"/>
+            <Label Grid.Row="9" Grid.Column="0" x:Name="LB_Today" VerticalAlignment="Center" FontSize="24" Margin="0,0,0,0" Content="{x:Static properties:ResourceHu.LB_Today }" Cursor="Hand" PreviewMouseDown="LB_Today_PreviewMouseDown"/>
 
             <Calendar Grid.Row="8" Grid.Column="0" SelectionMode="MultipleRange" SelectedDatesChanged="SelectedDates_Changed"
-            FirstDayOfWeek="Monday" Language="HU" Margin="15,22,5,48" CalendarDayButtonStyle="{DynamicResource CalanderDayButtonPlus}"
+            FirstDayOfWeek="Monday" Language="HU" Margin="5,0,5,0" CalendarDayButtonStyle="{DynamicResource CalanderDayButtonPlus}"
             Name="calendarEdit"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
             </Calendar>
-            <Frame x:Name="FrameContent" Grid.Column="1" Grid.Row="1"  Grid.RowSpan="10" NavigationUIVisibility="Hidden" ></Frame>
-            <ScrollViewer x:Name="Scroll_Menu" HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="2" Grid.RowSpan="10" Panel.ZIndex="1">
-                <StackPanel x:Name="Menu" Grid.Row="1" 
-                            Grid.RowSpan="10" Grid.Column="2">
-                </StackPanel>
+
+            <Border Grid.Column="1" Grid.Row="1"  Grid.RowSpan="10" Background="{DynamicResource BorderBackground}" CornerRadius="30" BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}">
+                <Frame x:Name="FrameContent" Grid.Column="1" Grid.Row="1"  Grid.RowSpan="10" NavigationUIVisibility="Hidden"></Frame>
+            </Border>
+
+            <ScrollViewer x:Name="Scroll_Menu" HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="2" Grid.RowSpan="10" Panel.ZIndex="1" Margin="5,0">
+                
+                <Border Margin="5,0,10,0" Background="{DynamicResource BorderBackground}" CornerRadius="30" BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> 
+                    <StackPanel x:Name="Menu" Grid.Row="1" 
+                                Grid.RowSpan="10" Grid.Column="2">
+                    </StackPanel>
+                </Border>
+
             </ScrollViewer>
+            
         </Grid>
     </Border>
 </Window>

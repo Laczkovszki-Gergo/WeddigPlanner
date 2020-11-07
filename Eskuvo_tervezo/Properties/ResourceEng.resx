@@ -583,4 +583,7 @@ Weddig Planner</value>
   <data name="Tooltip_IconRadioChannelRight" xml:space="preserve">
     <value>Next channel</value>
   </data>
+  <data name="DateOfWedding" xml:space="preserve">
+    <value>Date of Wedding</value>
+  </data>
 </root>

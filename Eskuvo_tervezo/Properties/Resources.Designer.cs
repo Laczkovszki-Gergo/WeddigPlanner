@@ -232,6 +232,15 @@ namespace Eskuvo_tervezo.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Az esküvő napja.
+        /// </summary>
+        public static string DateOfWedding {
+            get {
+                return ResourceManager.GetString("DateOfWedding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kép fájlok.
         /// </summary>
         public static string Dialog_ImageFiles {

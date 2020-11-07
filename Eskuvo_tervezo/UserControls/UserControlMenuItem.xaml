@@ -19,12 +19,11 @@
 
     <Border CornerRadius="20" Background="{DynamicResource MenuBackground}" Margin="5">
         <Border.Resources>
-            
             <DataTemplate x:Key="expanderHeader">
-                <TextBlock Text="{Binding}"   
-               Foreground="{DynamicResource MenuTextForeColors}"   
+                <TextBlock Text="{Binding}"
+               Foreground="{DynamicResource MenuTextForeColors}"
                FontSize="20"   
-               FontWeight="Bold" 
+               FontWeight="Normal" 
                TextWrapping="Wrap"
                FontFamily="Comic Sans MS"/>
             </DataTemplate>

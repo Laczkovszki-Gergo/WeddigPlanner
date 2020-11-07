@@ -27,7 +27,7 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Border BorderBrush="{DynamicResource WindowBorderBrush}" Background="{DynamicResource BorderBackground}" BorderThickness="2" CornerRadius="40">
+    <Border Background="{DynamicResource BorderBackground}" BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}"  CornerRadius="40">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>

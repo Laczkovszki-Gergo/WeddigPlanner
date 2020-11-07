@@ -178,7 +178,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Radio_Login1">
-    <End Role="Login" Type="Self.Login" Multiplicity="1" />
+    <End Role="Login" Type="Self.Login" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Radio" Type="Self.Radio" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Login">

@@ -232,6 +232,15 @@ namespace Eskuvo_tervezo.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date of Wedding.
+        /// </summary>
+        public static string DateOfWedding {
+            get {
+                return ResourceManager.GetString("DateOfWedding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Image Files.
         /// </summary>
         public static string Dialog_ImageFiles {
