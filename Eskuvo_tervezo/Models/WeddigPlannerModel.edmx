@@ -80,9 +80,10 @@
           <Property Name="User_ID" Type="int" Nullable="false" />
           <Property Name="Wedding_Date" Type="datetime" Nullable="false" />
           <Property Name="BrideName" Type="nchar" MaxLength="50" Nullable="false" />
-          <Property Name="GroomName" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="GroomName" Type="nchar" MaxLength="50" />
           <Property Name="Budget" Type="int" />
           <Property Name="Image" Type="image" />
+          <Property Name="Quote" Type="nchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="WeddingExpenses">
           <Key>
@@ -154,10 +155,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Guests_WeddingData">
-          <End Role="WeddingData" Type="Self.WeddingData" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+        <Association Name="FK_Guests_WeddingData1">
+          <End Role="WeddingData" Type="Self.WeddingData" Multiplicity="1" />
           <End Role="Guests" Type="Self.Guests" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="WeddingData">
@@ -276,7 +275,7 @@
             <End Role="Login" EntitySet="Login" />
             <End Role="Contacts" EntitySet="Contacts" />
           </AssociationSet>
-          <AssociationSet Name="FK_Guests_WeddingData" Association="Self.FK_Guests_WeddingData">
+          <AssociationSet Name="FK_Guests_WeddingData1" Association="Self.FK_Guests_WeddingData1">
             <End Role="WeddingData" EntitySet="WeddingData" />
             <End Role="Guests" EntitySet="Guests" />
           </AssociationSet>
@@ -449,12 +448,13 @@
           <Property Name="User_ID" Type="Int32" Nullable="false" />
           <Property Name="Wedding_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="BrideName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="GroomName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="GroomName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Budget" Type="Int32" />
           <NavigationProperty Name="Guests" Relationship="WeddingPlannerModel.FK_Guests_WeddingData" FromRole="WeddingData" ToRole="Guests" />
           <NavigationProperty Name="Login" Relationship="WeddingPlannerModel.FK_WeddingData_Login" FromRole="WeddingData" ToRole="Login" />
           <NavigationProperty Name="WeddingVenue" Relationship="WeddingPlannerModel.FK_WeddingVenue_WeddingData" FromRole="WeddingData" ToRole="WeddingVenue" />
           <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Quote" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="WeddingExpenses">
           <Key>
@@ -710,6 +710,7 @@
           <EntitySetMapping Name="WeddingData">
             <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingData">
               <MappingFragment StoreEntitySet="WeddingData">
+                <ScalarProperty Name="Quote" ColumnName="Quote" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Budget" ColumnName="Budget" />
                 <ScalarProperty Name="GroomName" ColumnName="GroomName" />

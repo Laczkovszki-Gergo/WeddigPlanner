@@ -583,6 +583,15 @@ namespace Eskuvo_tervezo.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Idézet.
+        /// </summary>
+        public static string LB_Quote {
+            get {
+                return ResourceManager.GetString("LB_Quote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rádió.
         /// </summary>
         public static string LB_Radio {
@@ -759,6 +768,15 @@ namespace Eskuvo_tervezo.Properties {
         public static string LB_Welcome {
             get {
                 return ResourceManager.GetString("LB_Welcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tanácsok.
+        /// </summary>
+        public static string Menu_Advices {
+            get {
+                return ResourceManager.GetString("Menu_Advices", resourceCulture);
             }
         }
         
@@ -948,15 +966,6 @@ namespace Eskuvo_tervezo.Properties {
         public static string Menu_Settings {
             get {
                 return ResourceManager.GetString("Menu_Settings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Menü.
-        /// </summary>
-        public static string Menu_Title {
-            get {
-                return ResourceManager.GetString("Menu_Title", resourceCulture);
             }
         }
         

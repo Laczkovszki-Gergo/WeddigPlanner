@@ -23,7 +23,11 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Border BorderBrush="{DynamicResource WindowBorderBrush}" Background="{DynamicResource BorderBackground}" BorderThickness="2" CornerRadius="40">
+    <Border BorderBrush="{DynamicResource WindowBorderBrush}" BorderThickness="2" CornerRadius="40">
+        <Border.Background>
+            <ImageBrush x:Name="BorderBackGround" ImageSource="/Resources/Background_wallpaper.jpg" Stretch="UniformToFill">
+            </ImageBrush>
+        </Border.Background>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -42,21 +46,21 @@
                   Height="auto" Grid.Row="1" Margin="55,40,25,0" x:Name="Tb_Name" MaxLength="60"
                   Cursor="Pen"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="Tb_Name_PreviewKeyDown"/>
-            <materialDesign:PackIcon Kind="Contact" VerticalAlignment="Top" Width="25" Height="25" Margin="20,45,0,0"  Grid.Row="1" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Kind="Contact"  VerticalAlignment="Top" Width="30" Height="30" Margin="15,45,0,0"  Grid.Row="1" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
             <Label  Grid.Row="1" x:Name="LB_Name" Content="{x:Static properties:ResourceHu.LB_Name}" VerticalAlignment="Top"/>
 
             <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="left"
                   Height="auto" Grid.Row="2" Margin="55,40,25,0" x:Name="Tb_Phone" MaxLength="30"
                   Cursor="Pen"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="1" PreviewKeyDown="Tb_Phone_PreviewKeyDown"/>
-            <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Top" Width="25" Height="25" Margin="20,45,0,0"  Grid.Row="2" Foreground="{DynamicResource TextForeColors}" ></materialDesign:PackIcon>
+            <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Top" Width="30" Height="30" Margin="15,45,0,0"  Grid.Row="2" Foreground="{DynamicResource TextForeColors}" ></materialDesign:PackIcon>
             <Label  Grid.Row="2" x:Name="LB_Phone" Content="{x:Static properties:ResourceHu.LB_Phone}" VerticalAlignment="Top"/>
 
             <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Top" HorizontalAlignment="Stretch" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="left"
                   Height="auto" Grid.Row="3" Margin="55,40,25,0" x:Name="Tb_Email"  MaxLength="40"
                   Cursor="Pen"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="2" PreviewKeyDown="Tb_Email_PreviewKeyDown"/>
-            <materialDesign:PackIcon Kind="Email" VerticalAlignment="Top" Width="25" Height="25" Margin="20,45,0,0"  Grid.Row="3" Foreground="{DynamicResource TextForeColors}" ></materialDesign:PackIcon>
+            <materialDesign:PackIcon Kind="Email" VerticalAlignment="Top" Width="30" Height="30" Margin="15,45,0,0"  Grid.Row="3" Foreground="{DynamicResource TextForeColors}" ></materialDesign:PackIcon>
             <Label  Grid.Row="3" x:Name="LB_Email" Content="{x:Static properties:ResourceHu.LB_Email}" VerticalAlignment="Top"/>
 
             <Button Grid.Row="4" x:Name="BT_Modification" Content="{x:Static properties:ResourceHu.BT_Modification}"  HorizontalAlignment="Right" Cursor="Hand"

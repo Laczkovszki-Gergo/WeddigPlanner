@@ -50,7 +50,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" MaxLength="50"
                   Height="auto" Grid.Row="1" Grid.Column="1" Margin="40,39,40,18" x:Name="TB_BrideName"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Grid.ColumnSpan="2" PreviewKeyDown="TB_BrideName_PreviewKeyDown"/>
-        <materialDesign:PackIcon Kind="Woman" VerticalAlignment="Center" Width="25" Height="24" Margin="20,45,0,20"  Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Woman" VerticalAlignment="Center" Width="30" Height="30" Margin="15,45,0,20" Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Groom" Grid.Column="3" Grid.ColumnSpan="2" Content="{x:Static properties:ResourceHu.LB_Groom}" HorizontalAlignment="Stretch" Margin="40,9,40,48"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                 FontSize="16"
@@ -58,7 +58,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="40,39,40,18" x:Name="TB_GroomName" MaxLength="50"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="1" PreviewKeyDown="TB_GroomName_PreviewKeyDown"/>
-        <materialDesign:PackIcon Kind="Man" VerticalAlignment="Center" Width="25" Height="24" Margin="20,45,0,20"  Grid.Row="1" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Man" VerticalAlignment="Center" Width="30" Height="30" Margin="15,45,0,20"  Grid.Row="1" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
 
         <Label  Grid.Row="3" x:Name="LB_Budget" Grid.Column="2" Grid.ColumnSpan="2" Content="{x:Static properties:ResourceHu.LB_Budget}" HorizontalAlignment="Stretch" Margin="40,8,40,49"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
@@ -67,7 +67,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="40,39,40,18" x:Name="TB_Budget" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" LostFocus="TB_Budget_LostFocus" Loaded="TB_Budget_Loaded" Panel.ZIndex="3" KeyDown="TB_Budget_KeyDown"/>
-        <materialDesign:PackIcon Kind="WalletAdd" VerticalAlignment="Center" HorizontalAlignment="Right" Width="25" Height="24" Margin="0,45,10,20"  Grid.Row="3" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="WalletAdd" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,45,5,20"  Grid.Row="3" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="2" x:Name="LB_WeddingDay" Grid.Column="2" Grid.ColumnSpan="2" Content="{x:Static properties:ResourceHu.LB_WeddingDay}" HorizontalAlignment="Stretch" Margin="40,8,40,49"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                 FontSize="16"
@@ -115,10 +115,10 @@
         <StackPanel Orientation="Vertical" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Panel.ZIndex="4">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" x:Name="BT_BrowsePicture" Content="{x:Static properties:ResourceHu.BT_BrowsePicture}"  HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="4" Background="Transparent"
-                    materialDesign:ButtonAssist.CornerRadius="20" Width="200" Height="40" FontWeight="UltraBlack" Margin="35,10,10,10"
+                    materialDesign:ButtonAssist.CornerRadius="20" Width="200" Height="40" FontWeight="UltraBlack" Margin="40,10,10,10"
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Click="BT_BrowsePicture_Click"/>
-                <materialDesign:PackIcon x:Name="Tooltip_ImageReset" Kind="DeleteCircleOutline" VerticalAlignment="Center" HorizontalAlignment="Right" Width="25" Height="24" Foreground="{DynamicResource TextForeColors}" 
+                <materialDesign:PackIcon x:Name="Tooltip_ImageReset" Kind="DeleteCircleOutline" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Foreground="{DynamicResource TextForeColors}" 
                                          ToolTip="{x:Static properties:ResourceHu.Tooltip_ImageReset}" MouseLeftButtonDown="Tooltip_ImageReset_MouseLeftButtonDown" Cursor="Hand"></materialDesign:PackIcon>
             </StackPanel>
 

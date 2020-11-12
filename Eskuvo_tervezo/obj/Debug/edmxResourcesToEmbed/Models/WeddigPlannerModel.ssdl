@@ -75,9 +75,10 @@
     <Property Name="User_ID" Type="int" Nullable="false" />
     <Property Name="Wedding_Date" Type="datetime" Nullable="false" />
     <Property Name="BrideName" Type="nchar" MaxLength="50" Nullable="false" />
-    <Property Name="GroomName" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="GroomName" Type="nchar" MaxLength="50" />
     <Property Name="Budget" Type="int" />
     <Property Name="Image" Type="image" />
+    <Property Name="Quote" Type="nchar" MaxLength="1000" />
   </EntityType>
   <EntityType Name="WeddingExpenses">
     <Key>
@@ -149,10 +150,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Guests_WeddingData">
-    <End Role="WeddingData" Type="Self.WeddingData" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+  <Association Name="FK_Guests_WeddingData1">
+    <End Role="WeddingData" Type="Self.WeddingData" Multiplicity="1" />
     <End Role="Guests" Type="Self.Guests" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="WeddingData">
@@ -271,7 +270,7 @@
       <End Role="Login" EntitySet="Login" />
       <End Role="Contacts" EntitySet="Contacts" />
     </AssociationSet>
-    <AssociationSet Name="FK_Guests_WeddingData" Association="Self.FK_Guests_WeddingData">
+    <AssociationSet Name="FK_Guests_WeddingData1" Association="Self.FK_Guests_WeddingData1">
       <End Role="WeddingData" EntitySet="WeddingData" />
       <End Role="Guests" EntitySet="Guests" />
     </AssociationSet>

@@ -49,7 +49,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Margin="40,20,40,0" x:Name="TB_Name" MaxLength="60"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_Name_PreviewKeyDown" Panel.ZIndex="1"/>
-        <materialDesign:PackIcon Kind="Contact" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Contact" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"  Grid.Row="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Phone" Grid.Column="1" Content="{x:Static properties:ResourceHu.LB_Phone}" HorizontalAlignment="Stretch" Margin="40,0,40,40"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                 FontSize="16"
@@ -57,7 +57,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="1" Margin="40,20,40,0" x:Name="TB_Phone" MaxLength="30"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_Phone_PreviewKeyDown" Panel.ZIndex="2"/>
-        <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"   Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Email" Grid.Column="2" Content="{x:Static properties:ResourceHu.LB_Email}" HorizontalAlignment="Stretch" Margin="40,0,40,40"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                 FontSize="16"
@@ -65,7 +65,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="2" Margin="40,20,40,0" x:Name="TB_Email" MaxLength="40"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_Email_PreviewKeyDown" Panel.ZIndex="3"/>
-        <materialDesign:PackIcon Kind="Email" VerticalAlignment="Center" Margin="20,25,0,0"  
+        <materialDesign:PackIcon Kind="Email" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"  
                                  Grid.Row="1" Grid.Column="2" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}">
         </materialDesign:PackIcon>
         <Button Grid.Row="1" Grid.Column="4" x:Name="BT_Save" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Right" Cursor="Hand" Panel.ZIndex="4" Background="Transparent"

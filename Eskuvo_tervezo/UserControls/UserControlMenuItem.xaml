@@ -17,15 +17,18 @@
             </ResourceDictionary>
     </UserControl.Resources>
 
-    <Border CornerRadius="20" Background="{DynamicResource MenuBackground}" Margin="5">
+    <Border CornerRadius="20" Background="{DynamicResource MenuBackground}" Margin="10,5">
         <Border.Resources>
             <DataTemplate x:Key="expanderHeader">
                 <TextBlock Text="{Binding}"
                Foreground="{DynamicResource MenuTextForeColors}"
                FontSize="20"   
-               FontWeight="Normal" 
+               FontWeight="Normal"
+               FontStyle="Normal"
+               FontStretch="Normal"
                TextWrapping="Wrap"
-               FontFamily="Comic Sans MS"/>
+               FontFamily="Comic Sans MS"
+               />
             </DataTemplate>
                       
         </Border.Resources>
@@ -34,19 +37,20 @@
             <Grid>
 
             <materialDesign:PackIcon x:Name="Icon" Kind="{Binding Path=Icon}" Width="25" Height="25" Margin="10,16" HorizontalAlignment="Left" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20"/>
-            <ListBoxItem x:Name="ListViewItemMenu" Content="{Binding Path=Header}" Padding="37 13" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" Background="Transparent" Foreground="{DynamicResource MenuTextForeColors}" FontSize="20"
+            <ListBoxItem x:Name="ListViewItemMenu" Content="{Binding Path=Header}" Padding="37 13" VerticalContentAlignment="Center" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" Background="Transparent" Foreground="{DynamicResource MenuTextForeColors}" FontSize="20"
                          PreviewMouseLeftButtonDown="ListViewItemMenu_PreviewMouseLeftButtonDown" Cursor="Hand"/>
-                <Expander x:Name="ExpanderMenu"  Header="{Binding Path=Header}" FontSize="20" Background="Transparent" Margin="12,0,0,0" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="{DynamicResource MenuTextForeColors}" 
+                <Expander x:Name="ExpanderMenu"  Header="{Binding Path=Header}" FontSize="20" Background="Transparent" Margin="12,2,0,0" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="{DynamicResource MenuTextForeColors}" 
                           FontFamily="Comic Sans MS" HeaderTemplate="{DynamicResource expanderHeader}">
                     <ListView x:Name="ListViewMenu" ItemsSource="{Binding Path=SubItems}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" Foreground="{DynamicResource MenuTextForeColors}" FontSize="20" 
                           PreviewMouseLeftButtonDown="ListViewItemMenu_PreviewMouseLeftButtonDown" SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                                <TextBlock Text="{Binding Path=Name}" Tag="{ Binding Path=Screen}" Margin="12,0,0,0" Padding="32 5" FontFamily="Comic Sans MS" HorizontalAlignment="Stretch" Foreground="{DynamicResource MenuTextForeColors}" FontSize="20" />
+                                <TextBlock Text="{Binding Path=Name}" Tag="{ Binding Path=Screen}" Margin="12,0,0,0" Padding="32 5" FontFamily="Comic Sans MS" HorizontalAlignment="Stretch" Foreground="{DynamicResource MenuTextForeColors}" FontSize="20"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </Expander>
+                </Expander>
+
             </Grid>
         </StackPanel>
     </Border>

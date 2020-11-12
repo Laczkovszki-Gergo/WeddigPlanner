@@ -27,6 +27,7 @@ namespace Eskuvo_tervezo.Models
         public string GroomName { get; set; }
         public Nullable<int> Budget { get; set; }
         public byte[] Image { get; set; }
+        public string Quote { get; set; }
     
         public virtual ICollection<Guests> Guests { get; set; }
         public virtual Login Login { get; set; }

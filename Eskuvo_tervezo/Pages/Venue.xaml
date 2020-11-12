@@ -45,7 +45,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="0" Margin="40,20,40,0" x:Name="TB_Venue" MaxLength="60"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_Venue_PreviewKeyDown"/>
-        <materialDesign:PackIcon Kind="PartyPopper" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="1" Grid.Column="0" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="PartyPopper" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30"  Grid.Row="1" Grid.Column="0" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Address" Grid.Column="1" Grid.ColumnSpan="2" Content="{x:Static properties:ResourceHu.LB_Address}" HorizontalAlignment="Stretch" Margin="0,0,0,40"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                 FontSize="16"
@@ -53,7 +53,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="40,20,40,0" x:Name="TB_Address" MaxLength="60"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="1" PreviewKeyDown="TB_Address_PreviewKeyDown"/>
-        <materialDesign:PackIcon Kind="Place" VerticalAlignment="Center" Margin="20,25,0,0"  
+        <materialDesign:PackIcon Kind="Place" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30"
                                  Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}">
         </materialDesign:PackIcon>
 

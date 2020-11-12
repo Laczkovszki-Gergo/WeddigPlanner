@@ -24,7 +24,11 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <Border BorderBrush="{DynamicResource WindowBorderBrush}" Background="Gray" BorderThickness="2" CornerRadius="40">
+        <Border BorderBrush="{DynamicResource WindowBorderBrush}" BorderThickness="2" CornerRadius="40">
+            <Border.Background>
+                <ImageBrush x:Name="BorderBackGround" ImageSource="/Resources/Background_wallpaper.jpg" Stretch="UniformToFill">
+                </ImageBrush>
+            </Border.Background>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.5*"/>

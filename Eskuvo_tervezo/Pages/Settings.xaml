@@ -47,7 +47,7 @@
                   Height="auto" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="45,20,45,0" x:Name="TB_user" MaxLength="30"
                   Cursor="Pen" PreviewKeyDown="TB_user_PreviewKeyDown"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-        <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LB_NewPassword" Content="{x:Static properties:ResourceHu.LB_NewPassword}"/>
         <PasswordBox materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  materialDesign:HintAssist.Hint="" VerticalAlignment="Center" MaxLength="20"
@@ -56,7 +56,7 @@
                       VerticalContentAlignment="Center" Cursor="Pen" FontSize="16"
                       PreviewKeyDown="T_passwd_PreviewKeyDown" Panel.ZIndex="1"  
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="White" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-        <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="20,25,0,0" Grid.Row="2" Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}" Grid.Column="1" Grid.ColumnSpan="2" ></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="2" Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}" Grid.Column="1" Grid.ColumnSpan="2" ></materialDesign:PackIcon>
 
         <Label  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="LB_NewPasswordAgain" Content="{x:Static properties:ResourceHu.LB_NewPasswordAgain}"/>
         <PasswordBox materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  materialDesign:HintAssist.Hint="" VerticalAlignment="Center" MaxLength="20"
@@ -65,14 +65,14 @@
                       VerticalContentAlignment="Center" Cursor="Pen" FontSize="16"
                       PreviewKeyDown="T_passwdAgain_PreviewKeyDown" Panel.ZIndex="2"  
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="White" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-        <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="20,25,0,0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="LB_Email" Content="{x:Static properties:ResourceHu.LB_Email}" />
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                   Height="auto" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="45,20,45,0" x:Name="TB_email" MaxLength="60"
                   Cursor="Pen" PreviewKeyDown="TB_email_PreviewKeyDown"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="3"/>
-        <materialDesign:PackIcon Kind="Email" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"  Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Email" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"  Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="LB_OldPassword" Content="{x:Static properties:ResourceHu.LB_OldPassword}" />
         <PasswordBox materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  materialDesign:HintAssist.Hint="" VerticalAlignment="Center" MaxLength="20"
@@ -81,7 +81,7 @@
                       VerticalContentAlignment="Center" Cursor="Pen" FontSize="16"
                       PreviewKeyDown="T_OldPassword_PreviewKeyDown" Panel.ZIndex="4"  
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="White" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-        <materialDesign:PackIcon Kind="PasswordReset" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"  Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="PasswordReset" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30"  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"  Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
         <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="BT_Save" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Center" Click="BT_Save_Click" Cursor="Hand" Panel.ZIndex="5"
                     materialDesign:ButtonAssist.CornerRadius="20" Margin="0" Width="120" Height="40" FontWeight="UltraBlack"

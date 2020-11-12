@@ -78,6 +78,7 @@
     <EntitySetMapping Name="WeddingData">
       <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingData">
         <MappingFragment StoreEntitySet="WeddingData">
+          <ScalarProperty Name="Quote" ColumnName="Quote" />
           <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="Budget" ColumnName="Budget" />
           <ScalarProperty Name="GroomName" ColumnName="GroomName" />

@@ -24,7 +24,11 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Border Background="{DynamicResource BorderBackground}" BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}"  CornerRadius="40">
+    <Border  BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}"  CornerRadius="40">
+        <Border.Background>
+            <ImageBrush x:Name="BorderBackGround" ImageSource="/Resources/Background_wallpaper.jpg" Stretch="UniformToFill">
+            </ImageBrush>
+        </Border.Background>
         <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -48,7 +52,7 @@
             </Image>
             <materialDesign:PackIcon x:Name="IconVolumeOnOff" Kind="VolumeHigh" Width="27" Height="27" HorizontalAlignment="Right" Margin="10,8,65,10" VerticalAlignment="Top" Cursor="Hand" 
                                      Foreground="{DynamicResource SpecialIconBackGround}" MouseDown="IconVolumeOnOff_MouseDown"></materialDesign:PackIcon>
-            <TextBlock Style="{StaticResource InputTblStyle}" x:Name="LB_Back" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,5" Text ="{x:Static properties:ResourceHu.LB_Back}" Cursor="Hand" PreviewMouseDown="LB_Back_PreviewMouseDown" Panel.ZIndex="8"></TextBlock>
+            <TextBlock Style="{StaticResource InputTblStyle}" x:Name="LB_Back" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="15,5" Text ="{x:Static properties:ResourceHu.LB_Back}" Cursor="Hand" PreviewMouseDown="LB_Back_PreviewMouseDown" Panel.ZIndex="8"></TextBlock>
 
             <Label  Grid.Row="0" x:Name="LB_Title_reg" VerticalAlignment="Bottom" Margin="0,0,0,10" Content="{x:Static properties:ResourceHu.LB_Title_reg }" />
             
@@ -57,7 +61,7 @@
                   Width="200" Height="auto" Grid.Row="1" Margin="0,20,0,0" x:Name="TB_user" 
                   Cursor="Pen" PreviewKeyDown="TB_user_PreviewKeyDown"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-            <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30"  Grid.Row="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
             
             <Label  Grid.Row="2" x:Name="LB_Passwd" Content="{x:Static properties:ResourceHu.LB_Passwd}"/>
             <PasswordBox materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  materialDesign:HintAssist.Hint="" VerticalAlignment="Center" 
@@ -66,7 +70,7 @@
                       VerticalContentAlignment="Center" Cursor="Pen" FontSize="16"
                       PreviewKeyDown="T_passwd_PreviewKeyDown" Panel.ZIndex="1"  
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="White" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-            <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="20,25,0,0" Grid.Row="2" Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="2" Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
             <Label  Grid.Row="3" x:Name="LB_PasswdAgain" Content="{x:Static properties:ResourceHu.LB_PasswdAgain}"/>
             <PasswordBox materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  materialDesign:HintAssist.Hint="" VerticalAlignment="Center" 
@@ -75,14 +79,14 @@
                       VerticalContentAlignment="Center" Cursor="Pen" FontSize="16"
                       PreviewKeyDown="T_passwdAgain_PreviewKeyDown" Panel.ZIndex="2"  
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="White" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-            <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="20,25,0,0" Grid.Row="3" Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="3" Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
             <Label  Grid.Row="4" x:Name="LB_Email" Content="{x:Static properties:ResourceHu.LB_Email}" />
             <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                   Width="200" Height="auto" Grid.Row="4" Margin="0,20,0,0" x:Name="TB_email" 
                   Cursor="Pen" PreviewKeyDown="TB_email_PreviewKeyDown"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="3"/>
-            <materialDesign:PackIcon Kind="Email" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="4" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Kind="Email" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="4" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
 
             <Button Grid.Row="5" x:Name="BT_Reg" Content="{x:Static properties:ResourceHu.BT_Reg}"  HorizontalAlignment="Right" Click="BT_Reg_Click" Cursor="Hand" Panel.ZIndex="5"
                     materialDesign:ButtonAssist.CornerRadius="20" Margin="0,25,15,0" Width="125" Height="40" FontWeight="UltraBlack"

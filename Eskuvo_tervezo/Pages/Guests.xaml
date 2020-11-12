@@ -46,14 +46,14 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="0" Margin="40,20,20,0" x:Name="TB_BrideGuests" MaxLength="50"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_BrideGuests_PreviewKeyDown"/>
-        <materialDesign:PackIcon Kind="PeopleAdd" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="1" Grid.Column="0" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="PeopleAdd" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"   Grid.Row="1" Grid.Column="0" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
         <Label  Grid.Row="1" x:Name="LB_BrideCount" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,20,40"
                 Content="{x:Static properties:ResourceHu.LB_BrideCount}" FontSize="16"/>
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="1" Margin="40,20,40,0" x:Name="TB_BrideGuestsCount"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="1" KeyDown="TB_BrideGuestsCount_PreviewKeyDown"/>
 
-        <materialDesign:PackIcon Kind="Counter" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,25,20,0"  Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Counter" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,25,20,0" Width="30" Height="30"  Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
         <Button Grid.Row="1" x:Name="BT_SaveBride" Content="{x:Static properties:ResourceHu.BT_SaveBride}"  HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="2" Grid.Column="1"
                   materialDesign:ButtonAssist.CornerRadius="20" Margin="20,20,20,10" Width="120" Height="40" FontWeight="UltraBlack"
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Bottom"
@@ -65,14 +65,14 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" MaxLength="50"
                   Height="auto" Grid.Row="1" Grid.Column="2" Margin="40,20,40,0" x:Name="TB_GroomGuests" 
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="3" PreviewKeyDown="TB_GroomGuests_PreviewKeyDown"/>
-        <materialDesign:PackIcon Kind="PeopleAdd" VerticalAlignment="Center" Margin="20,25,0,0"  Grid.Row="1" Grid.Column="2" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="PeopleAdd" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"   Grid.Row="1" Grid.Column="2" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
         <Label  Grid.Row="1" x:Name="LB_GroomCount" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,20,40"
                 Content="{x:Static properties:ResourceHu.LB_GroomCount}" FontSize="16"/>
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="3" Margin="40,20,40,0" x:Name="TB_GroomGuestsCount" 
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="4" KeyDown="TB_GroomGuestsCount_PreviewKeyDown"/>
 
-        <materialDesign:PackIcon Kind="Counter" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,25,20,0"  Grid.Row="1" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Counter" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,25,20,0" Width="30" Height="30" Grid.Row="1" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
         <Button Grid.Row="1" x:Name="BT_SaveGroom" Content="{x:Static properties:ResourceHu.BT_SaveGroom}"  HorizontalAlignment="Right" Cursor="Hand" Panel.ZIndex="5" Grid.Column="3"
                     materialDesign:ButtonAssist.CornerRadius="20" Margin="20,25,20,10" Width="120" Height="40" FontWeight="UltraBlack"
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Bottom"

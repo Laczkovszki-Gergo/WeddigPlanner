@@ -28,6 +28,7 @@ namespace Eskuvo_tervezo.Windows
         Models.Calendar[] CalArray = null;
         Models.CalendarLogEntrys[] ClArray = null;
         Models.Radio rad = null;
+        Models.WeddingData wedd;
 
         Functions f = new Functions();
         MainWindow main;
@@ -62,10 +63,6 @@ namespace Eskuvo_tervezo.Windows
             BigDayStyle = (Style)FindResource("CalendarDayButtonStyleHighlightedBigDay");
             main = _main;
             sound = _sound;
-            //TODO Framework háttérkép
-            //FrameContent.Background = f.CreateImageBrush(@"D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\1.jpg");
-            //FrameContent.BorderBrush = System.Windows.Media.Brushes.DarkGray;
-            //FrameContent.BorderThickness = new Thickness(2);
         }
         void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -104,12 +101,16 @@ namespace Eskuvo_tervezo.Windows
             timer.Tick += timer_Tick;
             timer.Start();
 
-            FrameContent.Content = new Pages.Welcome(ActualUser, rm, ResourceNames);
+            FrameContent.Content = new Pages.Advices(ActualUser, rm, ResourceNames);
 
-            if(WPE.WeddingData.Any(x=>x.User_ID.Equals(ActualUser.IDLogin)))
+            wedd = WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(ActualUser.IDLogin));
+
+            if(wedd != null)
                 {
-                if (WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(ActualUser.IDLogin)).Image != null)
+                if (wedd.Image != null)
                     ImageBetrothed.Source = f.CreateBitmapFromBytes(WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(ActualUser.IDLogin)).Image);
+                if(wedd.Quote !=null)
+                Tbl_Qoute.Text = wedd.Quote.Trim();
                 }
           
             LoadFormats(Hun);
@@ -155,8 +156,8 @@ namespace Eskuvo_tervezo.Windows
         internal void CreateMenu()
         {
             Menu.Children.Clear();
-            var item0 = new ItemMenu("Menu_Title", rm.GetString("Menu_Title"), new Pages.Welcome(ActualUser,rm,ResourceNames), PackIconKind.ViewDashboard);
-            var item1 = new ItemMenu("Menu_FirstSteps", rm.GetString("Menu_FirstSteps"), new Pages.FirstSteps(ActualUser, rm, ResourceNames,this), PackIconKind.FirstPage);
+            var item0 = new ItemMenu("Menu_Advices", rm.GetString("Menu_Advices"), new Pages.Advices(ActualUser,rm,ResourceNames), PackIconKind.Idea);
+            var item1 = new ItemMenu("Menu_FirstSteps", rm.GetString("Menu_FirstSteps"), new Pages.FirstSteps(ActualUser, rm, ResourceNames,this), PackIconKind.ManWoman);
 
             Menu.Children.Add(new UserControlMenuItem(item0, this, rm));
             Menu.Children.Add(new UserControlMenuItem(item1, this, rm));
@@ -609,7 +610,7 @@ namespace Eskuvo_tervezo.Windows
                 fi = null;
             }
         }
-        private void ImageBetrothed_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        void ImageBetrothed_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
             System.Windows.Media.Imaging.BitmapImage[] allpics = new System.Windows.Media.Imaging.BitmapImage[1];
             Windows.ImageView i = new Windows.ImageView((sender as Image), allpics);
@@ -618,6 +619,16 @@ namespace Eskuvo_tervezo.Windows
             if (result == true)
             {
                 this.Opacity = 1;
+            }
+        }
+        void Tbl_Qoute_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+            if (WPE.WeddingData.Any(x => x.User_ID.Equals(ActualUser.IDLogin)))
+            {
+                wedd = WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(ActualUser.IDLogin));
+                Windows.QuteModify qu = new Windows.QuteModify((rm as ResourceManager), wedd, ResourceNames, this);
+                qu.Show();
             }
         }
     }

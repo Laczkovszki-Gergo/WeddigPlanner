@@ -167,8 +167,8 @@
     <Compile Include="Pages\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Welcome.xaml.cs">
-      <DependentUpon>Welcome.xaml</DependentUpon>
+    <Compile Include="Pages\Advices.xaml.cs">
+      <DependentUpon>Advices.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Venue.xaml.cs">
       <DependentUpon>Venue.xaml</DependentUpon>
@@ -239,6 +239,9 @@
     <Compile Include="Windows\LogEntryModify.xaml.cs">
       <DependentUpon>LogEntryModify.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\QuteModify.xaml.cs">
+      <DependentUpon>QuteModify.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\RadioChannelModify.xaml.cs">
       <DependentUpon>RadioChannelModify.xaml</DependentUpon>
     </Compile>
@@ -302,7 +305,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Welcome.xaml">
+    <Page Include="Pages\Advices.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -438,6 +441,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\QuteModify.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\RadioChannelModify.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -478,6 +485,7 @@
     <Content Include="Models\WeddigPlannerModel.edmx.sql" />
     <Resource Include="Resources\Betrothed.png" />
     <Resource Include="Resources\Wedding.ico" />
+    <Resource Include="Resources\Background_wallpaper.jpg" />
     <Content Include="UserControls\DropDownMenu.csproj.user" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

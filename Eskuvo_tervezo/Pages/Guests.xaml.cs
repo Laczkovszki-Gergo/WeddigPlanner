@@ -332,8 +332,7 @@ namespace Eskuvo_tervezo.Pages
                 BT_SaveGroom_Click(sender, e);
             }
         }
-
-        private void BT_ExportToExcel_Click(object sender, RoutedEventArgs e)
+        void BT_ExportToExcel_Click(object sender, RoutedEventArgs e)
         {
             CreateExcelDocument();
         }

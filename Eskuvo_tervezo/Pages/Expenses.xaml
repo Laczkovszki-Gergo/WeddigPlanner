@@ -48,7 +48,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="1" Margin="30,51,20,31" x:Name="TB_Expense" MaxLength="60" IsEnabled="False"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_Expense_PreviewKeyDown" Panel.ZIndex="1"/>
-        <materialDesign:PackIcon Kind="PartyPopper" VerticalAlignment="Center" Margin="10,62,0,36"  Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}" ></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="PaperOutline" VerticalAlignment="Center" Margin="0,62,0,36" Width="30" Height="30"  Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}" ></materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Cost" Grid.Column="2" Content="{x:Static properties:ResourceHu.LB_Cost}" HorizontalAlignment="Stretch"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                 FontSize="16" Margin="0,21,0,61" IsEnabled="False"
@@ -56,7 +56,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="2" Margin="30,51,20,31" x:Name="TB_Cost" KeyDown="TB_Cost_PreviewKeyDown" IsEnabled="False"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="2" />
-        <materialDesign:PackIcon Kind="Place" VerticalAlignment="Center" Margin="10,62,0,36"  
+        <materialDesign:PackIcon Kind="Money" VerticalAlignment="Center" Margin="0,62,0,36" Width="30" Height="30"
                                  Grid.Row="1" Grid.Column="2" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}">
         </materialDesign:PackIcon>
 
@@ -67,7 +67,7 @@
         <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
                   Height="auto" Grid.Row="1" Grid.Column="3" Margin="30,51,20,31" x:Name="TB_Count" IsEnabled="False"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" KeyDown="TB_Count_PreviewKeyDown" Panel.ZIndex="3"/>
-        <materialDesign:PackIcon Kind="Numbers" VerticalAlignment="Center" Margin="10,62,0,36"  
+        <materialDesign:PackIcon Kind="Numbers" VerticalAlignment="Center" Margin="0,62,0,36" Width="30" Height="30"
                                  Grid.Row="1" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}">
         </materialDesign:PackIcon>
 

@@ -140,12 +140,13 @@
     <Property Name="User_ID" Type="Int32" Nullable="false" />
     <Property Name="Wedding_Date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="BrideName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Name="GroomName" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="GroomName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
     <Property Name="Budget" Type="Int32" />
     <NavigationProperty Name="Guests" Relationship="WeddingPlannerModel.FK_Guests_WeddingData" FromRole="WeddingData" ToRole="Guests" />
     <NavigationProperty Name="Login" Relationship="WeddingPlannerModel.FK_WeddingData_Login" FromRole="WeddingData" ToRole="Login" />
     <NavigationProperty Name="WeddingVenue" Relationship="WeddingPlannerModel.FK_WeddingVenue_WeddingData" FromRole="WeddingData" ToRole="WeddingVenue" />
     <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Quote" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="WeddingExpenses">
     <Key>

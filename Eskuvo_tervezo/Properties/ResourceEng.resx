@@ -195,9 +195,6 @@
   <data name="Menu_Logout" xml:space="preserve">
     <value>Log out</value>
   </data>
-  <data name="Menu_Title" xml:space="preserve">
-    <value>Menu</value>
-  </data>
   <data name="Menu_Ceremony" xml:space="preserve">
     <value>Ceremony</value>
   </data>
@@ -585,5 +582,11 @@ Weddig Planner</value>
   </data>
   <data name="DateOfWedding" xml:space="preserve">
     <value>Date of Wedding</value>
+  </data>
+  <data name="Menu_Advices" xml:space="preserve">
+    <value>Advices</value>
+  </data>
+  <data name="LB_Quote" xml:space="preserve">
+    <value>Quote</value>
   </data>
 </root>

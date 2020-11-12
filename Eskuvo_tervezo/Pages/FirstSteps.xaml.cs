@@ -253,9 +253,12 @@ namespace Eskuvo_tervezo.Pages
         void Tooltip_ImageReset_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             h.ImageBetrothed.Source = DefaultImage.Source;
-            Models.WeddingData wd = wedd;
-            wd.Image = null;
-            WPE.SaveChanges();
+            if(wedd != null)
+            {
+                Models.WeddingData wd = wedd;
+                wd.Image = null;
+                WPE.SaveChanges();
+            }
         }
     }
 }

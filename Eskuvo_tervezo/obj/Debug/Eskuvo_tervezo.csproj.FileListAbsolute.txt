@@ -18,7 +18,6 @@ D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Contacts.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\DateView.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Expenses.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Guests.g.cs
-D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Welcome.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Venue.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\UserControls\UserControlCalItems.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\UserControls\UsercontrolContacts.g.cs
@@ -46,7 +45,6 @@ D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Contacts.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\DateView.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Expenses.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Guests.baml
-D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Welcome.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Venue.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\ResourceDictionary\AutoCompleteTextboxDictionary.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\ResourceDictionary\ButtonDictionary.baml
@@ -101,4 +99,8 @@ D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Radio.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\RadioChannelModify.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\RadioChannelModify.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\ResourceDictionary\Datepicker.baml
+D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Advices.g.cs
+D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Advices.baml
+D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\QuteModify.g.cs
+D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\QuteModify.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Eskuvo_tervezo.csprojResolveAssemblyReference.cache
