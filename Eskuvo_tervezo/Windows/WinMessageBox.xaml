@@ -15,7 +15,9 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         Topmost="True"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded"
+        KeyDown="Window_KeyDown">
+    
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

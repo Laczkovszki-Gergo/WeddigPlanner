@@ -59,7 +59,7 @@
         <materialDesign:PackIcon Kind="MusicCircle" Width="30" Height="30" VerticalAlignment="Center" Margin="10,25,0,0"  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
 
 
-        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="BT_Save" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Center" Click="BT_Save_Click" Cursor="Hand" Panel.ZIndex="5"
+        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="BT_SaveChannel" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Center" Click="BT_SaveChannel_Click" Cursor="Hand" Panel.ZIndex="5"
                     materialDesign:ButtonAssist.CornerRadius="20" Margin="0" Width="120" Height="40" FontWeight="UltraBlack"
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}">
@@ -88,7 +88,7 @@
             </Grid>
         </DockPanel>
 
-        <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="BT_SaveRadioChannel" Content="{x:Static properties:ResourceHu.BT_SaveRadioChannel}"  HorizontalAlignment="Center" Click="BT_SaveRadioChannel_Click" Cursor="Hand" Panel.ZIndex="5"
+        <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="BT_SaveChosenChannel" Content="{x:Static properties:ResourceHu.BT_SaveRadioChannel}"  HorizontalAlignment="Center" Click="BT_SaveChosenChannel_Click" Cursor="Hand" Panel.ZIndex="5"
                     materialDesign:ButtonAssist.CornerRadius="20" Margin="0" Width="120" Height="40" FontWeight="UltraBlack"
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}">

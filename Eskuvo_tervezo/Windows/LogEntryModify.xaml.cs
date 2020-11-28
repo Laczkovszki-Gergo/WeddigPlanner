@@ -66,7 +66,7 @@ namespace Eskuvo_tervezo.Windows
         void Modification()
         {
             var result = WPE.CalendarLogEntrys.SingleOrDefault(b => b.ID == Entry.ID);
-            if (result != null && f.isNormalRichText(RTB_Entry, new TextRange(RTB_Entry.Document.ContentStart, RTB_Entry.Document.ContentEnd).Text.Trim(), rm))
+            if (result != null && f.IsNormalText(RTB_Entry, new TextRange(RTB_Entry.Document.ContentStart, RTB_Entry.Document.ContentEnd).Text.Trim(), rm))
             {
                 result.LogEntry = new TextRange(RTB_Entry.Document.ContentStart, RTB_Entry.Document.ContentEnd).Text.Trim();
                 WPE.SaveChanges();
@@ -84,7 +84,12 @@ namespace Eskuvo_tervezo.Windows
         {
             Modification();
         }
-
-
+        void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

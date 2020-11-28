@@ -19,10 +19,10 @@
         <ListBoxItem x:Name="ListViewItemMenu2" Grid.Column="1" Content="{Binding Path=Person}" Margin="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Stretch" 
                      Foreground="{DynamicResource TextForeColors}" FontSize="15" Panel.ZIndex="1"/>
         <materialDesign:PackIcon x:Name="Tooltip_Delete" Grid.Column="2" DataContext="{Binding Path=IconId}" Kind="Delete" Width="25" Height="25" Margin="5,16" HorizontalAlignment="Right" 
-                                 Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" PreviewMouseLeftButtonDown="Icon_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Delete }" 
+                                 Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" PreviewMouseLeftButtonDown="IconDelete_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Delete }" 
                                  Panel.ZIndex="3"/>
         <materialDesign:PackIcon x:Name="Tooltip_Modification" Grid.Column="2" DataContext="{Binding Path=IconId}" Kind="Pen" Width="25" Height="25" Margin="35,16" HorizontalAlignment="Right" 
-                                 Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" PreviewMouseLeftButtonDown="Icon2_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Modification }" 
+                                 Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" PreviewMouseLeftButtonDown="IconModify_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Modification }" 
                                  Panel.ZIndex="2"/>
     </Grid>
 </UserControl>

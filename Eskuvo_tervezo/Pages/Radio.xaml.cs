@@ -129,9 +129,9 @@ namespace Eskuvo_tervezo.Pages
             }
         }
 
-        void save()
+        void Save_Channel()
         {
-            if (f.isRadioLink(TB_StreamLink, TB_StreamLink.Text.Trim(), (rm as ResourceManager)) && f.isNormalText(TB_RadioChannelName, TB_RadioChannelName.Text.Trim(), (rm as ResourceManager)))
+            if (f.isRadioLink(TB_StreamLink, TB_StreamLink.Text.Trim(), (rm as ResourceManager)) && f.IsNormalText(TB_RadioChannelName, TB_RadioChannelName.Text.Trim(), (rm as ResourceManager)))
             {
                 if(!WPE.Radio.Any(x=> x.UserID.Equals(User.IDLogin) && x.StreamLink.Trim().Equals(TB_StreamLink.Text.Trim()) && x.ChannelName.Trim().Equals(TB_RadioChannelName.Text.Trim())))
                     {
@@ -183,21 +183,21 @@ namespace Eskuvo_tervezo.Pages
         {
             if (e.Key == System.Windows.Input.Key.Enter)
             {
-                BT_Save_Click(sender, e);
+                BT_SaveChannel_Click(sender, e);
             }
         }
         void TB_RadioChannelName_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == System.Windows.Input.Key.Enter)
             {
-                BT_Save_Click(sender, e);
+                BT_SaveChannel_Click(sender, e);
             }
         }
-        void BT_Save_Click(object sender, RoutedEventArgs e)
+        void BT_SaveChannel_Click(object sender, RoutedEventArgs e)
         {
-            save();
+            Save_Channel();
         }
-        void BT_SaveRadioChannel_Click(object sender, RoutedEventArgs e)
+        void BT_SaveChosenChannel_Click(object sender, RoutedEventArgs e)
         {
             if (CB_RadioList.SelectedIndex > -1)
                 RadioChannelChoose(RadioStuffs[CB_RadioList.SelectedIndex].ID);
@@ -231,7 +231,7 @@ namespace Eskuvo_tervezo.Pages
         {
             LB_Volume.Opacity = 0.2;
             ScbVolume.Opacity = 0.2;
-            BT_SaveRadioChannel.Opacity = 0.2;
+            BT_SaveChosenChannel.Opacity = 0.2;
             IconIncrease.Opacity = 0.2;
             IconDecrease.Opacity = 0.2;
         }
@@ -239,7 +239,7 @@ namespace Eskuvo_tervezo.Pages
         {
             LB_Volume.Opacity = 1;
             ScbVolume.Opacity = 1;
-            BT_SaveRadioChannel.Opacity = 1;
+            BT_SaveChosenChannel.Opacity = 1;
             IconDecrease.Opacity = 1;
             IconIncrease.Opacity = 1;
         }

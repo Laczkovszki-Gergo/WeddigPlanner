@@ -16,7 +16,6 @@
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/ResourceDictionary/AutoCompleteTextboxDictionary.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/ResourceDictionary/ComboBoxDictionary.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/ResourceDictionary/LabelDictionary.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>

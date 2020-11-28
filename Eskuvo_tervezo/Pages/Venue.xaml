@@ -92,7 +92,7 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Margin="20,0,20,0" CanContentScroll="False" Panel.ZIndex="7">
+            <ScrollViewer x:Name="PicsScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Margin="20,0,20,0" CanContentScroll="False" Panel.ZIndex="7" PreviewMouseWheel="HandlePreviewMouseWheel">
             <ListView x:Name="PicsBox" HorizontalAlignment="Stretch" VerticalAlignment="Top">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">

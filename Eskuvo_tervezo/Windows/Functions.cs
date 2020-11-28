@@ -29,21 +29,7 @@ namespace Eskuvo_tervezo.Windows
                 return BitConverter.ToString(hashBytes).Replace("-", String.Empty);
             }
         }
-        internal ImageSource CreateViewImageDynamically(string ImagePath, double width, double height)
-        {
-            Image dynamicImage = new Image();
 
-            BitmapImage bitmap = new BitmapImage();
-            bitmap.BeginInit();
-            bitmap.UriSource = new Uri(ImagePath);
-            bitmap.EndInit();
-
-            dynamicImage.Source = bitmap;
-            dynamicImage.Width = width;
-            dynamicImage.Height = height;
-
-            return dynamicImage.Source;
-        }
         internal ImageBrush CreateImageBrush(string ImagePath)
         {
             ImageBrush brush = new ImageBrush();
@@ -77,31 +63,10 @@ namespace Eskuvo_tervezo.Windows
             if (!Char.IsDigit((char)KeyInterop.VirtualKeyFromKey(e.Key)) & e.Key != Key.Back & e.Key != Key.Left & e.Key != Key.Right & e.Key != Key.Delete & e.Key != Key.Space & e.Key != Key.Tab)
                 e.Handled = true;
         }
-        internal void NumericBudgetTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            if (!Char.IsDigit((char)KeyInterop.VirtualKeyFromKey(e.Key)) & e.Key != Key.Back & e.Key != Key.Left & e.Key != Key.Right & e.Key != Key.Delete & e.Key != Key.Space & e.Key != Key.Tab)
-                e.Handled = true;
-        }
         internal void CurrencyFormat(object sender)
         {
             if ((sender as TextBox).Text != null && (sender as TextBox).Text.Length > 0)
                 (sender as TextBox).Text = string.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:#,##0}", double.Parse((sender as TextBox).Text));
-        }
-        internal void SetAppDomainCultures(string name)
-        {
-            try
-            {
-                CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture(name);
-                CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.CreateSpecificCulture(name);
-            }
-            catch (CultureNotFoundException)
-            {
-                return;
-            }
-            catch (ArgumentException)
-            {
-                return;
-            }
         }
 
         internal bool IsValidEmail(object sender,string emailaddress, System.Resources.ResourceManager rm)
@@ -135,9 +100,11 @@ namespace Eskuvo_tervezo.Windows
                     return false;
                 }
         }                 
-        internal bool isContactName(object sender, string name, System.Resources.ResourceManager rm)
+        internal bool IsName(object sender, string name, System.Resources.ResourceManager rm)
         {
-            if((sender as TextBox).Text.Length < 3)
+            Regex r = new Regex(@"^(.?[A-Za-z0-9u00C0-\u017F#?!@$%^&*-.äÄ€đĐłŁß;\s]){2,}$");
+
+            if ((sender as TextBox).Text.Length < 3 && !r.IsMatch(name))
             {
                 (sender as TextBox).ToolTip = rm.GetString("Tooltip_InvalidNameCharacters");
                 (sender as TextBox).BorderBrush = Brushes.Red;
@@ -166,42 +133,49 @@ namespace Eskuvo_tervezo.Windows
                 return false;
             }
         }
-        internal bool isNormalRichText(object sender,string text, System.Resources.ResourceManager rm)
+        internal bool IsNormalText(object sender, string text, System.Resources.ResourceManager rm)
         {
-            var r = new Regex(@"^(.?[A-Za-z0-9u00C0-\u017F#?!@$%^&*-.äÄ€đĐłŁß;\s]){2,}$");
-            if (r.IsMatch(text))
+            Regex r = new Regex(@"^(.?[A-Za-z0-9u00C0-\u017F#?!@$%^&*-.äÄ€đĐłŁß;\s]){2,}$");
+            if(sender is TextBox)
             {
-                (sender as RichTextBox).ClearValue(RichTextBox.ToolTipProperty);
-                (sender as RichTextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
-                return true;
-            }
-            else
-            {
-                (sender as RichTextBox).ToolTip = rm.GetString("Tooltip_InvalidNormalTextCharacters");
-                (sender as RichTextBox).BorderBrush = Brushes.Red;
-                return false;
-            }
-        }
-        internal bool isNormalText(object sender, string text, System.Resources.ResourceManager rm)
-        {
-            var r = new Regex(@"^(.?[A-Za-z0-9u00C0-\u017F#?!@$%^&*-.äÄ€đĐłŁß;\s]){2,}$");
-            if (r.IsMatch(text))
-            {
-                (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
-                (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
-                return true;
+                if (r.IsMatch(text))
+                {
+                    (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
+                    (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                    return true;
 
+                }
+                else
+                {
+                    (sender as TextBox).ToolTip = rm.GetString("Tooltip_InvalidNormalTextCharacters");
+                    (sender as TextBox).BorderBrush = Brushes.Red;
+                    return false;
+                }
+            }
+            else if (sender is RichTextBox)
+            {
+                if (r.IsMatch(text))
+                {
+                    (sender as RichTextBox).ClearValue(RichTextBox.ToolTipProperty);
+                    (sender as RichTextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                    return true;
+                }
+                else
+                {
+                    (sender as RichTextBox).ToolTip = rm.GetString("Tooltip_InvalidNormalTextCharacters");
+                    (sender as RichTextBox).BorderBrush = Brushes.Red;
+                    return false;
+                }
             }
             else
             {
-                (sender as TextBox).ToolTip = rm.GetString("Tooltip_InvalidNormalTextCharacters");
-                (sender as TextBox).BorderBrush = Brushes.Red;
                 return false;
             }
+
         }
         internal bool isRadioLink(object sender, string text, System.Resources.ResourceManager rm)
         {
-            var r = new Regex(@"^(.?[A-Za-z0-9u00C0-\u017F#?!@$%^&*-.äÄ€đĐłŁß/;\s]){2,}$");
+            Regex r = new Regex(@"^(.?[A-Za-z0-9u00C0-\u017F#?!@$%^&*-.äÄ€đĐłŁß/;\s]){2,}$");
             if (r.IsMatch(text))
             {
                 (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
@@ -265,10 +239,10 @@ namespace Eskuvo_tervezo.Windows
                 return false;
             }
         }
-        internal bool IsYourPassword(object sender, string text, Models.Login ActualUser,System.Resources.ResourceManager rm)
+        internal bool IsYourPassword(object sender, string text, Models.Login ActualUser, System.Resources.ResourceManager rm)
         {
             string ScryptedPassw = Encrypt(text);
-            if(ActualUser.Password.Trim().Equals(ScryptedPassw.Trim()))
+            if (ActualUser.Password.Trim().Equals(ScryptedPassw.Trim()))
             {
                 (sender as PasswordBox).ClearValue(PasswordBox.ToolTipProperty);
                 (sender as PasswordBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
@@ -354,8 +328,7 @@ namespace Eskuvo_tervezo.Windows
             }
             return null;
         }
-
-        internal System.Net.IPAddress GetIPAddress()
+        internal System.Net.IPAddress GetIPAddress(System.Resources.ResourceManager rm, string[] ResourceNames)
         {
             System.Net.IPAddress[] hostAddresses = System.Net.Dns.GetHostAddresses("");
 
@@ -366,7 +339,57 @@ namespace Eskuvo_tervezo.Windows
                     !hostAddress.ToString().StartsWith("169.254."))
                     return hostAddress;
             }
+            ViewModel.WinMessageBoxItems wmgbi = new ViewModel.WinMessageBoxItems(rm.GetString("Message_InternetConnectionTitle"), rm.GetString("Message_InternetConnection"), MaterialDesignThemes.Wpf.PackIconKind.MicrosoftInternetExplorer);
+            WinMessageBox wmsgb = new WinMessageBox(wmgbi,rm,ResourceNames,false);
+            wmsgb.Show();
             return null;
+        }
+
+        //Nem használt függvények, eljárások
+        internal ImageSource CreateViewImageDynamically(string ImagePath, double width, double height)
+        {
+            Image dynamicImage = new Image();
+
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(ImagePath);
+            bitmap.EndInit();
+
+            dynamicImage.Source = bitmap;
+            dynamicImage.Width = width;
+            dynamicImage.Height = height;
+
+            return dynamicImage.Source;
+        }
+
+        internal void SetAppDomainCultures(string name)
+        {
+            try
+            {
+                CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture(name);
+                CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.CreateSpecificCulture(name);
+            }
+            catch (CultureNotFoundException)
+            {
+                return;
+            }
+            catch (ArgumentException)
+            {
+                return;
+            }
+        }
+        internal bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (System.Net.WebClient client = new System.Net.WebClient())
+                using (client.OpenRead("http://google.com/generate_204"))
+                    return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

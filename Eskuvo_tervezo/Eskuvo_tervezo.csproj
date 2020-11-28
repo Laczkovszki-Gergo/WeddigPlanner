@@ -78,14 +78,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
@@ -97,10 +89,6 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration" />
-    <Reference Include="Xceed.Wpf.Toolkit, Version=4.0.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.4.0.1\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="Windows\App.xaml">
@@ -239,8 +227,8 @@
     <Compile Include="Windows\LogEntryModify.xaml.cs">
       <DependentUpon>LogEntryModify.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\QuteModify.xaml.cs">
-      <DependentUpon>QuteModify.xaml</DependentUpon>
+    <Compile Include="Windows\QouteModify.xaml.cs">
+      <DependentUpon>QouteModify.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\RadioChannelModify.xaml.cs">
       <DependentUpon>RadioChannelModify.xaml</DependentUpon>
@@ -258,10 +246,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WeddigPlannerModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\WeddigPlannerModel.Designer.cs">
+    <Compile Include="Models\WeddingPlannerModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>WeddigPlannerModel.edmx</DependentUpon>
+      <DependentUpon>WeddingPlannerModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Windows\VenueModify.xaml.cs">
       <DependentUpon>VenueModify.xaml</DependentUpon>
@@ -310,10 +298,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Venue.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ResourceDictionary\AutoCompleteTextboxDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -441,7 +425,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Windows\QuteModify.xaml">
+    <Page Include="Windows\QouteModify.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -513,23 +497,23 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <EntityDeploy Include="Models\WeddigPlannerModel.edmx">
+    <EntityDeploy Include="Models\WeddingPlannerModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>WeddigPlannerModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>WeddingPlannerModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\WeddigPlannerModel.edmx.diagram">
-      <DependentUpon>WeddigPlannerModel.edmx</DependentUpon>
+    <None Include="Models\WeddingPlannerModel.edmx.diagram">
+      <DependentUpon>WeddingPlannerModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Models\WeddigPlannerModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WeddigPlannerModel.edmx</DependentUpon>
+      <DependentUpon>WeddingPlannerModel.edmx</DependentUpon>
       <LastGenOutput>WeddigPlannerModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\WeddigPlannerModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WeddigPlannerModel.edmx</DependentUpon>
+      <DependentUpon>WeddingPlannerModel.edmx</DependentUpon>
       <LastGenOutput>WeddigPlannerModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>

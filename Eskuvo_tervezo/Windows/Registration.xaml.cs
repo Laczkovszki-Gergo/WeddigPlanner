@@ -47,7 +47,7 @@ namespace Eskuvo_tervezo
 
             Models.Login l = new Models.Login();
             List<Models.Login> LoginData = WPE.Login.ToList();
-            if (f.isContactName(TB_user,TB_user.Text,rm) && f.IsPassword(T_passwd,T_passwd.Password, rm) && f.IsPasswordAreEqual(T_passwd,T_passwdAgain,T_passwd.Password,T_passwdAgain.Password,rm) && f.IsValidEmail(TB_email,TB_email.Text.Trim(),rm))
+            if (f.IsName(TB_user,TB_user.Text,rm) && f.IsPassword(T_passwd,T_passwd.Password, rm) && f.IsPasswordAreEqual(T_passwd,T_passwdAgain,T_passwd.Password,T_passwdAgain.Password,rm) && f.IsValidEmail(TB_email,TB_email.Text.Trim(),rm))
             {
                 if (LoginData.FirstOrDefault(x => x.User.Trim().Equals(TB_user.Text)) == null)
                 {

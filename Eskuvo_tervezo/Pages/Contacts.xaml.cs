@@ -22,7 +22,6 @@ namespace Eskuvo_tervezo.Pages
         object rm;
         string[] ResourceNames;
 
-
         public Contacts(Models.Login _User, ResourceManager _rm, string[] _Resourcenames)
         {
             InitializeComponent();
@@ -71,7 +70,7 @@ namespace Eskuvo_tervezo.Pages
         }
         void SaveContact()
             { 
-            if(f.isContactName(TB_Name, TB_Name.Text.Trim(), (rm as ResourceManager)) && f.IsPhoneNumber(TB_Phone, TB_Phone.Text.Trim(), (rm as ResourceManager)) && f.IsValidEmail(TB_Email,TB_Email.Text.Trim(),(rm as ResourceManager)) )
+            if(f.IsName(TB_Name, TB_Name.Text.Trim(), (rm as ResourceManager)) && f.IsPhoneNumber(TB_Phone, TB_Phone.Text.Trim(), (rm as ResourceManager)) && f.IsValidEmail(TB_Email,TB_Email.Text.Trim(),(rm as ResourceManager)) )
             {
                 Models.Contacts cont = new Models.Contacts();
                 cont.User_Id = User.IDLogin;
@@ -271,7 +270,7 @@ namespace Eskuvo_tervezo.Pages
             }
         }
 
-        private void BT_ExportToExcel_Click(object sender, RoutedEventArgs e)
+        void BT_ExportToExcel_Click(object sender, RoutedEventArgs e)
         {
             CreateExcelDocument();
         }

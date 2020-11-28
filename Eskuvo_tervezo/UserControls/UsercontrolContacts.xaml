@@ -23,8 +23,8 @@
         <ListBoxItem x:Name="ListViewItemMenu3" Grid.Column="2" Content="{Binding Path=Email}" Padding="37 13" Margin="10,0,0,0" VerticalContentAlignment="Center" VerticalAlignment="Center"
                      HorizontalContentAlignment="Stretch" Foreground="{DynamicResource TextForeColors}" FontSize="15" Panel.ZIndex="2"/>
         <materialDesign:PackIcon x:Name="Tooltip_Delete" Grid.Column="3" DataContext="{Binding Path=IconId}" Kind="Delete" Width="25" Height="25" Margin="5,16" HorizontalAlignment="Right" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" 
-                                 PreviewMouseLeftButtonDown="Icon_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Delete }" Panel.ZIndex="4"/>
+                                 PreviewMouseLeftButtonDown="IconDelete_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Delete }" Panel.ZIndex="4"/>
         <materialDesign:PackIcon x:Name="Tooltip_Modification" Grid.Column="3" DataContext="{Binding Path=IconId}" Kind="Pen" Width="25" Height="25" Margin="35,16" HorizontalAlignment="Right" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" 
-                                 PreviewMouseLeftButtonDown="Icon2_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Modification }" Panel.ZIndex="3"/>
+                                 PreviewMouseLeftButtonDown="IconModify_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Modification }" Panel.ZIndex="3"/>
     </Grid>
 </UserControl>

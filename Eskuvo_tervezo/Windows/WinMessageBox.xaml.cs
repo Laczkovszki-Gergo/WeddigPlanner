@@ -54,19 +54,42 @@ namespace Eskuvo_tervezo.Windows
             }
         }
 
-        void BT_No_Click(object sender, RoutedEventArgs e)
+        void no()
         {
             DialogResult = false;
             this.Close();
         }
-        void BT_Yes_Click(object sender, RoutedEventArgs e)
+        void yes()
         {
             DialogResult = true;
             this.Close();
         }
-        void BT_Ok_Click(object sender, RoutedEventArgs e)
+        void ok()
         {
             this.Close();
+        }
+
+        void BT_No_Click(object sender, RoutedEventArgs e)
+        {
+            no();
+        }
+        void BT_Yes_Click(object sender, RoutedEventArgs e)
+        {
+            yes();
+        }
+        void BT_Ok_Click(object sender, RoutedEventArgs e)
+        {
+            ok();
+        }
+
+        void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Enter & BT_Yes.Visibility == Visibility.Visible)
+                yes();
+            else if (e.Key == System.Windows.Input.Key.Enter & BT_Ok.Visibility == Visibility.Visible)
+                ok();
+            else if (e.Key == System.Windows.Input.Key.Escape & BT_No.Visibility == Visibility.Visible)
+                no();
         }
     }
 }

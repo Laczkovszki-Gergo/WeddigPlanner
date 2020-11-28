@@ -100,7 +100,7 @@ namespace Eskuvo_tervezo.Pages
 
                 for (int i = 0; i < images.Count; i++)
                 {
-                    if (!p.Any(x=>x.ID.Equals(images[i].ID)))
+                    if (!p.Any(x => x.ID.Equals(images[i].ID)))
                     {
                         byte[] blob = images[i].Image;
                         MemoryStream stream = new MemoryStream();
@@ -115,7 +115,7 @@ namespace Eskuvo_tervezo.Pages
                         img.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
                         ms.Seek(0, SeekOrigin.Begin);
                         bi.StreamSource = ms;
-                        bi.EndInit();                        
+                        bi.EndInit();
 
                         picsbwid = (this.WindowWidth * 4 / 6 - 150) / 3;
                         picsbhei = (this.WindowHeight * 10 / 17) / 2;
@@ -123,7 +123,7 @@ namespace Eskuvo_tervezo.Pages
 
                         Bitimages.Add(bi);
                         p.Add(pics);
-                    }               
+                    }
                 }
                 if (p.Count > 0)
                 {
@@ -173,6 +173,7 @@ namespace Eskuvo_tervezo.Pages
             p.Clear();
             CB_Venue.SelectedIndex = index;
         }
+
         void insertImageData(string[] imageNames)
         {
             try
@@ -223,7 +224,7 @@ namespace Eskuvo_tervezo.Pages
         }
         void SaveVenues()
         {
-            if (f.isContactName(TB_Venue, TB_Venue.Text.Trim(), (rm as ResourceManager)) && f.isContactName(TB_Address, TB_Address.Text.Trim(), (rm as ResourceManager)))
+            if (f.IsName(TB_Venue, TB_Venue.Text.Trim(), (rm as ResourceManager)) && f.IsName(TB_Address, TB_Address.Text.Trim(), (rm as ResourceManager)))
             {
                 Models.WeddingVenue wv = new Models.WeddingVenue();
                 wv.WeddingID = Wedding.ID;
@@ -393,7 +394,6 @@ namespace Eskuvo_tervezo.Pages
               
                 if (dialog.ShowDialog() == true)
                 {
-
                     System.Windows.Input.Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
 
                     System.Drawing.Imaging.ImageFormat iformat;
@@ -541,6 +541,20 @@ namespace Eskuvo_tervezo.Pages
         void BT_DownloadPicture_Click(object sender, RoutedEventArgs e)
         {
             DownloadAllVenuePicture();
+        }
+
+        private void HandlePreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+
+            if(e.Delta >0)
+            {
+                PicsScrollViewer.ScrollToVerticalOffset(PicsScrollViewer.VerticalOffset - (10 + PicsScrollViewer.ScrollableHeight/10 > 30 ? 30 : PicsScrollViewer.ScrollableHeight / 10));
+            }
+            else if (e.Delta <0)
+            {
+                PicsScrollViewer.ScrollToVerticalOffset(PicsScrollViewer.VerticalOffset + (10 + PicsScrollViewer.ScrollableHeight / 10 > 30 ? 30 : PicsScrollViewer.ScrollableHeight / 10));
+            }
+
         }
     }
 }

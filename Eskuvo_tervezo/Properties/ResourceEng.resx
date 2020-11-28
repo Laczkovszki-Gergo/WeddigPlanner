@@ -139,7 +139,7 @@
     <value>Username</value>
   </data>
   <data name="Message_Reg" xml:space="preserve">
-    <value>This username is reserved</value>
+    <value>This username is reserved!</value>
   </data>
   <data name="Tbl_Reg" xml:space="preserve">
     <value>Registration</value>
@@ -588,5 +588,11 @@ Weddig Planner</value>
   </data>
   <data name="LB_Quote" xml:space="preserve">
     <value>Quote</value>
+  </data>
+  <data name="Message_InternetConnection" xml:space="preserve">
+    <value>Your internet connection is disconnected, the internet radio will be unavailable!</value>
+  </data>
+  <data name="Message_InternetConnectionTitle" xml:space="preserve">
+    <value>Internet connection</value>
   </data>
 </root>

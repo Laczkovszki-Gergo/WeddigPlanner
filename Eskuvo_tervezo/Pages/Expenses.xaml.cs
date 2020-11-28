@@ -282,6 +282,24 @@ namespace Eskuvo_tervezo.Pages
             else
                 LB_Amount.Foreground = Brushes.Red;
         }
+        void SaveExpense()
+        {
+            if (CB_Offer.SelectedIndex > -1)
+            {
+                if (f.IsName(TB_Expense, TB_Expense.Text.Trim(), (rm as ResourceManager)) && f.IsNumber(TB_Cost, f.StringRemoveWhiteSpace(TB_Cost.Text.Trim()), (rm as ResourceManager)) && f.IsNumber(TB_Count, f.StringRemoveWhiteSpace(TB_Count.Text.Trim()), (rm as ResourceManager)))
+                {
+                    Exp = WPE.WeddingExpenses.FirstOrDefault(x => x.ID.Equals(Wedding.ID));
+                    Models.WeddingExpenses wexp = new Models.WeddingExpenses();
+                    wexp.ExpenseName = TB_Expense.Text.Trim();
+                    wexp.Expense = Convert.ToInt32(f.StringRemoveWhiteSpace(TB_Cost.Text.Trim()));
+                    wexp.VenueID = VenueIDs[CB_Offer.SelectedIndex];
+                    wexp.Count = Convert.ToInt32(f.StringRemoveWhiteSpace(TB_Count.Text));
+                    WPE.WeddingExpenses.Add(wexp);
+                    WPE.SaveChanges();
+                    CreateExpenseList((rm as ResourceManager));
+                }
+            }
+        }
 
         internal void DeleteExpense(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
@@ -307,21 +325,7 @@ namespace Eskuvo_tervezo.Pages
         }
         void BT_Save_Click(object sender, RoutedEventArgs e)
         {
-            if(CB_Offer.SelectedIndex >-1)
-            {
-                if (f.isContactName(TB_Expense, TB_Expense.Text.Trim(), (rm as ResourceManager)) && f.IsNumber(TB_Cost, f.StringRemoveWhiteSpace(TB_Cost.Text.Trim()), (rm as ResourceManager)) && f.IsNumber(TB_Count, f.StringRemoveWhiteSpace(TB_Count.Text.Trim()), (rm as ResourceManager)))
-                {
-                    Exp = WPE.WeddingExpenses.FirstOrDefault(x => x.ID.Equals(Wedding.ID));
-                    Models.WeddingExpenses wexp = new Models.WeddingExpenses();
-                    wexp.ExpenseName = TB_Expense.Text.Trim();
-                    wexp.Expense = Convert.ToInt32(f.StringRemoveWhiteSpace(TB_Cost.Text.Trim()));
-                    wexp.VenueID = VenueIDs[CB_Offer.SelectedIndex];
-                    wexp.Count = Convert.ToInt32(f.StringRemoveWhiteSpace(TB_Count.Text));
-                    WPE.WeddingExpenses.Add(wexp);
-                    WPE.SaveChanges();
-                    CreateExpenseList((rm as ResourceManager));
-                }
-            }
+            SaveExpense();
         }
         void CB_Offer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

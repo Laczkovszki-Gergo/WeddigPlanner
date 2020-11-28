@@ -1078,6 +1078,24 @@ namespace Eskuvo_tervezo.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your internet connection is disconnected, the internet radio will be unavailable!.
+        /// </summary>
+        public static string Message_InternetConnection {
+            get {
+                return ResourceManager.GetString("Message_InternetConnection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internet connection.
+        /// </summary>
+        public static string Message_InternetConnectionTitle {
+            get {
+                return ResourceManager.GetString("Message_InternetConnectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure you want logout?.
         /// </summary>
         public static string Message_LogoutText {
@@ -1096,7 +1114,7 @@ namespace Eskuvo_tervezo.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This username is reserved.
+        ///   Looks up a localized string similar to This username is reserved!.
         /// </summary>
         public static string Message_Reg {
             get {

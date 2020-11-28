@@ -102,30 +102,30 @@ namespace Eskuvo_tervezo.Pages
         void Modification()
         {
             System.Windows.Input.Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
-            var result = WPE.Login.SingleOrDefault(b => b.IDLogin == ActualUser.IDLogin);
+            Models.Login _user = WPE.Login.SingleOrDefault(b => b.IDLogin == ActualUser.IDLogin);
 
-            if(result != null && f.IsYourPassword(T_OldPassword, T_OldPassword.Password, ActualUser, (rm as ResourceManager)))
+            if(_user != null && f.IsYourPassword(T_OldPassword, T_OldPassword.Password, ActualUser, (rm as ResourceManager)))
             {
 
                 if (TB_user.Text != string.Empty)
                 {
-                    if (f.isContactName(TB_user, TB_user.Text.Trim(), (rm as ResourceManager)))
-                        result.User = TB_user.Text.Trim();
+                    if (f.IsName(TB_user, TB_user.Text.Trim(), (rm as ResourceManager)))
+                        _user.User = TB_user.Text.Trim();
                 }
                 if(T_passwd.Password != string.Empty || T_passwdAgain.Password != string.Empty)
                 {
                     if (f.IsPassword(T_passwd, T_passwd.Password, (rm as ResourceManager)) && f.IsPasswordAreEqual(T_passwd, T_passwdAgain, T_passwd.Password, T_passwdAgain.Password, (rm as ResourceManager)))
-                        result.Password = f.Encrypt(T_passwd.Password.Trim());
+                        _user.Password = f.Encrypt(T_passwd.Password.Trim());
 
                 }
                 if(TB_email.Text != string.Empty)
                 {
                     if (f.IsValidEmail(TB_email, TB_email.Text.Trim(), (rm as ResourceManager)))
-                        result.EmailAddress = TB_email.Text.Trim();
+                        _user.EmailAddress = TB_email.Text.Trim();
                 }
                 WPE.SaveChanges();
                 WPE = new Models.WeddingPlannerEntities();
-                ActualUser = WPE.Login.FirstOrDefault(x => x.IDLogin.Equals(ActualUser.IDLogin));
+                ActualUser = _user;
                 h.LB_TitleHome.Content = h.LB_TitleHome.Content.ToString().Split(' ')[0] + " " + ActualUser.User.Trim();
             }
             System.Windows.Input.Mouse.OverrideCursor = null;

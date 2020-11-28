@@ -119,7 +119,7 @@
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Click="BT_BrowsePicture_Click"/>
                 <materialDesign:PackIcon x:Name="Tooltip_ImageReset" Kind="DeleteCircleOutline" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Foreground="{DynamicResource TextForeColors}" 
-                                         ToolTip="{x:Static properties:ResourceHu.Tooltip_ImageReset}" MouseLeftButtonDown="Tooltip_ImageReset_MouseLeftButtonDown" Cursor="Hand"></materialDesign:PackIcon>
+                                         ToolTip="{x:Static properties:ResourceHu.Tooltip_ImageReset}" MouseLeftButtonDown="Tooltip_ImageReset_MouseLeftButtonDown" Cursor="Hand" FontSize="20"></materialDesign:PackIcon>
             </StackPanel>
 
 

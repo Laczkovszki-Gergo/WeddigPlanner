@@ -135,16 +135,14 @@ namespace Eskuvo_tervezo
             l.TimeStamp = DateTime.Now;
             l.UserID = UserId;
             l.WindowsUser = Environment.UserName;
-            l.IP_Address = f.GetIPAddress().ToString();
+            l.IP_Address = f.GetIPAddress(rm, ResourceNames) != null ? f.GetIPAddress(rm, ResourceNames).ToString() : null;
             l.Mac_Address = f.GetMacAddress();
             WPE.Log.Add(l);
             WPE.SaveChanges();
-
         }
         void ReNewPassword()
         {
-
-            if (f.isContactName(TB_user, TB_user.Text.Trim(), rm))
+            if (f.IsName(TB_user, TB_user.Text.Trim(), rm))
             {
                 ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems(rm.GetString("Message_RenewPasswordTitle"), rm.GetString("Message_RenewPassword"), MaterialDesignThemes.Wpf.PackIconKind.WarningCircle);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);

@@ -4,10 +4,6 @@ D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\Eskuvo_tervezo.pdb
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\EntityFramework.dll
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\EntityFramework.SqlServer.dll
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\MaterialDesignThemes.Wpf.dll
-D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
-D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
-D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\Xceed.Wpf.Toolkit.dll
-D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\WPFToolkit.dll
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\EntityFramework.xml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\EntityFramework.SqlServer.xml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\bin\Debug\MaterialDesignThemes.Wpf.pdb
@@ -46,7 +42,6 @@ D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\DateView.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Expenses.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Guests.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Venue.baml
-D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\ResourceDictionary\AutoCompleteTextboxDictionary.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\ResourceDictionary\ButtonDictionary.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\ResourceDictionary\CalendarResource.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\ResourceDictionary\CheckBoxResource.baml
@@ -101,6 +96,6 @@ D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\RadioChannelModify.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\ResourceDictionary\Datepicker.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Advices.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Advices.baml
-D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\QuteModify.g.cs
-D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\QuteModify.baml
+D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\QouteModify.g.cs
+D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\QouteModify.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Eskuvo_tervezo.csprojResolveAssemblyReference.cache

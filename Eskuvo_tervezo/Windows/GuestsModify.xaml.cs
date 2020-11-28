@@ -67,7 +67,7 @@ namespace Eskuvo_tervezo.Windows
         void Modification()
         {
             var result = WPE.Guests.SingleOrDefault(b => b.Guest_ID == gue.Guest_ID);
-            if (result != null && f.isContactName(TB_Guest, TB_Guest.Text.Trim(), rm) && f.IsNumber(TB_GuestsCount, f.StringRemoveWhiteSpace(TB_GuestsCount.Text.Trim()), rm))
+            if (result != null && f.IsName(TB_Guest, TB_Guest.Text.Trim(), rm) && f.IsNumber(TB_GuestsCount, f.StringRemoveWhiteSpace(TB_GuestsCount.Text.Trim()), rm))
             {
                 result.Guest_Name = TB_Guest.Text.Trim();
                 result.Guest_Count = Convert.ToInt32(f.StringRemoveWhiteSpace(TB_GuestsCount.Text.Trim()));
@@ -102,6 +102,13 @@ namespace Eskuvo_tervezo.Windows
             if (e.Key == System.Windows.Input.Key.Enter)
             {
                 BT_Modification_Click(sender, e);
+            }
+        }
+        void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                this.Close();
             }
         }
     }

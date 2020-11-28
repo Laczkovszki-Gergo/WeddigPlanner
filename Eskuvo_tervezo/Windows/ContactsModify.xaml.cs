@@ -81,7 +81,7 @@ namespace Eskuvo_tervezo.Windows
         void Modification()
         {
             var result = WPE.Contacts.SingleOrDefault(b => b.Con_ID == Con.Con_ID);
-            if (result != null && f.isContactName(Tb_Name, Tb_Name.Text.Trim(), (rm as ResourceManager)) && f.IsValidEmail(Tb_Email, Tb_Email.Text.Trim(), (rm as ResourceManager)) && f.IsPhoneNumber(Tb_Phone, Tb_Phone.Text.Trim(), (rm as ResourceManager)))
+            if (result != null && f.IsName(Tb_Name, Tb_Name.Text.Trim(), (rm as ResourceManager)) && f.IsValidEmail(Tb_Email, Tb_Email.Text.Trim(), (rm as ResourceManager)) && f.IsPhoneNumber(Tb_Phone, Tb_Phone.Text.Trim(), (rm as ResourceManager)))
             {
                 result.Con_Name = Tb_Name.Text.Trim();
                 result.Con_Phone = Tb_Phone.Text.Trim();
@@ -120,6 +120,13 @@ namespace Eskuvo_tervezo.Windows
             if (e.Key == System.Windows.Input.Key.Enter)
             {
                 BT_Modification_Click(sender, e);
+            }
+        }
+        void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                this.Close();
             }
         }
     }

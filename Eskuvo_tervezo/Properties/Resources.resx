@@ -148,7 +148,7 @@
     <value>Regisztráció</value>
   </data>
   <data name="Message_Reg" xml:space="preserve">
-    <value>A felhasználónév foglalt</value>
+    <value>A felhasználónév foglalt!</value>
   </data>
   <data name="LB_Back" xml:space="preserve">
     <value>Vissza</value>
@@ -589,5 +589,11 @@ WeddingPlanner.</value>
   </data>
   <data name="LB_Quote" xml:space="preserve">
     <value>Idézet</value>
+  </data>
+  <data name="Message_InternetConnection" xml:space="preserve">
+    <value>Nincs internetkapcsolata, az internetrádió így működésképtelen lesz!</value>
+  </data>
+  <data name="Message_InternetConnectionTitle" xml:space="preserve">
+    <value>Internet kapcsolat</value>
   </data>
 </root>

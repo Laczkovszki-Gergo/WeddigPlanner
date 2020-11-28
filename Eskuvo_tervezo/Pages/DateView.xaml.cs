@@ -43,7 +43,7 @@ namespace Eskuvo_tervezo.Pages
             User = _User;
             h = _h;
         }
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        void Page_Loaded(object sender, RoutedEventArgs e)
         {
             RB_Actual.IsChecked = true;
             Disable_Enable_DatePickers();

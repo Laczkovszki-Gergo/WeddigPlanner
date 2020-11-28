@@ -75,7 +75,7 @@ namespace Eskuvo_tervezo.Windows
         void Modification()
         {
             var result = WPE.WeddingExpenses.SingleOrDefault(b => b.ID == exp.ID);
-            if (result != null && f.isContactName(TB_Expense, TB_Expense.Text.Trim(), rm) && f.IsNumber(TB_Cost, f.StringRemoveWhiteSpace(TB_Cost.Text.Trim()), rm) && f.IsNumber(TB_Count, f.StringRemoveWhiteSpace(TB_Count.Text.Trim()), rm))
+            if (result != null && f.IsName(TB_Expense, TB_Expense.Text.Trim(), rm) && f.IsNumber(TB_Cost, f.StringRemoveWhiteSpace(TB_Cost.Text.Trim()), rm) && f.IsNumber(TB_Count, f.StringRemoveWhiteSpace(TB_Count.Text.Trim()), rm))
             {
                 result.ExpenseName = TB_Expense.Text.Trim();
                 result.Expense = Convert.ToInt32(f.StringRemoveWhiteSpace(TB_Cost.Text.Trim()));
@@ -123,6 +123,13 @@ namespace Eskuvo_tervezo.Windows
             if (e.Key == System.Windows.Input.Key.Enter)
             {
                 BT_Modification_Click(sender, e);
+            }
+        }
+        void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                this.Close();
             }
         }
     }

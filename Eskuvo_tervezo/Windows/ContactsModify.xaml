@@ -13,7 +13,8 @@
         Background="Transparent"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        Topmost="True">
+        Topmost="True"
+        KeyDown="Window_KeyDown">
 
     <Window.Resources>
         <ResourceDictionary>

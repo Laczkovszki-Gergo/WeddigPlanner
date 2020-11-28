@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WeddingPlannerModelStoreContainer" CdmEntityContainer="WeddingPlannerEntities">
+    <EntitySetMapping Name="Calendar">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.Calendar">
+        <MappingFragment StoreEntitySet="Calendar">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalendarLogEntrys">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.CalendarLogEntrys">
+        <MappingFragment StoreEntitySet="CalendarLogEntrys">
+          <ScalarProperty Name="LogEntry" ColumnName="LogEntry" />
+          <ScalarProperty Name="CalID" ColumnName="CalID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.Contacts">
+        <MappingFragment StoreEntitySet="Contacts">
+          <ScalarProperty Name="Con_Email" ColumnName="Con_Email" />
+          <ScalarProperty Name="Con_Phone" ColumnName="Con_Phone" />
+          <ScalarProperty Name="Con_Name" ColumnName="Con_Name" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Con_ID" ColumnName="Con_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Guests">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.Guests">
+        <MappingFragment StoreEntitySet="Guests">
+          <ScalarProperty Name="Bride_Groom" ColumnName="Bride_Groom" />
+          <ScalarProperty Name="Guest_Count" ColumnName="Guest_Count" />
+          <ScalarProperty Name="Guest_Name" ColumnName="Guest_Name" />
+          <ScalarProperty Name="Wedding_ID" ColumnName="Wedding_ID" />
+          <ScalarProperty Name="Guest_ID" ColumnName="Guest_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="Mac_Address" ColumnName="Mac_Address" />
+          <ScalarProperty Name="IP_Address" ColumnName="IP_Address" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="WindowsUser" ColumnName="WindowsUser" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IDLog" ColumnName="IDLog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="IDLogin" ColumnName="IDLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Radio">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.Radio">
+        <MappingFragment StoreEntitySet="Radio">
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Chosen" ColumnName="Chosen" />
+          <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+          <ScalarProperty Name="StreamLink" ColumnName="StreamLink" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeddingData">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingData">
+        <MappingFragment StoreEntitySet="WeddingData">
+          <ScalarProperty Name="Quote" ColumnName="Quote" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="GroomName" ColumnName="GroomName" />
+          <ScalarProperty Name="BrideName" ColumnName="BrideName" />
+          <ScalarProperty Name="Wedding_Date" ColumnName="Wedding_Date" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeddingExpenses">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingExpenses">
+        <MappingFragment StoreEntitySet="WeddingExpenses">
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Expense" ColumnName="Expense" />
+          <ScalarProperty Name="ExpenseName" ColumnName="ExpenseName" />
+          <ScalarProperty Name="VenueID" ColumnName="VenueID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeddingVenue">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingVenue">
+        <MappingFragment StoreEntitySet="WeddingVenue">
+          <ScalarProperty Name="Venue_Address" ColumnName="Venue_Address" />
+          <ScalarProperty Name="Wedding_Venue" ColumnName="Wedding_Venue" />
+          <ScalarProperty Name="WeddingID" ColumnName="WeddingID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeddingVenueImages">
+      <EntityTypeMapping TypeName="WeddingPlannerModel.WeddingVenueImages">
+        <MappingFragment StoreEntitySet="WeddingVenueImages">
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="WeddingVenueID" ColumnName="WeddingVenueID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -70,7 +70,7 @@ namespace Eskuvo_tervezo.Windows
         void Modification()
         {
             var result = WPE.WeddingVenue.SingleOrDefault(b => b.ID == ven.ID);
-            if (result != null && f.isContactName(TB_Venue, TB_Venue.Text.Trim(), rm) && f.isContactName(TB_Address, TB_Address.Text.Trim(), rm))
+            if (result != null && f.IsName(TB_Venue, TB_Venue.Text.Trim(), rm) && f.IsName(TB_Address, TB_Address.Text.Trim(), rm))
             {
                 result.Wedding_Venue = TB_Venue.Text.Trim();
                 result.Venue_Address = TB_Address.Text.Trim();
@@ -90,6 +90,12 @@ namespace Eskuvo_tervezo.Windows
         {
             this.Close();
         }
-
+        void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

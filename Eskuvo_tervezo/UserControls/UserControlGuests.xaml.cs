@@ -38,11 +38,11 @@ namespace Eskuvo_tervezo.UserControls
             LoadFormats();
         }
 
-        void Icon_click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        void IconDelete_click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             gue.DeleteCLick(sender, e);
         }
-        void Icon2_click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        void IconModify_click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             int id = 0;
             Int32.TryParse((string)(sender as PackIcon).DataContext, out id);

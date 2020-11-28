@@ -189,8 +189,6 @@ namespace Eskuvo_tervezo.Windows
             Menu.Children.Add(new UserControlMenuItem(item8, this, rm)); 
             Menu.Children.Add(new UserControlMenuItem(item9, this, rm));
             Menu.Children.Add(new UserControlMenuItem(item10, this, rm));
-
-
         }
         internal void HighlightDay(CalendarDayButton button, DateTime date)
         {
@@ -529,7 +527,10 @@ namespace Eskuvo_tervezo.Windows
         }
         void timer_Tick(object sender, EventArgs e)
         {
-            LB_Time.Content = DateTime.Now.ToLongTimeString();
+            if(Hun)
+                LB_Time.Content = DateTime.Now.ToString("HH:mm:ss");
+            else
+                LB_Time.Content = DateTime.Now.ToString("hh:mm:ss tt", new CultureInfo("en-US"));
         }
         void LB_Today_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -623,11 +624,11 @@ namespace Eskuvo_tervezo.Windows
         }
         void Tbl_Qoute_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            WPE = new Models.WeddingPlannerEntities();
             if (WPE.WeddingData.Any(x => x.User_ID.Equals(ActualUser.IDLogin)))
             {
                 wedd = WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(ActualUser.IDLogin));
-                Windows.QuteModify qu = new Windows.QuteModify((rm as ResourceManager), wedd, ResourceNames, this);
+                Windows.QuoteModify qu = new Windows.QuoteModify((rm as ResourceManager), wedd, ResourceNames, this);
                 qu.Show();
             }
         }

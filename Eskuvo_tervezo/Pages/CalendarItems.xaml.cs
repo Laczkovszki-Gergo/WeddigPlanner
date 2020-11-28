@@ -53,7 +53,7 @@ namespace Eskuvo_tervezo.Pages
                 WPE.Calendar.Add(Cal);
                 WPE.SaveChanges();
             }
-            if (Cal != null && f.isNormalText(TB_LogEntry, TB_LogEntry.Text, (rm as ResourceManager)))
+            if (Cal != null && f.IsNormalText(TB_LogEntry, TB_LogEntry.Text, (rm as ResourceManager)))
             {
                 Models.CalendarLogEntrys cl = new Models.CalendarLogEntrys();
                 cl.CalID = Cal.ID;

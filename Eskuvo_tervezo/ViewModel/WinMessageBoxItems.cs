@@ -18,7 +18,6 @@ namespace Eskuvo_tervezo.ViewModel
             Text = text;
             Icon = icon;
         }
-        public string ItemResourceName { get; set; }
         public string Header { get; set; }
         public PackIconKind Icon { get; set; }
         public string Text { get; set; }

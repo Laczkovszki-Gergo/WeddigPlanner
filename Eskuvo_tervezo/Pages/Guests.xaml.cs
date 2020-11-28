@@ -45,7 +45,6 @@ namespace Eskuvo_tervezo.Pages
         void Page_Loaded(object sender, RoutedEventArgs e)
         {
             Wedding = WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(User.IDLogin));
-
             LoadFormats((rm as ResourceManager), ResourceNames);
             BT_ExportToExcel.Visibility = Visibility.Hidden;
             CreateGuestList((rm as ResourceManager));
@@ -138,7 +137,7 @@ namespace Eskuvo_tervezo.Pages
             WPE = new Models.WeddingPlannerEntities();
             if((sender as Button).Name == "BT_SaveGroom")
             {
-                if (f.isContactName(TB_GroomGuests, TB_GroomGuests.Text.Trim(), (rm as ResourceManager)) && f.IsNumber(TB_GroomGuestsCount, f.StringRemoveWhiteSpace(TB_GroomGuestsCount.Text.Trim()), (rm as ResourceManager)))
+                if (f.IsName(TB_GroomGuests, TB_GroomGuests.Text.Trim(), (rm as ResourceManager)) && f.IsNumber(TB_GroomGuestsCount, f.StringRemoveWhiteSpace(TB_GroomGuestsCount.Text.Trim()), (rm as ResourceManager)))
                 {
                     Models.Guests gue = new Models.Guests();
                     gue.Guest_Name = TB_GroomGuests.Text.Trim();
@@ -152,7 +151,7 @@ namespace Eskuvo_tervezo.Pages
             }
             else if ((sender as Button).Name == "BT_SaveBride")
             {
-                if (f.isContactName(TB_BrideGuests, TB_BrideGuests.Text.Trim(), (rm as ResourceManager)) && f.IsNumber(TB_BrideGuestsCount, f.StringRemoveWhiteSpace(TB_BrideGuestsCount.Text.Trim()), (rm as ResourceManager)))
+                if (f.IsName(TB_BrideGuests, TB_BrideGuests.Text.Trim(), (rm as ResourceManager)) && f.IsNumber(TB_BrideGuestsCount, f.StringRemoveWhiteSpace(TB_BrideGuestsCount.Text.Trim()), (rm as ResourceManager)))
                 {
                     Models.Guests gue = new Models.Guests();
                     gue.Guest_Name = TB_BrideGuests.Text.Trim();
@@ -201,8 +200,6 @@ namespace Eskuvo_tervezo.Pages
                 Microsoft.Office.Interop.Excel.XlColorIndex.xlColorIndexAutomatic);
                 xlWorkSheet.Range[rang].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
                 xlWorkSheet.Range[rang].VerticalAlignment = Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignCenter;
-
-
 
                 for (int i = 0; i < BrideGuestList.Count; i++)
                 {
@@ -316,7 +313,6 @@ namespace Eskuvo_tervezo.Pages
         }
         void TB_GroomGuests_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-
             if (e.Key == System.Windows.Input.Key.Enter)
             {
                 BT_SaveGroom_Click(sender, e);

@@ -69,7 +69,7 @@ namespace Eskuvo_tervezo.Windows
         void Modification()
         {
             Models.Radio result = WPE.Radio.SingleOrDefault(b => b.ID == rad.ID);
-            if (result != null && f.isNormalText(TB_StreamLink, TB_StreamLink.Text.Trim(), rm) && f.isNormalText(TB_RadioChannelName, TB_RadioChannelName.Text.Trim(), rm))
+            if (result != null && f.IsNormalText(TB_StreamLink, TB_StreamLink.Text.Trim(), rm) && f.IsNormalText(TB_RadioChannelName, TB_RadioChannelName.Text.Trim(), rm))
             {
                 result.StreamLink = TB_StreamLink.Text.Trim();
                 result.ChannelName = TB_RadioChannelName.Text.Trim();
@@ -100,6 +100,13 @@ namespace Eskuvo_tervezo.Windows
             if (e.Key == System.Windows.Input.Key.Enter)
             {
                 BT_Modification_Click(sender, e);
+            }
+        }
+        void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Escape)
+            {
+                this.Close();
             }
         }
     }

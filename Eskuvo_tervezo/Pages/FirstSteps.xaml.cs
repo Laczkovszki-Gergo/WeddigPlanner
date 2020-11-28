@@ -157,7 +157,7 @@ namespace Eskuvo_tervezo.Pages
         }
         void Save()
         {
-            if (f.isContactName(TB_BrideName, TB_BrideName.Text.Trim(), (rm as ResourceManager)) && f.isContactName(TB_GroomName, TB_GroomName.Text.Trim(), (rm as ResourceManager)) && 
+            if (f.IsName(TB_BrideName, TB_BrideName.Text.Trim(), (rm as ResourceManager)) && f.IsName(TB_GroomName, TB_GroomName.Text.Trim(), (rm as ResourceManager)) && 
                 f.IsDatetime(DateP, DateP.Text.Trim(), (rm as ResourceManager)) && f.IsNumber(TB_Budget, f.StringRemoveWhiteSpace(TB_Budget.Text.Trim()), (rm as ResourceManager)))
             {
                 System.Windows.Input.Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;

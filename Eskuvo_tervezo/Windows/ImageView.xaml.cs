@@ -40,6 +40,7 @@ public partial class ImageView : Window
             ImagePics.Source = pics.Source;
             Pics = pics;
             Allpics = allpics;
+
             if (allpics.Length == 1)
                 index = 0;
             else

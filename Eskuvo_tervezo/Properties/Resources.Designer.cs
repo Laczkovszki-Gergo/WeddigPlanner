@@ -1078,6 +1078,24 @@ namespace Eskuvo_tervezo.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nincs internetkapcsolata, az internetrádió így működésképtelen lesz!.
+        /// </summary>
+        public static string Message_InternetConnection {
+            get {
+                return ResourceManager.GetString("Message_InternetConnection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internet kapcsolat.
+        /// </summary>
+        public static string Message_InternetConnectionTitle {
+            get {
+                return ResourceManager.GetString("Message_InternetConnectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Biztosan kijelentkezik?.
         /// </summary>
         public static string Message_LogoutText {
@@ -1096,7 +1114,7 @@ namespace Eskuvo_tervezo.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A felhasználónév foglalt.
+        ///   Looks up a localized string similar to A felhasználónév foglalt!.
         /// </summary>
         public static string Message_Reg {
             get {
