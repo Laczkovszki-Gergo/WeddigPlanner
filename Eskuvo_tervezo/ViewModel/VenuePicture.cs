@@ -8,9 +8,9 @@ using System.Windows.Media.Imaging;
 
 namespace Eskuvo_tervezo.ViewModel
 {
-    public class Pictures
+    public class VenuePicture
     {
-        public Pictures(int id,string title, BitmapImage imageData, double wid, double hei)
+        public VenuePicture(int id,string title, BitmapImage imageData, double wid, double hei)
         {
             ID = id;
             Title = title;

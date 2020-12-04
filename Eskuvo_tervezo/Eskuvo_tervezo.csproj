@@ -182,11 +182,11 @@
     <Compile Include="UserControls\UserControlComparsion.xaml.cs">
       <DependentUpon>UserControlComparsion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UsercontrolContacts.xaml.cs">
-      <DependentUpon>UsercontrolContacts.xaml</DependentUpon>
+    <Compile Include="UserControls\UserControlContacts.xaml.cs">
+      <DependentUpon>UserControlContacts.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UsercontrolDates.xaml.cs">
-      <DependentUpon>UsercontrolDates.xaml</DependentUpon>
+    <Compile Include="UserControls\UserControlDates.xaml.cs">
+      <DependentUpon>UserControlDates.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlExpenses.xaml.cs">
       <DependentUpon>UserControlExpenses.xaml</DependentUpon>
@@ -197,17 +197,17 @@
     <Compile Include="UserControls\UserControlMenuItem.xaml.cs">
       <DependentUpon>UserControlMenuItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\CalLogEntrys.cs" />
+    <Compile Include="ViewModel\CalLogEntry.cs" />
     <Compile Include="ViewModel\Comparsion.cs" />
-    <Compile Include="ViewModel\Cont.cs" />
+    <Compile Include="ViewModel\Contact.cs" />
     <Compile Include="ViewModel\DateView.cs" />
-    <Compile Include="ViewModel\VenueItems.cs" />
-    <Compile Include="ViewModel\Expenses.cs" />
-    <Compile Include="ViewModel\Guests.cs" />
+    <Compile Include="ViewModel\VenueItem.cs" />
+    <Compile Include="ViewModel\Expense.cs" />
+    <Compile Include="ViewModel\Guest.cs" />
     <Compile Include="ViewModel\ItemMenu.cs" />
-    <Compile Include="ViewModel\Pictures.cs" />
+    <Compile Include="ViewModel\VenuePicture.cs" />
     <Compile Include="ViewModel\SubItem.cs" />
-    <Compile Include="ViewModel\WinMessageBoxItems.cs" />
+    <Compile Include="ViewModel\WinMessageBoxItem.cs" />
     <Compile Include="Windows\ContactsModify.xaml.cs">
       <DependentUpon>ContactsModify.xaml</DependentUpon>
     </Compile>
@@ -369,11 +369,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\UsercontrolContacts.xaml">
+    <Page Include="UserControls\UserControlContacts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\UsercontrolDates.xaml">
+    <Page Include="UserControls\UserControlDates.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

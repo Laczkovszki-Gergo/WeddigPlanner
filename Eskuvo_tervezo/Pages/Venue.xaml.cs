@@ -32,13 +32,13 @@ namespace Eskuvo_tervezo.Pages
         Windows.Functions f = new Windows.Functions();
 
         List<Models.Guests> guestList = new List<Models.Guests>();
-        List<ViewModel.VenueItems> exitems = new List<ViewModel.VenueItems>();
-        List<ViewModel.Pictures> p = new List<ViewModel.Pictures>();
+        List<ViewModel.VenueItem> exitems = new List<ViewModel.VenueItem>();
+        List<ViewModel.VenuePicture> p = new List<ViewModel.VenuePicture>();
         List<BitmapImage> Bitimages = new List<BitmapImage>();
 
         Models.WeddingVenue[] Venues;
 
-        ViewModel.VenueItems e;
+        ViewModel.VenueItem e;
         string[] ResourceNames;
         int[] VenueIDs;
 
@@ -119,7 +119,7 @@ namespace Eskuvo_tervezo.Pages
 
                         picsbwid = (this.WindowWidth * 4 / 6 - 150) / 3;
                         picsbhei = (this.WindowHeight * 10 / 17) / 2;
-                        ViewModel.Pictures pics = new ViewModel.Pictures(images[i].ID, images[i].ImageName.Trim(), bi, picsbwid, picsbhei);
+                        ViewModel.VenuePicture pics = new ViewModel.VenuePicture(images[i].ID, images[i].ImageName.Trim(), bi, picsbwid, picsbhei);
 
                         Bitimages.Add(bi);
                         p.Add(pics);
@@ -144,10 +144,10 @@ namespace Eskuvo_tervezo.Pages
             {
                 Venues = WPE.WeddingVenue.Where(x => x.WeddingID.Equals(Wedding.ID)).ToArray();
                 VenueIDs = Venues.Select(x => x.ID).ToArray();
-                exitems = new List<ViewModel.VenueItems>();
+                exitems = new List<ViewModel.VenueItem>();
                 for (int i = 0; i < Venues.Length; i++)
                 {
-                    e = new ViewModel.VenueItems(Venues[i].Wedding_Venue, Venues[i].Venue_Address);
+                    e = new ViewModel.VenueItem(Venues[i].Wedding_Venue, Venues[i].Venue_Address);
                     exitems.Add(e);
                 }
                 CB_Venue.ItemsSource = exitems;
@@ -162,10 +162,10 @@ namespace Eskuvo_tervezo.Pages
             {
                 Venues = WPE.WeddingVenue.Where(x => x.WeddingID.Equals(Wedding.ID)).ToArray();
                 VenueIDs = Venues.Select(x => x.ID).ToArray();
-                exitems = new List<ViewModel.VenueItems>();
+                exitems = new List<ViewModel.VenueItem>();
                 for (int i = 0; i < Venues.Length; i++)
                 {
-                    e = new ViewModel.VenueItems(Venues[i].Wedding_Venue, Venues[i].Venue_Address);
+                    e = new ViewModel.VenueItem(Venues[i].Wedding_Venue, Venues[i].Venue_Address);
                     exitems.Add(e);
                 }
                 CB_Venue.ItemsSource = exitems;
@@ -201,7 +201,7 @@ namespace Eskuvo_tervezo.Pages
             }
             catch (Exception ex)
             {
-                ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems("Error", ex.Message, PackIconKind.Error);
+                ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem("Error", ex.Message, PackIconKind.Error);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, false);
                 msb.Show();
                 System.Windows.Input.Mouse.OverrideCursor = null;
@@ -251,7 +251,7 @@ namespace Eskuvo_tervezo.Pages
             }
             catch (Exception ex)
             {
-                ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems("Error", ex.Message, PackIconKind.Error);
+                ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem("Error", ex.Message, PackIconKind.Error);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, false);
                 msb.Show();
             }
@@ -259,7 +259,7 @@ namespace Eskuvo_tervezo.Pages
         void DeletePicture(int id)
         {
 
-            ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeletePics"), PackIconKind.WarningCircle);
+            ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeletePics"), PackIconKind.WarningCircle);
             Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
 
             if (msb.ShowDialog() == true)
@@ -289,7 +289,7 @@ namespace Eskuvo_tervezo.Pages
             if (CB_Venue.SelectedIndex > -1)
             {
                 int VenID = VenueIDs[CB_Venue.SelectedIndex];
-                ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteVenue"), PackIconKind.WarningCircle);
+                ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteVenue"), PackIconKind.WarningCircle);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
 
                 if (msb.ShowDialog() == true)
@@ -302,7 +302,7 @@ namespace Eskuvo_tervezo.Pages
 
                         if (WPE.WeddingExpenses.Any(x => x.VenueID.Equals(ven.ID)))
                         {
-                            wmsb = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteExpense"), PackIconKind.WarningCircle);
+                            wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteExpense"), PackIconKind.WarningCircle);
                             msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
 
                             if (msb.ShowDialog() == true)
@@ -374,7 +374,7 @@ namespace Eskuvo_tervezo.Pages
                 }
 
                 bitmap.Save(dialog.FileName,iformat);
-                ViewModel.WinMessageBoxItems wmsgbi = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("MessageBoxSaveTitle"), (rm as ResourceManager).GetString("MessageBoxSaveText"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircle);
+                ViewModel.WinMessageBoxItem wmsgbi = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("MessageBoxSaveTitle"), (rm as ResourceManager).GetString("MessageBoxSaveText"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircle);
                 Windows.WinMessageBox wmsg = new Windows.WinMessageBox(wmsgbi, (rm as ResourceManager), ResourceNames, false);
                 wmsg.Show();
             }
@@ -437,7 +437,7 @@ namespace Eskuvo_tervezo.Pages
 
                         bitmap.Save(dialog.FileName.Split('.')[0] + @"\"+p[i].Title.Split('.')[0] +"."+ iformat.ToString(), iformat);
                     }
-                    ViewModel.WinMessageBoxItems wmsgbi = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("MessageBoxSaveTitle"), (rm as ResourceManager).GetString("MessageBoxSaveText"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircle);
+                    ViewModel.WinMessageBoxItem wmsgbi = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("MessageBoxSaveTitle"), (rm as ResourceManager).GetString("MessageBoxSaveText"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircle);
                     Windows.WinMessageBox wmsg = new Windows.WinMessageBox(wmsgbi, (rm as ResourceManager), ResourceNames, false);
                     wmsg.Show();
                     System.Windows.Input.Mouse.OverrideCursor = null;

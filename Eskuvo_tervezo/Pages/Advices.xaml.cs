@@ -36,12 +36,12 @@ namespace Eskuvo_tervezo.Pages
             Tbl_Advices.Text = null;
             Tbl_Advices.Inlines.Add(new Run("Ha megtörtént az eljegyzés és már azonnal bele akartok fogni az esküvő \nszervezésébe pár fontos teendő, amin el is kezdhettek gondolkodni.\n\n") { FontWeight = FontWeights.Bold, FontSize = 30});
             Tbl_Advices.Inlines.Add(
-    "o Beszéljétek meg az esküvő dátumát.\n"+
+    "o Beszéljétek meg az esküvő dátumát.\n" +
     "o Beszéljétek meg a költségkeretet, amit az esküvő szeretnétek szánni és hogy ki mennyit tud magára vállalni.\n" +
     "o Esküvői meghívón kezdjetek el gondolkodni.\n" +
     "o Készítsetek egy kezdeti vendéglistát, hogy hány főt szeretnétek a szertartásokon, illetve a lakodalmi részen vendégül látni.\n" +
     "  Ennek a körülbelüli számnak jelentősége lesz a helyszínválasztásnál, hisz minden vendéglátó helyszínnek más - más a befogadóképessége.\n" +
-    "o Kezdjetek el esküvői helyszíneket nézni(itt már fontos, hogy a dátumról legyen elképzelésetek) Ha felkapott helyszínt néztetek ki\n" +
+    "o Kezdjetek el esküvői helyszíneket nézni (itt már fontos, hogy a dátumról legyen elképzelésetek) Ha felkapott helyszínt néztetek ki\n" +
     "  magatoknak abban az esetben érdemes dátumilag egy B opciót is választani. Esetleg tegyétek fel magatoknak azt a kérdést, hogy a helyszínhez\n" +
     "  ragaszkodtok vagy a dátumhoz.\n" +
     "o A legfontosabb, hogy a szervezés úgy történjen, hogy minden kiválasztott szolgáltató vagy helyszín nektek legyen jó és nem másnak, hisz ez a\n" +
@@ -60,7 +60,7 @@ namespace Eskuvo_tervezo.Pages
     "o Kezdj el esküvői ruhákat nézelődni. Ha több szalon kínálatát is meg szeretnéd nézni fontos, hogy a ruhapróbát próbáld egy napra betenni,\n" +
     "  hogy nehogy utólag bánd meg, hogy elvitték az általad áhított ruhát! De az a legfontosabb, hogy te jól érzed magad a ruhádban.\n" +
     "  A vőlegénynek az öltözetére több idő is elegendő, de azt se hagyjátok az utolsó pillanatokra.\n" +
-    "o Ha ezekkel megvagy akkor már nagyjából meg is szerevezted az esküvődet!\n\n");
+    "o Ha ezekkel megvagy akkor már nagyjából meg is szervezted az esküvődet!\n\n");
             Tbl_Advices.Inlines.Add(new Run("Esküvő előtt 4 - 8 hónappal\n\n") { FontWeight = FontWeights.Bold, FontSize = 26 });
             Tbl_Advices.Inlines.Add(
     "o Véglegesítsétek le a meghívottak listáját.\n" +
@@ -94,7 +94,7 @@ namespace Eskuvo_tervezo.Pages
                 );
             Tbl_Advices.Inlines.Add(new Run("Esküvő előtt 1 héttel\n\n") { FontWeight = FontWeights.Bold, FontSize = 26 });
             Tbl_Advices.Inlines.Add(
-  "o Egyeztessetek a helyszínnel a végleges létszámról és a foglalt szobákról ha erre szükség van.\n" +
+  "o Egyeztessetek a helyszínnel a végleges létszámról és a foglalt szobákról, ha erre szükség van.\n" +
   "o Beszéljétek át mégegyszer, hogy mindenki tudja e pontosan az általa elvállalt feladat menetét.\n" +
   "o Szolgáltatókkal való egyeztetés.\n\n"
                 );
@@ -113,6 +113,7 @@ namespace Eskuvo_tervezo.Pages
     "o Intézzétek az esküvői költségeket.\n" +
     "o Minden bérelt vagy kölcsönkért tárgyat juttassatok vissza.\n" +
     "o Esküvői ajándékok elszállítása.");
+
 
         }
     }

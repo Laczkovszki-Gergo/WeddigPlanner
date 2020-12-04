@@ -71,7 +71,7 @@ namespace Eskuvo_tervezo.Pages
             Items.Children.Clear();
             foreach (var item in CalEntrys.Where(x => x.CalID.Equals(Cal.ID)).Reverse().ToList())
                 {
-                    var it = new ViewModel.CalLogEntrys(item.LogEntry.Trim(), item.ID.ToString());
+                    var it = new ViewModel.CalLogEntry(item.LogEntry.Trim(), item.ID.ToString());
                     Items.Children.Add(new UserControls.UserControlCalItems(it,Cal, (_rm as ResourceManager),Resourcenames, this));
                 }
             h.RefreshCalendarArray();
@@ -83,7 +83,7 @@ namespace Eskuvo_tervezo.Pages
             Items.Children.Clear();
             foreach (var item in CalEntrys.Where(x => x.CalID.Equals(Cal.ID)).Reverse().ToList())
             {
-                var it = new ViewModel.CalLogEntrys(item.LogEntry.Trim(), item.ID.ToString());
+                var it = new ViewModel.CalLogEntry(item.LogEntry.Trim(), item.ID.ToString());
                 Items.Children.Add(new UserControls.UserControlCalItems(it, Cal,(rm as ResourceManager), Resourcenames, this));
             }
             h.RefreshCalendarArray();
@@ -117,7 +117,7 @@ namespace Eskuvo_tervezo.Pages
             int id = 0;
             Int32.TryParse((string)(sender as PackIcon).DataContext, out id);
 
-            ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_Delete"), PackIconKind.WarningCircle);
+            ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_Delete"), PackIconKind.WarningCircle);
             Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), Resourcenames, null);
 
             if (msb.ShowDialog() == true)

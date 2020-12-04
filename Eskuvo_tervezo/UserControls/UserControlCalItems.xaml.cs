@@ -31,7 +31,7 @@ namespace Eskuvo_tervezo.UserControls
 
         object rm = null;
 
-        public UserControlCalItems(ViewModel.CalLogEntrys item, Models.Calendar _Cal, ResourceManager _rm, string[] _ResourceNames,Pages.CalendarItems _cli)
+        public UserControlCalItems(ViewModel.CalLogEntry item, Models.Calendar _Cal, ResourceManager _rm, string[] _ResourceNames,Pages.CalendarItems _cli)
         {
             InitializeComponent();
             Cal = _Cal;
@@ -53,11 +53,11 @@ namespace Eskuvo_tervezo.UserControls
             }
         }
 
-        void Icon_click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        void IconDelete_click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             cli.DeleteCLick(sender, e);
         }
-        void Icon2_click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        void IconModify_click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             int id = 0;
             Int32.TryParse((string)(sender as PackIcon).DataContext, out id);

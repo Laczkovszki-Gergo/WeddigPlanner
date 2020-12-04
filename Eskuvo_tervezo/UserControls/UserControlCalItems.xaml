@@ -10,9 +10,9 @@
              >
     <Grid>
         <materialDesign:PackIcon x:Name="Tooltip_Delete" DataContext="{Binding Path=IconId}" Kind="Delete" Width="25" Height="25" Margin="5,16" HorizontalAlignment="Right" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" 
-                                 PreviewMouseLeftButtonDown="Icon_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Delete }" Panel.ZIndex="2"/>
+                                 PreviewMouseLeftButtonDown="IconDelete_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Delete }" Panel.ZIndex="2"/>
         <materialDesign:PackIcon x:Name="Tooltip_Modification" DataContext="{Binding Path=IconId}" Kind="Pen" Width="25" Height="25" Margin="35,16" HorizontalAlignment="Right" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20" 
-                                 PreviewMouseLeftButtonDown="Icon2_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Modification }" Panel.ZIndex="1"/>
+                                 PreviewMouseLeftButtonDown="IconModify_click" Cursor="Hand" ToolTip="{x:Static properties:ResourceHu.Tooltip_Modification }" Panel.ZIndex="1"/>
         <ListBoxItem x:Name="ListViewItemMenu" Content="{Binding Path=LogEntry}" Padding="37 13" Margin="0,0,65,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" VerticalAlignment="Center"
                      Foreground="{DynamicResource TextForeColors}" FontSize="15"/>
     </Grid>

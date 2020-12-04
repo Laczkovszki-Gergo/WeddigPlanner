@@ -156,24 +156,24 @@ namespace Eskuvo_tervezo.Windows
         internal void CreateMenu()
         {
             Menu.Children.Clear();
-            var item0 = new ItemMenu("Menu_Advices", rm.GetString("Menu_Advices"), new Pages.Advices(ActualUser,rm,ResourceNames), PackIconKind.Idea);
-            var item1 = new ItemMenu("Menu_FirstSteps", rm.GetString("Menu_FirstSteps"), new Pages.FirstSteps(ActualUser, rm, ResourceNames,this), PackIconKind.ManWoman);
+            var item0 = new ItemMenu(rm.GetString("Menu_Advices"), new Pages.Advices(ActualUser, rm, ResourceNames), PackIconKind.Idea);
+            var item1 = new ItemMenu(rm.GetString("Menu_FirstSteps"), new Pages.FirstSteps(ActualUser, rm, ResourceNames, this), PackIconKind.ManWoman);
 
             Menu.Children.Add(new UserControlMenuItem(item0, this, rm));
             Menu.Children.Add(new UserControlMenuItem(item1, this, rm));
 
             if (FirstStepReady())
             {
-                var item2 = new ItemMenu("Menu_DiaryDate", rm.GetString("Menu_DiaryDate"), new Pages.DateView(ActualUser, rm, ResourceNames, this), PackIconKind.BookAdd);
-                var item3 = new ItemMenu("Menu_Contact", rm.GetString("Menu_Contact"), new Pages.Contacts(ActualUser, rm, ResourceNames), PackIconKind.Contact);
-                var item4 = new ItemMenu("Menu_Guests", rm.GetString("Menu_Guests"), new Pages.Guests(ActualUser, rm, ResourceNames), PackIconKind.People);
+                var item2 = new ItemMenu(rm.GetString("Menu_DiaryDate"), new Pages.DateView(ActualUser, rm, ResourceNames, this), PackIconKind.BookAdd);
+                var item3 = new ItemMenu(rm.GetString("Menu_Contact"), new Pages.Contacts(ActualUser, rm, ResourceNames), PackIconKind.Contact);
+                var item4 = new ItemMenu(rm.GetString("Menu_Guests"), new Pages.Guests(ActualUser, rm, ResourceNames), PackIconKind.People);
 
                 var menu_expenses = new List<SubItem>();
-                menu_expenses.Add(new SubItem("Menu_Venue", rm.GetString("Menu_Venue"), new Pages.Venue(ActualUser, rm, ResourceNames)));                                                                                                             
-                menu_expenses.Add(new SubItem("Menu_ExpensesPlanned", rm.GetString("Menu_ExpensesPlanned"), new Pages.Expenses(ActualUser,rm,ResourceNames)));
-                var item5 = new ItemMenu("Menu_Expenses", rm.GetString("Menu_Expenses"), menu_expenses, PackIconKind.Money);
+                menu_expenses.Add(new SubItem(rm.GetString("Menu_Venue"), new Pages.Venue(ActualUser, rm, ResourceNames)));
+                menu_expenses.Add(new SubItem(rm.GetString("Menu_ExpensesPlanned"), new Pages.Expenses(ActualUser, rm, ResourceNames)));
+                var item5 = new ItemMenu(rm.GetString("Menu_Expenses"), menu_expenses, PackIconKind.Money);
 
-                var item6 = new ItemMenu("Menu_Comparsion", rm.GetString("Menu_Comparsion"), new Pages.Comparsion(ActualUser,rm,ResourceNames), PackIconKind.Compare);
+                var item6 = new ItemMenu(rm.GetString("Menu_Comparsion"), new Pages.Comparsion(ActualUser, rm, ResourceNames), PackIconKind.Compare);
 
                 Menu.Children.Add(new UserControlMenuItem(item2, this, rm));
                 Menu.Children.Add(new UserControlMenuItem(item3, this, rm));
@@ -181,12 +181,12 @@ namespace Eskuvo_tervezo.Windows
                 Menu.Children.Add(new UserControlMenuItem(item5, this, rm));
                 Menu.Children.Add(new UserControlMenuItem(item6, this, rm));
             }
-            var item7 = new ItemMenu("Menu_Radio", rm.GetString("Menu_Radio"), new Pages.Radio(ActualUser,rm,ResourceNames,main,this), PackIconKind.Radio);
-            var item8 = new ItemMenu("Menu_Settings", rm.GetString("Menu_Settings"), new Pages.Settings(ActualUser,rm, ResourceNames,this), PackIconKind.Settings);
-            var item9 = new ItemMenu("Menu_Logout", rm.GetString("Menu_Logout"), new Page(), PackIconKind.Logout);
-            var item10 = new ItemMenu("Menu_Exit", rm.GetString("Menu_Exit"), new Page(), PackIconKind.EmergencyExit);
+            var item7 = new ItemMenu(rm.GetString("Menu_Radio"), new Pages.Radio(ActualUser, rm, ResourceNames, main, this), PackIconKind.Radio);
+            var item8 = new ItemMenu(rm.GetString("Menu_Settings"), new Pages.Settings(ActualUser, rm, ResourceNames, this), PackIconKind.Settings);
+            var item9 = new ItemMenu(rm.GetString("Menu_Logout"), new Page(), PackIconKind.Logout);
+            var item10 = new ItemMenu(rm.GetString("Menu_Exit"), new Page(), PackIconKind.EmergencyExit);
             Menu.Children.Add(new UserControlMenuItem(item7, this, rm));
-            Menu.Children.Add(new UserControlMenuItem(item8, this, rm)); 
+            Menu.Children.Add(new UserControlMenuItem(item8, this, rm));
             Menu.Children.Add(new UserControlMenuItem(item9, this, rm));
             Menu.Children.Add(new UserControlMenuItem(item10, this, rm));
         }
@@ -266,7 +266,7 @@ namespace Eskuvo_tervezo.Windows
             }
             catch (Exception ex)
             {
-                ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems("Error", ex.Message, PackIconKind.Error);
+                ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem("Error", ex.Message, PackIconKind.Error);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames,false);
                 msb.Show();
             }
@@ -334,7 +334,7 @@ namespace Eskuvo_tervezo.Windows
             }
             catch (Exception ex)
             {
-                ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems("Error", ex.Message, PackIconKind.Error);
+                ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem("Error", ex.Message, PackIconKind.Error);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, false);
                 msb.Show();
 
@@ -381,7 +381,7 @@ namespace Eskuvo_tervezo.Windows
                 catch(Exception ex)
                 {
                     sr.Close();
-                    ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems("Error", ex.Message, PackIconKind.Error);
+                    ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem("Error", ex.Message, PackIconKind.Error);
                     Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, false);
                     msb.Show();
                 }
@@ -390,7 +390,7 @@ namespace Eskuvo_tervezo.Windows
 
         internal void Exit_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems(rm.GetString("ExitWarning"), rm.GetString("Exit"), PackIconKind.QuestionMarkRhombus);
+            ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("ExitWarning"), rm.GetString("Exit"), PackIconKind.QuestionMarkRhombus);
             Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
 
             if (msb.ShowDialog() == true)
@@ -400,7 +400,7 @@ namespace Eskuvo_tervezo.Windows
         }
         internal void Back_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems(rm.GetString("Message_LogoutTitle"), rm.GetString("Message_LogoutText"), PackIconKind.QuestionMarkRhombus);
+            ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("Message_LogoutTitle"), rm.GetString("Message_LogoutText"), PackIconKind.QuestionMarkRhombus);
             Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
 
             if (msb.ShowDialog() == true)

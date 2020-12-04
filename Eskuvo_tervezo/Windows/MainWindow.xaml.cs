@@ -41,7 +41,6 @@ namespace Eskuvo_tervezo
             Hun = true;
             bgwRadioHigh.DoWork += BgwRadioHigh_DoWork;
             bgwRadioHigh.WorkerSupportsCancellation = true;
-            
         }
         public MainWindow(string[] _ResourceNames, bool hun,bool _sound)
         {
@@ -144,7 +143,7 @@ namespace Eskuvo_tervezo
         {
             if (f.IsName(TB_user, TB_user.Text.Trim(), rm))
             {
-                ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems(rm.GetString("Message_RenewPasswordTitle"), rm.GetString("Message_RenewPassword"), MaterialDesignThemes.Wpf.PackIconKind.WarningCircle);
+                ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("Message_RenewPasswordTitle"), rm.GetString("Message_RenewPassword"), MaterialDesignThemes.Wpf.PackIconKind.WarningCircle);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
 
                 if (msb.ShowDialog() == true)
@@ -278,7 +277,7 @@ namespace Eskuvo_tervezo
         void BT_Exit_Click(object sender, RoutedEventArgs e)
         {
 
-            ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems(rm.GetString("ExitWarning"), rm.GetString("Exit"), MaterialDesignThemes.Wpf.PackIconKind.QuestionMarkRhombus);
+            ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("ExitWarning"), rm.GetString("Exit"), MaterialDesignThemes.Wpf.PackIconKind.QuestionMarkRhombus);
             Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames,null);
 
             if (msb.ShowDialog() == true)

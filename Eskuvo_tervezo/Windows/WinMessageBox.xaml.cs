@@ -25,7 +25,7 @@ namespace Eskuvo_tervezo.Windows
         string[] ResourceNames;
         ResourceManager rm;
 
-        public WinMessageBox(ViewModel.WinMessageBoxItems WMsbI, ResourceManager _rm, string[] _ResourceNames, bool? IsYesNo)
+        public WinMessageBox(ViewModel.WinMessageBoxItem WMsbI, ResourceManager _rm, string[] _ResourceNames, bool? IsYesNo)
         {
             InitializeComponent();
             rm = _rm;

@@ -34,7 +34,8 @@ namespace Eskuvo_tervezo.UserControls
             ListViewItemMenu.Visibility = itemMenu.SubItems == null ? Visibility.Visible : Visibility.Collapsed;
             this.DataContext = itemMenu;
         }
-        void ListViewItemMenu_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+        void MenuItemclick(object sender, MouseButtonEventArgs e)
         {
             for (int i = 0; i < home.Menu.Children.Count; i++)
             {
@@ -63,10 +64,19 @@ namespace Eskuvo_tervezo.UserControls
             ExpanderMenu.IsExpanded = true;
             ListViewMenu.SelectedItem = null;
         }
-        void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        void MenuSubItemClick(object sender)
         {
             if (ListViewMenu.SelectedItem != null)
                 home.SwitchScreen(((SubItem)((ListView)sender).SelectedItem).Screen);
+        }
+
+        void ListViewItemMenu_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MenuItemclick(sender,e);
+        }
+        void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MenuSubItemClick(sender);
            
         }
     }

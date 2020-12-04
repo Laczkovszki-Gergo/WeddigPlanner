@@ -28,11 +28,11 @@ namespace Eskuvo_tervezo.Pages
         Models.Login User;
         
 
-        ViewModel.VenueItems e;
+        ViewModel.VenueItem e;
         Windows.Functions f = new Windows.Functions();
 
         List<Models.WeddingExpenses> expList = new List<Models.WeddingExpenses>();
-        List<ViewModel.VenueItems> exitems = new List<ViewModel.VenueItems>();
+        List<ViewModel.VenueItem> exitems = new List<ViewModel.VenueItem>();
 
         string[] ResourceNames;
         int[] VenueIDs;
@@ -83,7 +83,7 @@ namespace Eskuvo_tervezo.Pages
                 ExpenseItems.Children.Clear();
                 foreach (var item in expList)
                 {
-                    var exp = new ViewModel.Expenses(item.ExpenseName.Trim(), f.StringCurrencyFormat(item.Expense.ToString().Trim()), item.ID, f.StringCurrencyFormat(item.Count.ToString().Trim()));
+                    var exp = new ViewModel.Expense(item.ExpenseName.Trim(), f.StringCurrencyFormat(item.Expense.ToString().Trim()), item.ID, f.StringCurrencyFormat(item.Count.ToString().Trim()));
                     ExpenseItems.Children.Add(new UserControls.UserControlExpenses(exp, (rm as ResourceManager), ResourceNames, this));
                 }
                 Amount_Reload();
@@ -180,7 +180,7 @@ namespace Eskuvo_tervezo.Pages
                     if (f.IsFileLocked(file, (rm as ResourceManager), ResourceNames) == false)
                     {
                         xlWorkBook.SaveAs(saveFileDialog.FileName);
-                        ViewModel.WinMessageBoxItems wmsgbi = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("MessageBoxSaveTitle"), (rm as ResourceManager).GetString("MessageBoxSaveText"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircle);
+                        ViewModel.WinMessageBoxItem wmsgbi = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("MessageBoxSaveTitle"), (rm as ResourceManager).GetString("MessageBoxSaveText"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircle);
                         Windows.WinMessageBox wmsg = new Windows.WinMessageBox(wmsgbi, (rm as ResourceManager), ResourceNames, false);
                         wmsg.Show();
                     }
@@ -198,7 +198,7 @@ namespace Eskuvo_tervezo.Pages
             catch (Exception ex)
             {
                 System.Windows.Input.Mouse.OverrideCursor = null;
-                ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems("Error", ex.Message, MaterialDesignThemes.Wpf.PackIconKind.Error);
+                ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem("Error", ex.Message, MaterialDesignThemes.Wpf.PackIconKind.Error);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, false);
                 msb.Show();
 
@@ -254,10 +254,10 @@ namespace Eskuvo_tervezo.Pages
             {
                 Models.WeddingVenue[] Venues = WPE.WeddingVenue.Where(x => x.WeddingID.Equals(Wedding.ID)).ToArray();
                 VenueIDs = Venues.Select(x => x.ID).ToArray();
-                exitems = new List<ViewModel.VenueItems>();
+                exitems = new List<ViewModel.VenueItem>();
                 for (int i = 0; i < Venues.Length; i++)
                 {
-                    e = new ViewModel.VenueItems(Venues[i].Wedding_Venue, Venues[i].Venue_Address);
+                    e = new ViewModel.VenueItem(Venues[i].Wedding_Venue, Venues[i].Venue_Address);
                     exitems.Add(e);
                 }
                 CB_Offer.ItemsSource = exitems;
@@ -306,7 +306,7 @@ namespace Eskuvo_tervezo.Pages
             int id = 0;
             Int32.TryParse((sender as PackIcon).DataContext.ToString(), out id);
 
-            ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteExp"), PackIconKind.WarningCircle);
+            ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteExp"), PackIconKind.WarningCircle);
             Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
 
             if (msb.ShowDialog() == true)

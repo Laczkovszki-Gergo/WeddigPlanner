@@ -94,7 +94,7 @@ namespace Eskuvo_tervezo.Pages
             catch (Exception ex)
             {
                 System.Windows.Input.Mouse.OverrideCursor = null;
-                ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems("Error", ex.Message, MaterialDesignThemes.Wpf.PackIconKind.Error);
+                ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem("Error", ex.Message, MaterialDesignThemes.Wpf.PackIconKind.Error);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, false);
                 msb.Show();
             }

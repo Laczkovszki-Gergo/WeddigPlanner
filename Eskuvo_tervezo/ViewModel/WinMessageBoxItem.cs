@@ -9,10 +9,10 @@ using System.Windows.Controls;
 
 namespace Eskuvo_tervezo.ViewModel
 {
-    public class WinMessageBoxItems
+    public class WinMessageBoxItem
     {
 
-        public WinMessageBoxItems(string header,string text,PackIconKind icon) 
+        public WinMessageBoxItem(string header,string text,PackIconKind icon) 
         {
             Header = header;
             Text = text;

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Eskuvo_tervezo.ViewModel
 {
-    public class Expenses
+    public class Expense
     {
         Windows.Functions f = new Windows.Functions();
-        public Expenses(string expanse, string cost, int id, string count)
+        public Expense(string expanse, string cost, int id, string count)
         {
             ID = id;
             Expanse = expanse;

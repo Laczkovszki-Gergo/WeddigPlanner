@@ -269,7 +269,7 @@ namespace Eskuvo_tervezo.Windows
             }
             catch (IOException)
             {
-                ViewModel.WinMessageBoxItems wmsgi = new ViewModel.WinMessageBoxItems((rm as System.Resources.ResourceManager).GetString("Message_FileIsOpenTitle"), (rm as System.Resources.ResourceManager).GetString("Message_FileIsOpenText"), MaterialDesignThemes.Wpf.PackIconKind.WarningLights);
+                ViewModel.WinMessageBoxItem wmsgi = new ViewModel.WinMessageBoxItem((rm as System.Resources.ResourceManager).GetString("Message_FileIsOpenTitle"), (rm as System.Resources.ResourceManager).GetString("Message_FileIsOpenText"), MaterialDesignThemes.Wpf.PackIconKind.WarningLights);
                 Windows.WinMessageBox wmsgb = new WinMessageBox(wmsgi, rm, ResourceNames, false);
                 wmsgb.Show();
                 return true;
@@ -339,7 +339,7 @@ namespace Eskuvo_tervezo.Windows
                     !hostAddress.ToString().StartsWith("169.254."))
                     return hostAddress;
             }
-            ViewModel.WinMessageBoxItems wmgbi = new ViewModel.WinMessageBoxItems(rm.GetString("Message_InternetConnectionTitle"), rm.GetString("Message_InternetConnection"), MaterialDesignThemes.Wpf.PackIconKind.MicrosoftInternetExplorer);
+            ViewModel.WinMessageBoxItem wmgbi = new ViewModel.WinMessageBoxItem(rm.GetString("Message_InternetConnectionTitle"), rm.GetString("Message_InternetConnection"), MaterialDesignThemes.Wpf.PackIconKind.MicrosoftInternetExplorer);
             WinMessageBox wmsgb = new WinMessageBox(wmgbi,rm,ResourceNames,false);
             wmsgb.Show();
             return null;

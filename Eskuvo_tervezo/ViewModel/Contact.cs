@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Eskuvo_tervezo.ViewModel
 {
-    public class Guests
+    public class Contact
     {
-        public Guests(string name, int person, string iconID)
+        public Contact(string name, string phone, string email, string iconId)
         {
             Name = name;
-            Person = person;
-            IconId = iconID;
+            Phone = phone;
+            Email = email;
+            IconId = iconId;
         }
         public string Name { get; set; }
-        public int Person { get; set; }
-
+        public string Phone { get; set; }
+        public string Email { get; set; }
         public string IconId { get; set; }
     }
-
 }

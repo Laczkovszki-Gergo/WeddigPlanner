@@ -275,7 +275,7 @@ namespace Eskuvo_tervezo.Pages
         }
         void Tooltip_Delete_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteRadioChannel"), MaterialDesignThemes.Wpf.PackIconKind.WarningCircle);
+            ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteRadioChannel"), MaterialDesignThemes.Wpf.PackIconKind.WarningCircle);
             Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, true);
 
             if (msb.ShowDialog() == true)

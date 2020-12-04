@@ -16,6 +16,5 @@ namespace Eskuvo_tervezo.ViewModel
         }
         public string ExpenseName { get; set; }
         public string Expense { get;}
-
     }
 }

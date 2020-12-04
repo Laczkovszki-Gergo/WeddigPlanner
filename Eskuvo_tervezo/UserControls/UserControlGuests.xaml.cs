@@ -26,7 +26,7 @@ namespace Eskuvo_tervezo.UserControls
         object rm = null;
         Pages.Guests gue;
         string[] ResourceNames;
-        public UserControlGuests(ViewModel.Guests item, Pages.Guests _gue, string[] _ResourceNames, ResourceManager _rm)
+        public UserControlGuests(ViewModel.Guest item, Pages.Guests _gue, string[] _ResourceNames, ResourceManager _rm)
         {
             InitializeComponent();
             ListViewItemMenu1.Visibility = item.Name != null ? Visibility.Visible : Visibility.Collapsed;

@@ -23,13 +23,13 @@ namespace Eskuvo_tervezo.UserControls
     public partial class UserControlExpenses : UserControl
     {
         Models.WeddingPlannerEntities WPE = new Models.WeddingPlannerEntities();
-        ViewModel.Expenses Exp;
+        ViewModel.Expense Exp;
         Pages.Expenses expPage;
 
         string[] ResourceNames;
         object rm = null;
 
-        public UserControlExpenses(ViewModel.Expenses _Exp,ResourceManager _rm, string[] _ResourceNames, Pages.Expenses _expPage)
+        public UserControlExpenses(ViewModel.Expense _Exp,ResourceManager _rm, string[] _ResourceNames, Pages.Expenses _expPage)
         {        
             InitializeComponent();
             Exp = _Exp;
@@ -53,11 +53,11 @@ namespace Eskuvo_tervezo.UserControls
             }
         }
 
-        void Tooltip_Delete_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        void IconDelete(object sender, MouseButtonEventArgs e)
         {
             expPage.DeleteExpense(sender, e);
         }
-        void Tooltip_Modification_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        void IconModify(object sender, MouseButtonEventArgs e)
         {
             int id = 0;
             Int32.TryParse((sender as PackIcon).DataContext.ToString(), out id);

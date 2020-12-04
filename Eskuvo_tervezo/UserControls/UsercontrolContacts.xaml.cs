@@ -28,7 +28,7 @@ namespace Eskuvo_tervezo.UserControls
         string[] ResourceNames;
         object rm = null;
 
-        public UsercontrolContacts(ViewModel.Cont item, ResourceManager _rm, string[] _ResourceNames, Pages.Contacts _con)
+        public UsercontrolContacts(ViewModel.Contact item, ResourceManager _rm, string[] _ResourceNames, Pages.Contacts _con)
         {
             InitializeComponent();
             rm = _rm;

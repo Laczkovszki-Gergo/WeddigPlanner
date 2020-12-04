@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eskuvo_tervezo.ViewModel
 {
-    public class VenueItems
+    public class VenueItem
     {
         public string Venue
         {
@@ -16,7 +16,7 @@ namespace Eskuvo_tervezo.ViewModel
         {
             get;set;
         }
-        public VenueItems(string venue, string address)
+        public VenueItem(string venue, string address)
         {
             Venue = venue.Trim();
             Address = address.Trim();

@@ -112,14 +112,14 @@ namespace Eskuvo_tervezo.Pages
 
                 foreach (var item in guestList.Where(x => x.Bride_Groom.Equals(1)).OrderBy(x => x.Guest_Name).ToList())
                 {
-                    var it = new ViewModel.Guests(item.Guest_Name.Trim(), item.Guest_Count, item.Guest_ID.ToString());
+                    var it = new ViewModel.Guest(item.Guest_Name.Trim(), item.Guest_Count, item.Guest_ID.ToString());
                     BrideItems.Children.Add(new UserControls.UserControlGuests(it,this,ResourceNames, (rm as ResourceManager)));
                     br = br + it.Person;
                 }          
                 GroomItems.Children.Clear();
                 foreach (var item in guestList.Where(x => x.Bride_Groom.Equals(0)).OrderBy(x=>x.Guest_Name).ToList())
                 {
-                    var it = new ViewModel.Guests(item.Guest_Name.Trim(), item.Guest_Count, item.Guest_ID.ToString());
+                    var it = new ViewModel.Guest(item.Guest_Name.Trim(), item.Guest_Count, item.Guest_ID.ToString());
                     GroomItems.Children.Add(new UserControls.UserControlGuests(it, this, ResourceNames, (rm as ResourceManager)));
                     gr = gr + it.Person;
                 }
@@ -230,7 +230,7 @@ namespace Eskuvo_tervezo.Pages
                     if (f.IsFileLocked(file, (rm as ResourceManager), ResourceNames) == false)
                     {
                         xlWorkBook.SaveAs(saveFileDialog.FileName);
-                        ViewModel.WinMessageBoxItems wmsgbi = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("MessageBoxSaveTitle"), (rm as ResourceManager).GetString("MessageBoxSaveText"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircle);
+                        ViewModel.WinMessageBoxItem wmsgbi = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("MessageBoxSaveTitle"), (rm as ResourceManager).GetString("MessageBoxSaveText"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircle);
                         Windows.WinMessageBox wmsg = new Windows.WinMessageBox(wmsgbi, (rm as ResourceManager), ResourceNames, false);
                         wmsg.Show();
                     }
@@ -248,7 +248,7 @@ namespace Eskuvo_tervezo.Pages
             catch (Exception ex)
             {
                 System.Windows.Input.Mouse.OverrideCursor = null;
-                ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems("Error", ex.Message, MaterialDesignThemes.Wpf.PackIconKind.Error);
+                ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem("Error", ex.Message, MaterialDesignThemes.Wpf.PackIconKind.Error);
                 Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, false);
                 msb.Show();
 
@@ -269,7 +269,7 @@ namespace Eskuvo_tervezo.Pages
         {
             int id = 0;
             Int32.TryParse((string)(sender as PackIcon).DataContext, out id);
-            ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteGuest"), PackIconKind.WarningCircle);
+            ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteGuest"), PackIconKind.WarningCircle);
             Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
 
             if (msb.ShowDialog() == true)

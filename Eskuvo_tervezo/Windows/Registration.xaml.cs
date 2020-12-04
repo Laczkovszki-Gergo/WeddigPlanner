@@ -61,7 +61,7 @@ namespace Eskuvo_tervezo
                 }
                 else
                 {
-                    ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems(rm.GetString("LB_Title_reg"), rm.GetString("Message_Reg"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircleOutline);
+                    ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("LB_Title_reg"), rm.GetString("Message_Reg"), MaterialDesignThemes.Wpf.PackIconKind.InformationCircleOutline);
                     Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames,null);
                     msb.Show();
                     System.Windows.Input.Mouse.OverrideCursor = null;
@@ -134,7 +134,7 @@ namespace Eskuvo_tervezo
         }
         void BT_Exit_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.WinMessageBoxItems wmsb = new ViewModel.WinMessageBoxItems(rm.GetString("ExitWarning"), rm.GetString("Exit"), MaterialDesignThemes.Wpf.PackIconKind.QuestionMarkRhombus);
+            ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("ExitWarning"), rm.GetString("Exit"), MaterialDesignThemes.Wpf.PackIconKind.QuestionMarkRhombus);
             Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames,null);
 
             if (msb.ShowDialog() == true)

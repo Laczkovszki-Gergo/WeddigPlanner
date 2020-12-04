@@ -7,10 +7,10 @@ using Eskuvo_tervezo.ViewModel;
 
 namespace Eskuvo_tervezo.ViewModel
 {
-    public class CalLogEntrys
+    public class CalLogEntry
     {
 
-        public CalLogEntrys(string logEntry, string iconId)
+        public CalLogEntry(string logEntry, string iconId)
         {
             LogEntry = logEntry;
             IconId = iconId;

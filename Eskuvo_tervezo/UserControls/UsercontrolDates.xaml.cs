@@ -32,10 +32,15 @@ namespace Eskuvo_tervezo.UserControls
             this.DataContext = item;
         }
 
-        void ListViewItemMenu1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        void ShowDate(object sender, MouseButtonEventArgs e)
         {
             CalCalender cal = h.LoadDayEntrys;
             cal(Convert.ToDateTime((((sender as ListBoxItem).DataContext) as ViewModel.DateView).Day));
+        }
+
+        void ListViewItemMenu1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowDate(sender, e);
         }
     }
 }
