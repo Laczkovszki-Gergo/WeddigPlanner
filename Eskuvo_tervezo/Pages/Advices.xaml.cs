@@ -21,20 +21,25 @@ namespace Eskuvo_tervezo.Pages
     /// </summary>
     public partial class Advices : Page
     {
-        Windows.Functions f = new Windows.Functions();
-
-        object rm;
-        string[] ResourceNames;
-
-        public Advices(Models.Login _User, ResourceManager _rm, string[] _Resourcenames)
+        bool hun = true;
+        public Advices(bool _hun)
         {
             InitializeComponent();
-            rm = _rm;
-            ResourceNames = _Resourcenames;
+            hun = _hun;
 
-            Tbl_Advices.TextWrapping = TextWrapping.WrapWithOverflow; 
+        }
+        void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadAdvices(hun);
+        }
+        internal void LoadAdvices(bool Hun)
+        {
+            Tbl_Advices.TextWrapping = TextWrapping.WrapWithOverflow;
             Tbl_Advices.Text = null;
-            Tbl_Advices.Inlines.Add(new Run("Ha megtörtént az eljegyzés és már azonnal bele akartok fogni az esküvő \nszervezésébe pár fontos teendő, amin el is kezdhettek gondolkodni.\n\n") { FontWeight = FontWeights.Bold, FontSize = 30});
+
+            if(Hun)
+            {
+            Tbl_Advices.Inlines.Add(new Run("Ha megtörtént az eljegyzés és már azonnal bele akartok fogni az esküvő \nszervezésébe pár fontos teendő, amin el is kezdhettek gondolkodni.\n\n") { FontWeight = FontWeights.Bold, FontSize = 30 });
             Tbl_Advices.Inlines.Add(
     "o Beszéljétek meg az esküvő dátumát.\n" +
     "o Beszéljétek meg a költségkeretet, amit az esküvő szeretnétek szánni és hogy ki mennyit tud magára vállalni.\n" +
@@ -113,7 +118,11 @@ namespace Eskuvo_tervezo.Pages
     "o Intézzétek az esküvői költségeket.\n" +
     "o Minden bérelt vagy kölcsönkért tárgyat juttassatok vissza.\n" +
     "o Esküvői ajándékok elszállítása.");
-
+            }
+            else
+            {
+                //TODO ANGOL fordítás
+            }
 
         }
     }

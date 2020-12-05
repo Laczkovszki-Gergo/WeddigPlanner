@@ -98,3 +98,4 @@ D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Advices.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Pages\Advices.baml
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\QouteModify.g.cs
 D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Windows\QouteModify.baml
+D:\C#\Eskuvo_tervezo\Eskuvo_tervezo\obj\Debug\Eskuvo_tervezo.csprojResolveAssemblyReference.cache

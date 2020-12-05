@@ -101,7 +101,7 @@ namespace Eskuvo_tervezo.Windows
             timer.Tick += timer_Tick;
             timer.Start();
 
-            FrameContent.Content = new Pages.Advices(ActualUser, rm, ResourceNames);
+            FrameContent.Content = new Pages.Advices(Hun);
 
             wedd = WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(ActualUser.IDLogin));
 
@@ -156,7 +156,7 @@ namespace Eskuvo_tervezo.Windows
         internal void CreateMenu()
         {
             Menu.Children.Clear();
-            var item0 = new ItemMenu(rm.GetString("Menu_Advices"), new Pages.Advices(ActualUser, rm, ResourceNames), PackIconKind.Idea);
+            var item0 = new ItemMenu(rm.GetString("Menu_Advices"), new Pages.Advices(Hun), PackIconKind.Idea);
             var item1 = new ItemMenu(rm.GetString("Menu_FirstSteps"), new Pages.FirstSteps(ActualUser, rm, ResourceNames, this), PackIconKind.ManWoman);
 
             Menu.Children.Add(new UserControlMenuItem(item0, this, rm));
@@ -418,7 +418,11 @@ namespace Eskuvo_tervezo.Windows
             LoadFormats(Hun);
             if (FrameContent != null)
             {
-                if (FrameContent.Content is Pages.CalendarItems)
+                if (FrameContent.Content is Pages.Advices)
+                {
+                    (FrameContent.Content as Pages.Advices).LoadAdvices(Hun);
+                }
+                else if (FrameContent.Content is Pages.CalendarItems)
                 {
                     (FrameContent.Content as Pages.CalendarItems).LoadFormats(rm, ResourceNames);
                     (FrameContent.Content as Pages.CalendarItems).CreateList(rm);
@@ -473,7 +477,11 @@ namespace Eskuvo_tervezo.Windows
             LoadFormats(Hun);
             if (FrameContent != null)
             {
-                if (FrameContent.Content is Pages.CalendarItems)
+                if (FrameContent.Content is Pages.Advices)
+                {
+                    (FrameContent.Content as Pages.Advices).LoadAdvices(Hun);
+                }
+                else if (FrameContent.Content is Pages.CalendarItems)
                 {
                     (FrameContent.Content as Pages.CalendarItems).LoadFormats(rm, ResourceNames);
                     (FrameContent.Content as Pages.CalendarItems).CreateList(rm);

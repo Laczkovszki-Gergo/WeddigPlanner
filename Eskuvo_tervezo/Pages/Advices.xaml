@@ -9,7 +9,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1000" 
       Title="Welcome"
-      FontFamily="Comic Sans MS">
+      FontFamily="Comic Sans MS"
+      Loaded="Page_Loaded">
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
