@@ -40,10 +40,12 @@ namespace Eskuvo_tervezo.Pages
         Int64? SumCost = 0;
         object rm;
         int? Budget = 0;
+        System.Windows.Media.Brush TextColor = null;
 
         public Expenses(Models.Login _User, ResourceManager _rm, string[] _Resourcenames)
         {
             InitializeComponent();
+            TextColor = LB_Offer.Foreground;
             WPE = new Models.WeddingPlannerEntities();
             rm = _rm;
             User = _User;
@@ -63,6 +65,7 @@ namespace Eskuvo_tervezo.Pages
             TB_Count.IsEnabled = false;
             TB_Cost.IsEnabled = false;
             BT_ExportToExcel.Visibility = Visibility.Hidden;
+
         }
         internal void CreateExpenseList(ResourceManager _rm)
         {
@@ -261,6 +264,7 @@ namespace Eskuvo_tervezo.Pages
                     exitems.Add(e);
                 }
                 CB_Offer.ItemsSource = exitems;
+                ExpenseItems.Children.Clear();
             }
         }
         void Amount_Reload()
@@ -278,7 +282,7 @@ namespace Eskuvo_tervezo.Pages
                 LB_Amount.Content += " 0 / " + f.StringCurrencyFormat(WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(Wedding.User_ID)).Budget.ToString());
 
             if (Budget >= SumCost)
-                LB_Amount.Foreground = Brushes.White;
+                LB_Amount.Foreground = TextColor;
             else
                 LB_Amount.Foreground = Brushes.Red;
         }

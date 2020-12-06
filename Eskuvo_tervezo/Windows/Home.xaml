@@ -27,6 +27,7 @@
                 <ResourceDictionary Source="pack://application:,,,/ResourceDictionary/CalendarResource.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/ResourceDictionary/HighlightedCal.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/ResourceDictionary/LabelDictionary.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/ResourceDictionary/TextblockDictionary.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -100,11 +101,11 @@
                     <RowDefinition Height="1.5*"/>
                 </Grid.RowDefinitions>
                 
-                    <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="10,0,10,5" BorderBrush="{DynamicResource DayNamesForeCorol}" BorderThickness="2" CornerRadius="30">
+                    <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="10,0,10,5" BorderBrush="{DynamicResource WindowBorderBrush}" BorderThickness="2" CornerRadius="30">
                 </Border>
                 
                 <Canvas ClipToBounds="True" Name="canMain" Grid.Row="1" Grid.Column="1" Margin="5,0,5,5">
-                    <TextBlock  x:Name="Tbl_Radio" FontSize="24" Text="♫ Rádio ♫" />
+                    <TextBlock  x:Name="Tbl_Radio" FontSize="24" Text="♫ Rádio ♫" Style="{DynamicResource QouteTblStyle}" />
                 </Canvas>
 
                 <materialDesign:PackIcon x:Name="Tooltip_IconRadioChannelLeft" Kind="ArrowLeftThinCircleOutline" Grid.Column="0" Grid.Row="1" Width="27" Height="27" HorizontalAlignment="Center"  VerticalAlignment="Center" Cursor="Hand" 
@@ -118,7 +119,7 @@
                 <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0">
 
                     <Label Grid.Row="0" Grid.Column="1" x:Name="LB_TitleHome" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,-5,0,0" Content="{x:Static properties:ResourceHu.LB_TitleHome }" FontSize="28" />
-                    <Label Grid.Row="0" Grid.Column="0" x:Name="LB_RemainingDays" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,-10,0,0" Content="{x:Static properties:ResourceHu.LB_RemainingDays }" Foreground="LightPink" FontSize="22" />
+                    <Label Grid.Row="0" Grid.Column="0" x:Name="LB_RemainingDays" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,-10,0,0" Content="{x:Static properties:ResourceHu.LB_RemainingDays }" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="22" />
                 </StackPanel>
             </Border>
 
@@ -148,7 +149,7 @@
 
             <Border Margin="10,0,10,5" Grid.Row="10" Grid.Column="0" Background="{DynamicResource ButtonBackGround}" CornerRadius="30" BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="10" Grid.Column="0" Margin="10,7,5,7"  >
-                    <TextBlock x:Name="Tbl_Qoute" Text="{x:Static properties:ResourceHu.LB_Quote}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="WrapWithOverflow" TextAlignment="Center" Cursor="Hand" MouseLeftButtonDown="Tbl_Qoute_MouseLeftButtonDown">
+                    <TextBlock x:Name="Tbl_Qoute" Text="{x:Static properties:ResourceHu.LB_Quote}" Style="{DynamicResource QouteTblStyle}" Margin="0" Cursor="Hand" MouseLeftButtonDown="Tbl_Qoute_MouseLeftButtonDown">
                     </TextBlock>
                 </ScrollViewer>
             </Border>

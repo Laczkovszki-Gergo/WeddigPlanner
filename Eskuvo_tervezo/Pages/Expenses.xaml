@@ -42,52 +42,52 @@
                 Content="{x:Static properties:ResourceHu.LB_Amount}" FontSize="24"/>
 
         <Label  Grid.Row="1" Grid.Column="1" x:Name="LB_Expense" Content="{x:Static properties:ResourceHu.LB_Expense}" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16" Margin="0,21,0,61" IsEnabled="False"
+                Margin="0,21,0,61" IsEnabled="False"
                 />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20"
                   Height="auto" Grid.Row="1" Grid.Column="1" Margin="30,51,20,31" x:Name="TB_Expense" MaxLength="60" IsEnabled="False"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_Expense_PreviewKeyDown" Panel.ZIndex="1"/>
-        <materialDesign:PackIcon Kind="PaperOutline" VerticalAlignment="Center" Margin="0,62,0,36" Width="30" Height="30"  Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}" ></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="PaperOutline" VerticalAlignment="Center" Margin="0,62,0,36" Width="30" Height="30"  Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}" ></materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Cost" Grid.Column="2" Content="{x:Static properties:ResourceHu.LB_Cost}" HorizontalAlignment="Stretch"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16" Margin="0,21,0,61" IsEnabled="False"
+                Margin="0,21,0,61" IsEnabled="False"
                 />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20"
                   Height="auto" Grid.Row="1" Grid.Column="2" Margin="30,51,20,31" x:Name="TB_Cost" KeyDown="TB_Cost_PreviewKeyDown" IsEnabled="False"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="2" />
         <materialDesign:PackIcon Kind="Money" VerticalAlignment="Center" Margin="0,62,0,36" Width="30" Height="30"
-                                 Grid.Row="1" Grid.Column="2" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}">
+                                 Grid.Row="1" Grid.Column="2" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}">
         </materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Count" Grid.Column="3" Content="{x:Static properties:ResourceHu.LB_Count}" HorizontalAlignment="Stretch"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16" Margin="0,21,0,61" IsEnabled="False"
+                Margin="0,21,0,61" IsEnabled="False"
                 />
 
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20"
                   Height="auto" Grid.Row="1" Grid.Column="3" Margin="30,51,20,31" x:Name="TB_Count" IsEnabled="False"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" KeyDown="TB_Count_PreviewKeyDown" Panel.ZIndex="3"/>
         <materialDesign:PackIcon Kind="Numbers" VerticalAlignment="Center" Margin="0,62,0,36" Width="30" Height="30"
-                                 Grid.Row="1" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}">
+                                 Grid.Row="1" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}">
         </materialDesign:PackIcon>
 
         <Button Grid.Row="1" Grid.Column="4" x:Name="BT_Save" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="4" 
-                    materialDesign:ButtonAssist.CornerRadius="20" Margin="11,47,12,27" Width="120" Height="40" FontWeight="UltraBlack"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center" IsEnabled="False"
+                    materialDesign:ButtonAssist.CornerRadius="20" Margin="10,0,10,0" Width="120" Height="40" FontWeight="UltraBlack"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center" IsEnabled="False"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Background="{DynamicResource ButtonBackGround}" Click="BT_Save_Click"/>
 
         <Label  Grid.Row="1" Grid.Column="0" x:Name="LB_Offer" Content="{x:Static properties:ResourceHu.LB_Offer}" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16" Margin="0,21,0,61"
+                Margin="0,21,0,61"
                 />
 
         <ComboBox x:Name="CB_Offer" Grid.Row="1" Grid.Column="0" Width="auto" Height="40" 
-                      HorizontalAlignment="Stretch" Margin="20,52,20,22" FontSize="16"
+                      HorizontalAlignment="Stretch" Margin="20,52,20,22" FontSize="20"
                       IsDropDownOpen="False" SelectionChanged="CB_Offer_SelectionChanged" ItemsSource="{Binding}" DropDownOpened="CB_Offer_DropDownOpened" DropDownClosed="CB_Offer_DropDownClosed">
 
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="{Binding Venue}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="16"></Label>
-                        <Label Content="{Binding Address}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="16"></Label>
+                        <Label Content="{Binding Venue}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="20"></Label>
+                        <Label Content="{Binding Address}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="20"></Label>
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
@@ -99,8 +99,8 @@
         </ScrollViewer>
 
         <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="5" x:Name="BT_ExportToExcel" Content="{x:Static properties:ResourceHu.BT_ExportToExcel}"  HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="4" Background="Transparent"
-                    materialDesign:ButtonAssist.CornerRadius="20" Width="240" Height="40" FontWeight="UltraBlack" Visibility="Visible"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                    materialDesign:ButtonAssist.CornerRadius="20" Width="280" Height="40" FontWeight="UltraBlack" Visibility="Visible"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Click="BT_ExportToExcel_Click"/>
     </Grid>
 </Page>

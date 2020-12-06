@@ -98,12 +98,6 @@ namespace Eskuvo_tervezo.Pages
                 BT_ExportToExcel.Visibility = Visibility.Visible;
             else
                 BT_ExportToExcel.Visibility = Visibility.Hidden;
-
-            //foreach (var item in contList.Where(x => x.User_Id.Equals(User.IDLogin)).Reverse().ToList())
-            //{
-            //    var it = new ViewModel.Cont(item.Con_Name.Trim(), item.Con_Phone.Trim(), item.Con_Email.Trim(), item.Con_ID.ToString());
-            //    ContactItems.Children.Add(new UserControls.UsercontrolContacts(it, (rm as ResourceManager), ResourceNames, this));
-            //}
         }
         internal void CreateContactList(ResourceManager rm)
         {
@@ -120,13 +114,6 @@ namespace Eskuvo_tervezo.Pages
                 BT_ExportToExcel.Visibility = Visibility.Visible;
             else
                 BT_ExportToExcel.Visibility = Visibility.Hidden;
-
-
-            //foreach (var item in contList.Where(x => x.User_Id.Equals(User.IDLogin)).Reverse().ToList())
-            //{
-            //    var it = new ViewModel.Cont(item.Con_Name.Trim(), item.Con_Phone.Trim(), item.Con_Email.Trim(), item.Con_ID.ToString());
-            //    ContactItems.Children.Add(new UserControls.UsercontrolContacts(it, (rm as ResourceManager), ResourceNames, this));
-            //}
         }
         void CreateExcelDocument()
         {
@@ -254,16 +241,14 @@ namespace Eskuvo_tervezo.Pages
             }
         }
         void TB_Phone_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            
+        {          
             if (e.Key == System.Windows.Input.Key.Enter)
             {
                 BT_Save_Click(sender, e);
             }
         }
         void TB_Email_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            
+        {           
             if (e.Key == System.Windows.Input.Key.Enter)
             {
                 BT_Save_Click(sender, e);

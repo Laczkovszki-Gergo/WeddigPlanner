@@ -40,15 +40,15 @@
         <Label  Grid.Row="0" x:Name="LB_Date" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Bottom" Margin="10" HorizontalAlignment="Center" 
                 Content="{x:Static properties:ResourceHu.LB_Diary}" Foreground="{DynamicResource TextForeColors}" FontSize="30"/>
         <Label  Grid.Row="1" x:Name="LB_Entry" Content="{x:Static properties:ResourceHu.LB_Entry}" HorizontalAlignment="Stretch" Margin="40,0,160,40"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                Foreground="{DynamicResource TextForeColors}" FontSize="16"
+                Foreground="{DynamicResource TextForeColors}"
                 />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20"
                   Height="auto" Grid.Row="1" Margin="40,20,160,0" x:Name="TB_LogEntry" 
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_LogEntry_PreviewKeyDown" Panel.ZIndex="1"/>
-        <materialDesign:PackIcon Kind="BookAdd" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30"  Grid.Row="1" Foreground="{DynamicResource TextForeColors}" FontSize="20"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="BookAdd" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30"  Grid.Row="1" Foreground="{DynamicResource SpecialIconBackGround}" FontSize="20"></materialDesign:PackIcon>
         <Button Grid.Row="1" x:Name="BT_Save" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Right" Cursor="Hand" Panel.ZIndex="2" 
                     materialDesign:ButtonAssist.CornerRadius="20" Margin="20,25,20,0" Width="120" Height="40" FontWeight="UltraBlack"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}" Click="BT_Save_Click"/>
         <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="0" Grid.RowSpan="6" Margin="20" BorderBrush="{DynamicResource ScrollViewerBorderBrush}" BorderThickness="2" Panel.ZIndex="3">
             <StackPanel x:Name="Items" Grid.Row="1" Grid.RowSpan="10" Grid.Column="2"

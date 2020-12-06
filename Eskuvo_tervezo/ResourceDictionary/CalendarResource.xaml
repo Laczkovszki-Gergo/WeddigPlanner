@@ -4,7 +4,7 @@
 
 
     <!--Control colors.-->
-    <Color x:Key="WindowColor">#FFE8EDF9</Color>
+    <Color x:Key="WindowColor">Black    </Color>
     <Color x:Key="ContentAreaColorLight">#FFC5CBF9</Color>
     <Color x:Key="ContentAreaColorDark">#FF7381F9</Color>
 
@@ -12,7 +12,7 @@
     <Color x:Key="DisabledControlDarkColor">#FFC5CBF9</Color>
     <Color x:Key="DisabledForegroundColor">#FF888888</Color>
 
-    <Color x:Key="SelectedBackgroundColor">Darkgray</Color>
+    <!--<Color x:Key="SelectedBackgroundColor">Darkgray</Color>-->
     <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
 
     <Color x:Key="ControlLightColor">TransParent</Color>
@@ -25,7 +25,7 @@
     <Color x:Key="ControlPressedColor">Green</Color>
 
 
-    <Color x:Key="GlyphColor">White</Color> <!--Nyilak színe-->
+    <!--<Color x:Key="CalendarGlyphColor">Black</Color> --><!--Nyilak színe-->
     <Color x:Key="GlyphMouseOver">sc#1, 0.004391443, 0.002428215, 0.242281124</Color>
 
     <!--Border colors-->
@@ -42,7 +42,7 @@
     <Color x:Key="DefaultBorderBrushDarkColor">Black</Color>
 
     <!--Control-specific resources.-->
-    <Color x:Key="HeaderTopColor">#FFC5CBF9</Color>
+    <!--<Color x:Key="HeaderTopColor">Black</Color>-->
     <Color x:Key="DatagridCurrentCellBorderColor">Black</Color>
     <Color x:Key="SliderTrackDarkColor">#FFC5CBF9</Color>
 
@@ -53,8 +53,8 @@
     <Color x:Key="ActualCalendarDayForeColor">#F60000</Color> <!--RED-->
     <Color x:Key="ActualCalendarDayBackColor">#E87C7C</Color> <!--LightCoral like red-->
     <Color x:Key="ActualCalendarDayBorderColor">Pink</Color>
-    <SolidColorBrush x:Key="TextForeColors">White</SolidColorBrush>
-    <SolidColorBrush x:Key="DayNamesForeCorol">Pink</SolidColorBrush>
+    <!--<SolidColorBrush x:Key="TextForeColors">White</SolidColorBrush>-->
+    <!--<SolidColorBrush x:Key="DayNamesForeCorol">Pink</SolidColorBrush>-->
 
 
 
@@ -196,7 +196,7 @@
                                   Storyboard.TargetName="NormalText"
                                   Storyboard.TargetProperty="(TextElement.Foreground).
                       (SolidColorBrush.Color)"
-                                  To="#2D2E32" /> <!--"Inaktív" napok színe-->
+                                  To="Black" /> <!--"Inaktív" napok színe-->
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
@@ -240,7 +240,7 @@
                      RadiusY="30"
                      Opacity="0">
                             <Rectangle.Fill>
-                                <SolidColorBrush Color="LightCoral" /> <!--Mai nap háttérszíne-->
+                                <SolidColorBrush Color="{DynamicResource CalendarToDayBackColor}" /> <!--Mai nap háttérszíne-->
                             </Rectangle.Fill>
                         </Rectangle>
                         <Rectangle x:Name="SelectedBackground"
@@ -267,7 +267,7 @@
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             Margin="5,1,5,1">
                             <TextElement.Foreground>
-                                <SolidColorBrush Color="White" /> <!--Napok betűszíne-->
+                                <SolidColorBrush Color="{DynamicResource CalendarDayColor}" /> <!--Napok betűszíne-->
                             </TextElement.Foreground>
                         </ContentPresenter>
                         <Path x:Name="Blackout"
@@ -410,7 +410,7 @@
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             Margin="1,0,1,1">
                             <TextElement.Foreground>
-                                <SolidColorBrush Color="White" /> <!--Hónapok és évek aktív betűszínei-->
+                                <SolidColorBrush Color="{DynamicResource CalendarDayColor}" /> <!--Hónapok és évek aktív betűszínei-->
                             </TextElement.Foreground>
                         </ContentPresenter>
                         <Rectangle x:Name="CalendarButtonFocusVisual"
@@ -469,7 +469,7 @@
             Width="15"
             Data="M288.75,232.25 L288.75,240.625 L283,236.625 z">
                     <Path.Fill>
-                        <SolidColorBrush Color="{DynamicResource GlyphColor}" /> <!--Bal Nyíl színe-->
+                        <SolidColorBrush Color="{DynamicResource CalendarGlyphColor}" /> <!--Bal Nyíl színe-->
                     </Path.Fill>
                 </Path>
             </Grid>
@@ -512,7 +512,7 @@
             VerticalAlignment="Center"
             Width="15">
                     <Path.Fill>
-                        <SolidColorBrush Color="{DynamicResource GlyphColor}" />
+                        <SolidColorBrush Color="{DynamicResource CalendarGlyphColor}" />
                         <!--Jobb Nyíl színe-->
                     </Path.Fill>
                 </Path>
@@ -597,7 +597,7 @@
                   BorderThickness="{TemplateBinding BorderThickness}"
                   Background="{TemplateBinding Background}"
                   CornerRadius="30">
-                            <Border BorderBrush="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"
+                            <Border BorderBrush="{DynamicResource WindowBorderBrush}"
                     BorderThickness="2"
                     CornerRadius="30">
                                 <Grid>
@@ -745,7 +745,7 @@
 
                     <!--The first two gradient stops specifies the background for 
             the calendar's heading and navigation buttons.-->
-                    <GradientStop Color="{DynamicResource HeaderTopColor}"
+                    <GradientStop Color="{DynamicResource CalendarHeaderTopColor}"
                       Offset="0" />
                     <GradientStop Color="{DynamicResource ControlMediumColor}"
                       Offset="0" />

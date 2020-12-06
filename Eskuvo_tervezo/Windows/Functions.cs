@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Net.Mail;
-using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Data.SqlClient;
+
 
 namespace Eskuvo_tervezo.Windows
 {
@@ -344,7 +340,6 @@ namespace Eskuvo_tervezo.Windows
             wmsgb.Show();
             return null;
         }
-
         //Nem használt függvények, eljárások
         internal ImageSource CreateViewImageDynamically(string ImagePath, double width, double height)
         {

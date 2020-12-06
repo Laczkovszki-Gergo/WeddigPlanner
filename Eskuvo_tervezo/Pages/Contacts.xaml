@@ -44,33 +44,33 @@
                 Content="{x:Static properties:ResourceHu.LB_Contact}" FontSize="34"/>
 
         <Label  Grid.Row="1" x:Name="LB_Name" Content="{x:Static properties:ResourceHu.LB_Name}" HorizontalAlignment="Stretch" Margin="40,0,40,40"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16"
+                
                 />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20"
                   Height="auto" Grid.Row="1" Margin="40,20,40,0" x:Name="TB_Name" MaxLength="60"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_Name_PreviewKeyDown" Panel.ZIndex="1"/>
-        <materialDesign:PackIcon Kind="Contact" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"  Grid.Row="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Contact" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"  Grid.Row="1" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Phone" Grid.Column="1" Content="{x:Static properties:ResourceHu.LB_Phone}" HorizontalAlignment="Stretch" Margin="40,0,40,40"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16"
+                
                 />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20"
                   Height="auto" Grid.Row="1" Grid.Column="1" Margin="40,20,40,0" x:Name="TB_Phone" MaxLength="30"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_Phone_PreviewKeyDown" Panel.ZIndex="2"/>
-        <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"   Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"   Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Email" Grid.Column="2" Content="{x:Static properties:ResourceHu.LB_Email}" HorizontalAlignment="Stretch" Margin="40,0,40,40"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16"
+                
                 />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20"
                   Height="auto" Grid.Row="1" Grid.Column="2" Margin="40,20,40,0" x:Name="TB_Email" MaxLength="40"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" PreviewKeyDown="TB_Email_PreviewKeyDown" Panel.ZIndex="3"/>
         <materialDesign:PackIcon Kind="Email" VerticalAlignment="Center" Margin="5,25,0,0" Width="30" Height="30"  
-                                 Grid.Row="1" Grid.Column="2" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}">
+                                 Grid.Row="1" Grid.Column="2" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}">
         </materialDesign:PackIcon>
         <Button Grid.Row="1" Grid.Column="4" x:Name="BT_Save" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Right" Cursor="Hand" Panel.ZIndex="4" Background="Transparent"
-                    materialDesign:ButtonAssist.CornerRadius="20" Margin="20,0,20,0" Width="120" Height="40" FontWeight="UltraBlack"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                    materialDesign:ButtonAssist.CornerRadius="20" Margin="10,0,10,0" Width="120" Height="40" FontWeight="UltraBlack"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Click="BT_Save_Click"/>
         <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="5" Margin="20" BorderBrush="Gray" BorderThickness="2" Panel.ZIndex="5">
             <StackPanel x:Name="ContactItems" Grid.Row="1" Grid.RowSpan="10" Grid.Column="2" Grid.ColumnSpan="4"
@@ -79,8 +79,8 @@
         </ScrollViewer>
 
         <Button Grid.Row="7" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="4" x:Name="BT_ExportToExcel" Content="{x:Static properties:ResourceHu.BT_ExportToExcel}"  HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="4" Background="Transparent"
-                    materialDesign:ButtonAssist.CornerRadius="20" Width="240" Height="40" FontWeight="UltraBlack" Visibility="Hidden"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                    materialDesign:ButtonAssist.CornerRadius="20" Width="280" Height="40" FontWeight="UltraBlack" Visibility="Visible"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Click="BT_ExportToExcel_Click"/>
     </Grid>
 </Page>

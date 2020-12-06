@@ -556,9 +556,6 @@ Weddig Planner</value>
   <data name="LB_Volume" xml:space="preserve">
     <value>Volume:</value>
   </data>
-  <data name="BT_SaveRadioChannel" xml:space="preserve">
-    <value>Save</value>
-  </data>
   <data name="Message_DeleteRadioChannel" xml:space="preserve">
     <value>Are you sure that you want delete this channel?</value>
   </data>
@@ -594,5 +591,11 @@ Weddig Planner</value>
   </data>
   <data name="Message_InternetConnectionTitle" xml:space="preserve">
     <value>Internet connection</value>
+  </data>
+  <data name="BT_SaveChannel" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="BT_SaveChosenChannel" xml:space="preserve">
+    <value>Save</value>
   </data>
 </root>

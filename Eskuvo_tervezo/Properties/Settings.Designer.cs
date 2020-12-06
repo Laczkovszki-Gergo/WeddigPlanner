@@ -23,15 +23,13 @@ namespace Eskuvo_tervezo.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string TextBoxBrushColor {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LACZKOVSZKI\\SQLSERVER;Initial Catalog=WeddingPlanner;Integrated Secur" +
+            "ity=True")]
+        public string ConnectionString {
             get {
-                return ((string)(this["Color"]));
-            }
-            set {
-                this["Color"] = value;
+                return ((string)(this["ConnectionString"]));
             }
         }
     }

@@ -180,6 +180,24 @@ namespace Eskuvo_tervezo.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
+        public static string BT_SaveChannel {
+            get {
+                return ResourceManager.GetString("BT_SaveChannel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string BT_SaveChosenChannel {
+            get {
+                return ResourceManager.GetString("BT_SaveChosenChannel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
         public static string BT_SaveGroom {
             get {
                 return ResourceManager.GetString("BT_SaveGroom", resourceCulture);
@@ -192,15 +210,6 @@ namespace Eskuvo_tervezo.Properties {
         public static string BT_SavePics {
             get {
                 return ResourceManager.GetString("BT_SavePics", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Save.
-        /// </summary>
-        public static string BT_SaveRadioChannel {
-            get {
-                return ResourceManager.GetString("BT_SaveRadioChannel", resourceCulture);
             }
         }
         

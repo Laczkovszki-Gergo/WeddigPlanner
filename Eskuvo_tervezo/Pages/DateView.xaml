@@ -62,9 +62,9 @@
                 Content="{x:Static properties:ResourceHu.RB_Interval}" Checked="RB_Interval_Checked"></RadioButton>
         </StackPanel>
         <Label  Grid.Row="1" x:Name="LB_StartingInterval" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="2" Content="{x:Static properties:ResourceHu.LB_StartingInterval}" HorizontalAlignment="Stretch" Margin="40,8,40,49"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16"
+                
                 />
-        <DatePicker x:Name="DateStart" FontSize="16" IsEnabled="true"
+        <DatePicker x:Name="DateStart" FontSize="20" IsEnabled="true"
                   Height="auto" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="2" FirstDayOfWeek="Monday" Cursor="Hand" Margin="40,39,15,19" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectedDateFormat="Short" 
                     BorderBrush="{DynamicResource ButtonBorderBrush}" BorderThickness="0" Foreground="{DynamicResource TextForeColors}" AllowDrop="True" AutomationProperties.IsColumnHeader="True" AutomationProperties.IsRowHeader="True"
         Focusable="False" Panel.ZIndex="2" Background="{x:Null}" CalendarOpened="DateP_CalendarOpened" CalendarClosed="DateP_CalendarClosed">
@@ -76,7 +76,7 @@
                             <ControlTemplate>
                                 <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  x:Name="PART_TextBox" Text="{Binding Path=SelectedDate, StringFormat='dd MMM yyyy', 
                                  RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}"  IsReadOnly="True"
-                                        materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                        materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                                         Height="auto"
                                         Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" 
                                          SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" 
@@ -89,9 +89,9 @@
             </DatePicker.Resources>
         </DatePicker>
         <Label  Grid.Row="1" x:Name="LB_EndingInterval" Grid.Column="2" Grid.ColumnSpan="1" Grid.RowSpan="2" Content="{x:Static properties:ResourceHu.LB_EndingInterval}" HorizontalAlignment="Stretch" Margin="40,8,40,49"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16"
+                
                 />
-        <DatePicker x:Name="DateEnd" FontSize="16"
+        <DatePicker x:Name="DateEnd" FontSize="20"
                   Height="auto" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" Grid.RowSpan="2" FirstDayOfWeek="Monday" Cursor="Hand" Margin="40,39,15,19" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectedDateFormat="Short" 
                     BorderBrush="{DynamicResource ButtonBorderBrush}" BorderThickness="0" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}" AllowDrop="True" AutomationProperties.IsColumnHeader="True" AutomationProperties.IsRowHeader="True"
         Focusable="False" Panel.ZIndex="2" CalendarOpened="DateP_CalendarOpened" CalendarClosed="DateP_CalendarClosed">
@@ -103,7 +103,7 @@
                             <ControlTemplate>
                                 <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  x:Name="PART_TextBox" Text="{Binding Path=SelectedDate, StringFormat='dd MMM yyyy', 
                                  RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}"  IsReadOnly="True"
-                                        materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                        materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                                         Height="auto"
                                         Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Width="{Binding ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DatePicker}}}"
                                 />
@@ -116,7 +116,7 @@
 
         <Button Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" x:Name="BT_Search" Content="{x:Static properties:ResourceHu.BT_Search}"  HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="4" Background="Transparent"
                     materialDesign:ButtonAssist.CornerRadius="20" Width="120" Height="40" FontWeight="UltraBlack"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Click="BT_Search_Click"/>
 
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="29,10,11,30">

@@ -8,13 +8,13 @@
         <SolidColorBrush x:Key="SelectedBackgroundBrush" Color="Gray" />
         <SolidColorBrush x:Key="SelectedForegroundBrush" Color="White" />
         <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#888" />
-        <SolidColorBrush x:Key="NormalBrush" Color="LightCoral" />
-        <SolidColorBrush x:Key="NormalBorderBrush" Color="Pink" />
-        <SolidColorBrush x:Key="HorizontalNormalBrush" Color="LightCoral" />
-        <!--<SolidColorBrush x:Key="VerticallNormalBrush" Color="Red" />-->
-        <SolidColorBrush x:Key="HorizontalNormalBorderBrush" Color="Pink" />
+        <SolidColorBrush x:Key="NormalBrush" Color="#AB7287" />
+        <SolidColorBrush x:Key="NormalBorderBrush" Color="#990A48" />
+        <SolidColorBrush x:Key="HorizontalNormalBrush" Color="#AB7287" />
+        <SolidColorBrush x:Key="HorizontalNormalBorderBrush" Color="#990A48" />
         <SolidColorBrush x:Key="ScrollbarBackGroundColors" Color="Transparent"/>
         <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent"/>
+    
         <LinearGradientBrush x:Key="ListBoxBackgroundBrush"
 
             StartPoint="0,0" EndPoint="1,0.001">
@@ -107,7 +107,7 @@
                                             <Setter Property="Template">
                                                 <Setter.Value>
                                                     <ControlTemplate TargetType="{x:Type RepeatButton}">
-                                                        <Border Background="Transparent" /> <!--A görgető sáv háttérszíne-->
+                                                        <Border Background="{DynamicResource TextForeColors}" CornerRadius="20"/> <!--A görgető sáv háttérszíne-->
                                                     </ControlTemplate>
                                                 </Setter.Value>
                                             </Setter>

@@ -40,7 +40,7 @@ namespace Eskuvo_tervezo.UserControls
             for (int i = 0; i < home.Menu.Children.Count; i++)
             {
                 if (home.Menu.Children[i] is UserControlMenuItem)
-                    (home.Menu.Children[i] as UserControlMenuItem).ListViewItemMenu.Foreground = Brushes.Yellow;
+                    (home.Menu.Children[i] as UserControlMenuItem).ListViewItemMenu.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#8A651F"));
             }
             //TODO kiválasztott menü elemek piros betűszíne
 

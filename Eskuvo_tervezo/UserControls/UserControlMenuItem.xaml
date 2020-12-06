@@ -17,7 +17,7 @@
             </ResourceDictionary>
     </UserControl.Resources>
 
-    <Border CornerRadius="20" Background="{DynamicResource MenuBackground}" Margin="10,5">
+    <Border CornerRadius="20" Background="{DynamicResource MenuBackground}" BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}" Margin="10,5">
         <Border.Resources>
             <DataTemplate x:Key="expanderHeader">
                 <TextBlock Text="{Binding}"

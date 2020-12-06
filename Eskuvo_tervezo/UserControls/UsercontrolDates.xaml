@@ -8,21 +8,23 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:properties="clr-namespace:Eskuvo_tervezo.Properties"
              MaxHeight="150"
-             Margin="0,5"
              >
-    <Grid >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="2*" />
-        </Grid.ColumnDefinitions>
 
-        <ScrollViewer  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="0" Margin="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left">
-            <ListBoxItem x:Name="ListViewItemMenu1" Grid.Column="0" Content="{Binding Path=Day}" Margin="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"
-                         Foreground="{DynamicResource TextForeColors}" FontSize="15" Cursor="Hand" PreviewMouseDown="ListViewItemMenu1_PreviewMouseDown" />
-        </ScrollViewer>
-        <ScrollViewer  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="1" Margin="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left">
-            <ListBoxItem x:Name="ListViewItemMenu2" Grid.Column="1" Content="{Binding Path=Entry}" Margin="10,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"
-                         Foreground="{DynamicResource TextForeColors}" FontSize="15" Cursor="Hand" PreviewMouseDown="ListViewItemMenu1_PreviewMouseDown"/>
-        </ScrollViewer>
-    </Grid>
+    <Border CornerRadius="20" Background="{DynamicResource MenuBackground}" BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}" Margin="10,5">
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <ScrollViewer  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="0" Margin="10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left">
+                <ListBoxItem x:Name="ListViewItemMenu1" Grid.Column="0" Content="{Binding Path=Day}" Margin="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"
+                         Foreground="{DynamicResource TextForeColors}" FontSize="20" Cursor="Hand" PreviewMouseDown="ListViewItemMenu1_PreviewMouseDown" />
+            </ScrollViewer>
+            <ScrollViewer  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.Column="1" Margin="10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left">
+                <ListBoxItem x:Name="ListViewItemMenu2" Grid.Column="1" Content="{Binding Path=Entry}" Margin="10,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"
+                         Foreground="{DynamicResource TextForeColors}" FontSize="20" Cursor="Hand" PreviewMouseDown="ListViewItemMenu1_PreviewMouseDown"/>
+            </ScrollViewer>
+        </Grid>
+    </Border>
 </UserControl>

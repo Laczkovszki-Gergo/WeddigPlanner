@@ -154,7 +154,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsHighlighted" Value="true">
-                            <Setter TargetName="Border" Property="Background" Value="#F4C5D7"/>
+                        <Setter TargetName="Border" Property="Background" Value="#F6DAE6"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Foreground" Value="#E7111D"/>
@@ -163,7 +163,7 @@
                             <Setter Property="Background" TargetName="Border" Value="Red" />
                         </Trigger>
                         <Trigger Property="ComboBoxItem.IsMouseOver" Value="True">
-                                   <Setter TargetName="Border"  Property="Background" Value="LightCoral"></Setter><!--Combobox selected color-->
+                                   <Setter TargetName="Border"  Property="Background" Value="#990A48"></Setter><!--Combobox selected color-->
                                    <Setter TargetName="Border"  Property="TextElement.Foreground" Value="White"></Setter>
                                    <Setter TargetName="Border"  Property="Cursor" Value="Hand"></Setter>
                                </Trigger>

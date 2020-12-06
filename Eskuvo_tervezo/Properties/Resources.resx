@@ -560,9 +560,6 @@ WeddingPlanner.</value>
   <data name="LB_Volume" xml:space="preserve">
     <value>Hangerő:</value>
   </data>
-  <data name="BT_SaveRadioChannel" xml:space="preserve">
-    <value>Mentés</value>
-  </data>
   <data name="Message_DeleteRadioChannel" xml:space="preserve">
     <value>Biztosan törli ezt a csatornát?</value>
   </data>
@@ -595,5 +592,11 @@ WeddingPlanner.</value>
   </data>
   <data name="Message_InternetConnectionTitle" xml:space="preserve">
     <value>Internet kapcsolat</value>
+  </data>
+  <data name="BT_SaveChannel" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="BT_SaveChosenChannel" xml:space="preserve">
+    <value>Mentés</value>
   </data>
 </root>

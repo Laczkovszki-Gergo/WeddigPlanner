@@ -56,6 +56,7 @@ namespace Eskuvo_tervezo
         {
             LoadFormats(Hun);
             Tbl_RePassword.Visibility = Visibility.Hidden;
+            Tbl_Error.Visibility = Visibility.Hidden;
             if(sound)          
                 IconVolumeOnOff.Kind = MaterialDesignThemes.Wpf.PackIconKind.VolumeHigh;
             else

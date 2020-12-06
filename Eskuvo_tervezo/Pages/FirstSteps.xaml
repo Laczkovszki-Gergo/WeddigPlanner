@@ -45,61 +45,48 @@
                 Content="{x:Static properties:ResourceHu.LB_FirstSteps}" FontSize="34"/>
 
         <Label  Grid.Row="1" x:Name="LB_Bride" Content="{x:Static properties:ResourceHu.LB_Bride}" HorizontalAlignment="Stretch" Margin="40,9,40,48"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16" Grid.Column="1" Grid.ColumnSpan="2"
+                Grid.Column="1" Grid.ColumnSpan="2"
                 />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" MaxLength="50"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20" MaxLength="50"
                   Height="auto" Grid.Row="1" Grid.Column="1" Margin="40,39,40,18" x:Name="TB_BrideName"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Grid.ColumnSpan="2" PreviewKeyDown="TB_BrideName_PreviewKeyDown"/>
-        <materialDesign:PackIcon Kind="Woman" VerticalAlignment="Center" Width="30" Height="30" Margin="15,45,0,20" Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Woman" VerticalAlignment="Center" Width="30" Height="30" Margin="15,45,0,20" Grid.Row="1" Grid.Column="1" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="1" x:Name="LB_Groom" Grid.Column="3" Grid.ColumnSpan="2" Content="{x:Static properties:ResourceHu.LB_Groom}" HorizontalAlignment="Stretch" Margin="40,9,40,48"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16"
+                
                 />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20"
                   Height="auto" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="40,39,40,18" x:Name="TB_GroomName" MaxLength="50"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="1" PreviewKeyDown="TB_GroomName_PreviewKeyDown"/>
-        <materialDesign:PackIcon Kind="Man" VerticalAlignment="Center" Width="30" Height="30" Margin="15,45,0,20"  Grid.Row="1" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="Man" VerticalAlignment="Center" Width="30" Height="30" Margin="15,45,0,20"  Grid.Row="1" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
 
 
         <Label  Grid.Row="3" x:Name="LB_Budget" Grid.Column="2" Grid.ColumnSpan="2" Content="{x:Static properties:ResourceHu.LB_Budget}" HorizontalAlignment="Stretch" Margin="40,8,40,49"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16"
+                
                 />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20"
                   Height="auto" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="40,39,40,18" x:Name="TB_Budget" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                   Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" LostFocus="TB_Budget_LostFocus" Loaded="TB_Budget_Loaded" Panel.ZIndex="3" KeyDown="TB_Budget_KeyDown"/>
-        <materialDesign:PackIcon Kind="WalletAdd" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,45,5,20"  Grid.Row="3" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+        <materialDesign:PackIcon Kind="WalletAdd" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,45,5,20"  Grid.Row="3" Grid.Column="3" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
 
         <Label  Grid.Row="2" x:Name="LB_WeddingDay" Grid.Column="2" Grid.ColumnSpan="2" Content="{x:Static properties:ResourceHu.LB_WeddingDay}" HorizontalAlignment="Stretch" Margin="40,8,40,49"  Height="auto" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                FontSize="16"
+                
                 />
 
 
-        <DatePicker x:Name="DateP" FontSize="16"
+        <DatePicker x:Name="DateP" FontSize="20"
                     Height="auto" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" FirstDayOfWeek="Monday" Cursor="Hand" Margin="40,0,15,24" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectedDateFormat="Short" 
-                    Focusable="False" Panel.ZIndex="2" PreviewKeyDown="DateP_PreviewKeyDown" BorderBrush="{DynamicResource ButtonBorderBrush}" BorderThickness="0" Background="{x:Null}" Foreground="{DynamicResource TextForeColors}"
+                    Focusable="False" Panel.ZIndex="2" PreviewKeyDown="DateP_PreviewKeyDown" BorderThickness="0" BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{x:Null}" Foreground="{DynamicResource TextForeColors}"
                     CalendarOpened="DateP_CalendarOpened" CalendarClosed="DateP_CalendarClosed">
-        
 
             <DatePicker.Resources>
-
-
-                <!--<SolidColorBrush x:Key="PrimaryHueMidBrush" Color="LightCoral" />
-                <SolidColorBrush x:Key="MaterialDesignBody" Color="Yellow" />
-                <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="Pink" />
-                <SolidColorBrush x:Key="CalendarTodayHighlightColor" Color="Red" />
-                <SolidColorBrush x:Key="MaterialDesignPaper" Color="Transparent" />
-                <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="Pink" />
-                <SolidColorBrush x:Key="HeaderNormalForegroundBrushKey" Color="Yellow" />-->
-                
-
-
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Control.Template">
                         <Setter.Value>
                             <ControlTemplate>
                                 <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  x:Name="PART_TextBox" Text="{Binding Path=SelectedDate, StringFormat='dd MMM yyyy', 
                                  RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}"  IsReadOnly="True"
-                                        materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                        materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                                         Height="auto"
                                         Cursor="Pen" BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Width="{Binding ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DatePicker}}}"
                                 />
@@ -116,16 +103,16 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" x:Name="BT_BrowsePicture" Content="{x:Static properties:ResourceHu.BT_BrowsePicture}"  HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="4" Background="Transparent"
                     materialDesign:ButtonAssist.CornerRadius="20" Width="200" Height="40" FontWeight="UltraBlack" Margin="40,10,10,10"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Click="BT_BrowsePicture_Click"/>
-                <materialDesign:PackIcon x:Name="Tooltip_ImageReset" Kind="DeleteCircleOutline" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Foreground="{DynamicResource TextForeColors}" 
+                <materialDesign:PackIcon x:Name="Tooltip_ImageReset" Kind="DeleteCircleOutline" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Foreground="{DynamicResource SpecialIconBackGround}" 
                                          ToolTip="{x:Static properties:ResourceHu.Tooltip_ImageReset}" MouseLeftButtonDown="Tooltip_ImageReset_MouseLeftButtonDown" Cursor="Hand" FontSize="20"></materialDesign:PackIcon>
             </StackPanel>
 
 
             <Button Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" x:Name="BT_Save" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="5" Background="Transparent"
                     materialDesign:ButtonAssist.CornerRadius="20" Width="200" Height="40" FontWeight="UltraBlack" Margin="10"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Click="BT_Save_Click"/>
         </StackPanel>
     </Grid>

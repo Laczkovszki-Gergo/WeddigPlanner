@@ -6,15 +6,17 @@
              xmlns:local="clr-namespace:Eskuvo_tervezo.UserControls"
              mc:Ignorable="d" 
              Width="auto" Height="auto">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
+    <Border CornerRadius="20" Background="{DynamicResource MenuBackground}" BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}" Margin="10,5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
 
-                <ListBoxItem x:Name="ListViewItemMenu1" Grid.Column="0" Content="{Binding Path=ExpenseName}" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" 
-                         Foreground="{DynamicResource TextForeColors}" FontSize="15"/>
-        <ListBoxItem x:Name="ListViewItemMenu2" Grid.Column="1" Content="{Binding Path=Expense}" Margin="10,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" 
-                         Foreground="{DynamicResource TextForeColors}" FontSize="15"/>
-    </Grid>
+            <ListBoxItem x:Name="ListViewItemMenu1" Grid.Column="0" Content="{Binding Path=ExpenseName}" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" 
+                         Foreground="{DynamicResource TextForeColors}" FontSize="20"/>
+            <ListBoxItem x:Name="ListViewItemMenu2" Grid.Column="1" Content="{Binding Path=Expense}" Margin="10,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch" 
+                         Foreground="{DynamicResource TextForeColors}" FontSize="20"/>
+        </Grid>
+    </Border>
 </UserControl>

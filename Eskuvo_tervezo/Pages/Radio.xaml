@@ -45,14 +45,14 @@
                 Content="{x:Static properties:ResourceHu.LB_Radio}" Foreground="{DynamicResource TextForeColors}" FontSize="34"/>
 
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LB_StreamLink" Content="{x:Static properties:ResourceHu.LB_StreamLink}" />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                   Height="auto" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="45,20,45,0" x:Name="TB_StreamLink" MaxLength="120"
                   Cursor="Pen" PreviewKeyDown="TB_StreamLink_PreviewKeyDown"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
         <materialDesign:PackIcon Kind="Radio" Width="30" Height="30" VerticalAlignment="Center" Margin="10,25,0,0"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
        
         <Label  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" x:Name="LB_RadioChannelName" Content="{x:Static properties:ResourceHu.LB_RadioChannelName}" />
-        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+        <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
                   Height="auto" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="45,20,45,0" x:Name="TB_RadioChannelName" MaxLength="60"
                   Cursor="Pen" PreviewKeyDown="TB_RadioChannelName_PreviewKeyDown"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
@@ -60,14 +60,14 @@
 
 
         <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="BT_SaveChannel" Content="{x:Static properties:ResourceHu.BT_Save}"  HorizontalAlignment="Center" Click="BT_SaveChannel_Click" Cursor="Hand" Panel.ZIndex="5"
-                    materialDesign:ButtonAssist.CornerRadius="20" Margin="0" Width="120" Height="40" FontWeight="UltraBlack"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                    materialDesign:ButtonAssist.CornerRadius="20" Margin="0" Width="140" Height="40" FontWeight="UltraBlack"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}">
         </Button>
         <Label  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" x:Name="LB_RadioList" Content="{x:Static properties:ResourceHu.LB_RadioList}" />
 
         <ComboBox x:Name="CB_RadioList" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Width="auto" Height="40" VerticalAlignment="Bottom" Margin="10,20"
-                      HorizontalAlignment="Stretch"  FontSize="16" 
+                      HorizontalAlignment="Stretch"  FontSize="20" 
                       IsDropDownOpen="False" SelectionChanged="CB_RadioList_SelectionChanged" DropDownOpened="CB_RadioList_DropDownOpened" DropDownClosed="CB_RadioList_DropDownClosed">
         </ComboBox>
 
@@ -88,9 +88,9 @@
             </Grid>
         </DockPanel>
 
-        <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="BT_SaveChosenChannel" Content="{x:Static properties:ResourceHu.BT_SaveRadioChannel}"  HorizontalAlignment="Center" Click="BT_SaveChosenChannel_Click" Cursor="Hand" Panel.ZIndex="5"
-                    materialDesign:ButtonAssist.CornerRadius="20" Margin="0" Width="120" Height="40" FontWeight="UltraBlack"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+        <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"  x:Name="BT_SaveChosenChannel" Content="{x:Static properties:ResourceHu.BT_SaveChosenChannel}"  HorizontalAlignment="Center" Click="BT_SaveChosenChannel_Click" Cursor="Hand" Panel.ZIndex="5"
+                    materialDesign:ButtonAssist.CornerRadius="20" Margin="0" Width="140" Height="40" FontWeight="UltraBlack"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}">
         </Button>
     </Grid>

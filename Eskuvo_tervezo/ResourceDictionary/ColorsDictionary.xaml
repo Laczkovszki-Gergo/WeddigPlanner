@@ -3,7 +3,9 @@
                     xmlns:local="clr-namespace:Eskuvo_tervezo.ResourceDictionary">
 
 
-    <SolidColorBrush x:Key="TextForeColors">White</SolidColorBrush>
+
+
+    <!--<SolidColorBrush x:Key="TextForeColors">White</SolidColorBrush>
     <SolidColorBrush x:Key="TextBoxBackColors">Transparent</SolidColorBrush>
     <SolidColorBrush x:Key="TextBoxSelectionBrush">#202020</SolidColorBrush>
     <SolidColorBrush x:Key="TextCaretBrush">White</SolidColorBrush>
@@ -16,8 +18,49 @@
     <SolidColorBrush x:Key="ScrollViewerBorderBrush">Gray</SolidColorBrush>
     <SolidColorBrush x:Key="CalendarTodayHighlightColor">Red</SolidColorBrush>
     <SolidColorBrush x:Key="CalendarSelectedColor">Pink</SolidColorBrush>
-    <SolidColorBrush x:Key="ComboboxHighLightColor">LightCoral</SolidColorBrush> <!--ComboboxDictionaryban manuálisan át kell írni, nem lehet rá hivatkozni, ComboboxItem.IsMouseOver-nél-->
+    <SolidColorBrush x:Key="ComboboxHighLightColor">LightCoral</SolidColorBrush>
+    --><!--ComboboxDictionaryban manuálisan át kell írni, nem lehet rá hivatkozni, ComboboxItem.IsMouseOver-nél--><!--
     <SolidColorBrush x:Key="MenuBackground">LightCoral</SolidColorBrush>
     <SolidColorBrush x:Key="MenuTextForeColors">Yellow</SolidColorBrush>
-    <SolidColorBrush x:Key="BorderBackground">Gray</SolidColorBrush> <!--Az ablakok háttérszíne-->   
+    <SolidColorBrush x:Key="BorderBackground">Gray</SolidColorBrush>
+    --><!--Az ablakok háttérszíne-->
+
+    
+    <!-- Szövegek -->
+    <SolidColorBrush x:Key="TextForeColors">#240115</SolidColorBrush>
+    <SolidColorBrush x:Key="TextBoxBackColors">Transparent</SolidColorBrush>
+    <SolidColorBrush x:Key="TextBoxSelectionBrush">#AB7287</SolidColorBrush>
+    <SolidColorBrush x:Key="TextCaretBrush">#240115</SolidColorBrush>
+    
+    <SolidColorBrush x:Key="TextBoxAndPasswordUnderlineBrush">#990A48</SolidColorBrush>
+
+    <SolidColorBrush x:Key="TextBorderBrush">#240115</SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonBorderBrush">#240115</SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonBackGround">Transparent</SolidColorBrush>
+    <SolidColorBrush x:Key="SpecialIconBackGround">#990A48</SolidColorBrush>
+
+
+    <SolidColorBrush x:Key="WindowBorderBrush">#990A48</SolidColorBrush>
+    <SolidColorBrush x:Key="BorderBackground">#990A48</SolidColorBrush>
+    <!--Az ablakok határszíne-->
+
+    <SolidColorBrush x:Key="ComboboxHighLightColor">#240115</SolidColorBrush> <!--ComboboxDictionaryban manuálisan át kell írni, nem lehet rá hivatkozni, ComboboxItem.IsMouseOver-nél-->
+
+    <SolidColorBrush x:Key="MenuBackground">#F6DAE6</SolidColorBrush>
+    <SolidColorBrush x:Key="MenuTextForeColors">#8A651F</SolidColorBrush>
+
+
+    <!--Calendar-->
+    <SolidColorBrush x:Key="DayNamesForeCorol">#8A651F</SolidColorBrush>
+    <Color x:Key="SelectedBackgroundColor">#BD955E</Color>
+    <Color x:Key="CalendarDayColor">#AB7287</Color>
+    <Color x:Key="CalendarToDayBackColor">#E8C262</Color>
+    <Color x:Key="CalendarHeaderTopColor">Black</Color>
+    <Color x:Key="CalendarGlyphColor">#990A48</Color> <!--Nyilak színe-->
+    <SolidColorBrush x:Key="CalendarTodayHighlightColor">White</SolidColorBrush>
+    <SolidColorBrush x:Key="CalendarSelectedColor">Pink</SolidColorBrush>
+
+    <!-- Scrollbar -->
+    <SolidColorBrush x:Key="ScrollViewerBorderBrush">Red</SolidColorBrush>
+
 </ResourceDictionary>

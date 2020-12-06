@@ -51,16 +51,16 @@
 
                 <Button Grid.Row="3" x:Name="BT_Yes" Content="{x:Static properties:ResourceHu.BT_Yes}"  HorizontalAlignment="Left" Cursor="Hand" Panel.ZIndex="0"
                     materialDesign:ButtonAssist.CornerRadius="20" Margin="20,0,20,0" Width="120" Height="40" FontWeight="UltraBlack"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}" Click="BT_Yes_Click">
                 </Button>
                 <Button Grid.Row="3" x:Name="BT_No" Content="{x:Static properties:ResourceHu.BT_No}" HorizontalAlignment="Right" Cursor="Hand" Panel.ZIndex="1" 
                     materialDesign:ButtonAssist.CornerRadius="20" Margin="20,0,20,0" Width="120" Height="40" FontWeight="UltraBlack"
-                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Foreground="{DynamicResource TextForeColors}" Background="{DynamicResource ButtonBackGround}" Click="BT_No_Click"/>
                 <Button Grid.Row="3" x:Name="BT_Ok" Content="Ok" HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="1" Visibility="Hidden"
                     materialDesign:ButtonAssist.CornerRadius="20" Margin="20,0,20,0" Width="120" Height="40" FontWeight="UltraBlack"
-                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Foreground="{DynamicResource TextForeColors}" Background="{DynamicResource ButtonBackGround}" Click="BT_Ok_Click"/>
             </Grid>
         </Border>

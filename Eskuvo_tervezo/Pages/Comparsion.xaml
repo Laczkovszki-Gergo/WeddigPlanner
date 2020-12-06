@@ -41,13 +41,13 @@
         <Label  Grid.Row="1" x:Name="LB_FirstOffer" Grid.Column="0" Content="{x:Static properties:ResourceHu.LB_FirstOffer}" VerticalAlignment="Top" Margin="5" HorizontalAlignment="Center">
         </Label>
         <ComboBox x:Name="CB_FirstOffer" Grid.Row="1" Grid.Column="0" Width="auto" Height="40" 
-                      HorizontalAlignment="Stretch" Margin="20,50,20,20" FontSize="16" 
+                      HorizontalAlignment="Stretch" Margin="20,50,20,20" FontSize="20" 
                       IsDropDownOpen="False" SelectionChanged="CB_FirstOffer_SelectionChanged" ItemsSource="{Binding}" DropDownOpened="CB_FirstOffer_DropDownOpened" DropDownClosed="CB_FirstOffer_DropDownClosed">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <Label Name="Venue" Content="{Binding Venue}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="16"></Label>
-                        <Label Name="Address" Content="{Binding Address}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="16"></Label>
+                        <Label Name="Venue" Content="{Binding Venue}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="20"></Label>
+                        <Label Name="Address" Content="{Binding Address}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="20"></Label>
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
@@ -56,13 +56,13 @@
         <Label  Grid.Row="1" x:Name="LB_SecondOffer" Grid.Column="1" Content="{x:Static properties:ResourceHu.LB_SecondOffer}" VerticalAlignment="Top" Margin="5" HorizontalAlignment="Center">
         </Label>
         <ComboBox x:Name="CB_SecondOffer" Grid.Row="1" Grid.Column="1" Width="auto" Height="40" 
-                      HorizontalAlignment="Stretch" Margin="20,50,20,20" FontSize="16" 
+                      HorizontalAlignment="Stretch" Margin="20,50,20,20" FontSize="20" 
                       IsDropDownOpen="False" SelectionChanged="CB_SecondOffer_SelectionChanged" ItemsSource="{Binding}" DropDownOpened="CB_SecondOffer_DropDownOpened" DropDownClosed="CB_SecondOffer_DropDownClosed">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="{Binding Venue}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="16"></Label>
-                        <Label Content="{Binding Address}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="16"></Label>
+                        <Label Content="{Binding Venue}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="20"></Label>
+                        <Label Content="{Binding Address}" Margin="5,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" FontSize="20"></Label>
                     </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
@@ -83,8 +83,8 @@
         </Label>
 
         <Button Grid.Row="6" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="BT_ExportToExcel" Content="{x:Static properties:ResourceHu.BT_ExportToExcel}"  HorizontalAlignment="Center" Cursor="Hand" Panel.ZIndex="4" Background="Transparent"
-                    materialDesign:ButtonAssist.CornerRadius="20" Width="240" Height="40" FontWeight="UltraBlack" Visibility="Hidden"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Center"
+                    materialDesign:ButtonAssist.CornerRadius="20" Width="280" Height="40" FontWeight="UltraBlack" Visibility="Visible"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Center"
                     BorderBrush="{DynamicResource TextBorderBrush}" Foreground="{DynamicResource TextForeColors}" Click="BT_ExportToExcel_Click"/>
     </Grid>
 </Page>

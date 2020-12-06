@@ -46,12 +46,18 @@ namespace Eskuvo_tervezo.Windows
         }
         void LoadFormats()
         {
+            try
+            {
+
+
             for (int i = 0; i < ResourceNames.Length; i++)
             {
                 object it = this.FindName(ResourceNames[i]);
                 if (it is Button)
                     (it as Button).Content = rm.GetString(ResourceNames[i]);
             }
+            }
+            catch { }
         }
 
         void no()

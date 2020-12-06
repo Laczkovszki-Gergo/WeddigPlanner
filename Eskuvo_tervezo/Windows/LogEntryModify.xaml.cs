@@ -91,5 +91,13 @@ namespace Eskuvo_tervezo.Windows
                 this.Close();
             }
         }
+
+        void RTB_Entry_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Enter)
+            {
+                BT_Modification_Click(sender, e);
+            }
+        }
     }
 }

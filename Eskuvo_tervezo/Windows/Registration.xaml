@@ -9,7 +9,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="{x:Static properties:ResourceHu.Title_Reg }" Height="500" Width="300"
+        Title="{x:Static properties:ResourceHu.Title_Reg }" Height="500" Width="400"
         ResizeMode="CanMinimize"
         WindowStyle="None"
         FontFamily="Comic Sans MS"
@@ -57,45 +57,46 @@
             <Label  Grid.Row="0" x:Name="LB_Title_reg" VerticalAlignment="Bottom" Margin="0,0,0,10" Content="{x:Static properties:ResourceHu.LB_Title_reg }" />
             
             <Label  Grid.Row="1" x:Name="LB_User" Content="{x:Static properties:ResourceHu.LB_User}" />
-            <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                  Width="200" Height="auto" Grid.Row="1" Margin="0,20,0,0" x:Name="TB_user" 
+            <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                  Width="300" Height="auto" Grid.Row="1" Margin="0,20,0,0" x:Name="TB_user" 
                   Cursor="Pen" PreviewKeyDown="TB_user_PreviewKeyDown"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-            <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30"  Grid.Row="1" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30"  Grid.Row="1" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
             
             <Label  Grid.Row="2" x:Name="LB_Passwd" Content="{x:Static properties:ResourceHu.LB_Passwd}"/>
             <PasswordBox materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  materialDesign:HintAssist.Hint="" VerticalAlignment="Center" 
-                      HorizontalAlignment="Center" Width="200" Height="auto" Grid.Row="2" 
+                      HorizontalAlignment="Center" Width="300" Height="auto" Grid.Row="2" 
                       Margin="0,20,0,0" x:Name="T_passwd" HorizontalContentAlignment="Center" 
-                      VerticalContentAlignment="Center" Cursor="Pen" FontSize="16"
+                      VerticalContentAlignment="Center" Cursor="Pen" FontSize="20"
                       PreviewKeyDown="T_passwd_PreviewKeyDown" Panel.ZIndex="1"  
-                      BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="White" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-            <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="2" Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+                      BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
+            <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="2" Panel.ZIndex="10" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
 
             <Label  Grid.Row="3" x:Name="LB_PasswdAgain" Content="{x:Static properties:ResourceHu.LB_PasswdAgain}"/>
             <PasswordBox materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"  materialDesign:HintAssist.Hint="" VerticalAlignment="Center" 
-                      HorizontalAlignment="Center" Width="200" Height="auto" Grid.Row="3" 
+                      HorizontalAlignment="Center" Width="300" Height="auto" Grid.Row="3" 
                       Margin="0,20,0,0" x:Name="T_passwdAgain" HorizontalContentAlignment="Center" 
-                      VerticalContentAlignment="Center" Cursor="Pen" FontSize="16"
+                      VerticalContentAlignment="Center" Cursor="Pen" FontSize="20"
                       PreviewKeyDown="T_passwdAgain_PreviewKeyDown" Panel.ZIndex="2"  
-                      BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="White" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
-            <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="3" Panel.ZIndex="10" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+                      BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}"/>
+            <materialDesign:PackIcon Kind="Key" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="3" Panel.ZIndex="10" Foreground="{DynamicResource SpecialIconBackGround
+                }"></materialDesign:PackIcon>
 
             <Label  Grid.Row="4" x:Name="LB_Email" Content="{x:Static properties:ResourceHu.LB_Email}" />
-            <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                  Width="200" Height="auto" Grid.Row="4" Margin="0,20,0,0" x:Name="TB_email" 
+            <TextBox  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource TextBoxAndPasswordUnderlineBrush}"   materialDesign:HintAssist.Hint="" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                  Width="300" Height="auto" Grid.Row="4" Margin="0,20,0,0" x:Name="TB_email" 
                   Cursor="Pen" PreviewKeyDown="TB_email_PreviewKeyDown"
                       BorderBrush="{DynamicResource TextBorderBrush}" CaretBrush="{DynamicResource TextCaretBrush}" SelectionBrush="{DynamicResource TextBoxSelectionBrush}" Foreground="{DynamicResource TextForeColors}" Panel.ZIndex="3"/>
-            <materialDesign:PackIcon Kind="Email" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="4" Panel.ZIndex="9" Foreground="{DynamicResource TextForeColors}"></materialDesign:PackIcon>
+            <materialDesign:PackIcon Kind="Email" VerticalAlignment="Center" Margin="10,25,0,0" Width="30" Height="30" Grid.Row="4" Panel.ZIndex="9" Foreground="{DynamicResource SpecialIconBackGround}"></materialDesign:PackIcon>
 
             <Button Grid.Row="5" x:Name="BT_Reg" Content="{x:Static properties:ResourceHu.BT_Reg}"  HorizontalAlignment="Right" Click="BT_Reg_Click" Cursor="Hand" Panel.ZIndex="5"
-                    materialDesign:ButtonAssist.CornerRadius="20" Margin="0,25,15,0" Width="125" Height="40" FontWeight="UltraBlack"
-                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Top"
+                    materialDesign:ButtonAssist.CornerRadius="20" Margin="0,25,30,0" Width="160" Height="40" FontWeight="UltraBlack"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Top"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}">
             </Button>
             <Button Grid.Row="5" x:Name="BT_Exit" Content="{x:Static properties:ResourceHu.BT_Exit}" HorizontalAlignment="Left" Click="BT_Exit_Click" Cursor="Hand" Panel.ZIndex="4"
-                    materialDesign:ButtonAssist.CornerRadius="20" Margin="15,25,0,0" Width="125" Height="40" FontWeight="UltraBlack"
-                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" VerticalAlignment="Top"
+                    materialDesign:ButtonAssist.CornerRadius="20" Margin="30,25,0,0" Width="160" Height="40" FontWeight="UltraBlack"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" VerticalAlignment="Top"
                     BorderBrush="{DynamicResource ButtonBorderBrush}" Background="{DynamicResource ButtonBackGround}" Foreground="{DynamicResource TextForeColors}"/>
 
         </Grid>

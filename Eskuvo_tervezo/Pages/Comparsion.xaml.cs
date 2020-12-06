@@ -27,10 +27,12 @@ namespace Eskuvo_tervezo.Pages
         string[] ResourceNames;
         int[] VenueIDs;
         int? Budget = 0;
+        System.Windows.Media.Brush TextColor = null;
 
         public Comparsion(Models.Login _User, ResourceManager _rm, string[] _Resourcenames)
         {
             InitializeComponent();
+            TextColor = LB_FirstOffer.Foreground;
             WPE = new Models.WeddingPlannerEntities();
             rm = _rm;
             User = _User;
@@ -135,8 +137,8 @@ namespace Eskuvo_tervezo.Pages
             }
             if (Budget >= SumCost)
             {
-                LB_FirstOffer.Foreground = System.Windows.Media.Brushes.White;
-                LB_SecondOffer.Foreground = System.Windows.Media.Brushes.White;
+                LB_FirstOffer.Foreground = TextColor;
+                LB_SecondOffer.Foreground = TextColor;
             }
             else
             {
