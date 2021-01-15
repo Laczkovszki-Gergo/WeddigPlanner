@@ -140,6 +140,7 @@ namespace Eskuvo_tervezo.Pages
         }
         internal void CB_Reload()
         {
+            CB_Venue.ItemsSource = null;
             if (WPE.WeddingVenue.Any(x => x.WeddingID.Equals(Wedding.ID)))
             {
                 Venues = WPE.WeddingVenue.Where(x => x.WeddingID.Equals(Wedding.ID)).ToArray();
@@ -242,7 +243,7 @@ namespace Eskuvo_tervezo.Pages
                 OpenFileDialog fldlg = new OpenFileDialog();
                 fldlg.Multiselect = true;
                 fldlg.InitialDirectory = Environment.SpecialFolder.MyPictures.ToString();
-                fldlg.Filter = (rm as ResourceManager).GetString("Dialog_ImageFiles") + "(*.jpg; *.jpeg; *.gif; *.bmp)| *.jpg; *.jpeg; *.gif; *.bmp";
+                fldlg.Filter = (rm as ResourceManager).GetString("Dialog_ImageFiles") + "(*.jpg; *.jpeg; *.png; *.gif; *.bmp)| *.jpg; *.jpeg; *.png; *.gif; *.bmp";
                 if (fldlg.ShowDialog() == true)
                 {
                     insertImageData(fldlg.FileNames);
@@ -260,7 +261,7 @@ namespace Eskuvo_tervezo.Pages
         {
 
             ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeletePics"), PackIconKind.WarningCircle);
-            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
+            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, true);
 
             if (msb.ShowDialog() == true)
             {
@@ -290,7 +291,7 @@ namespace Eskuvo_tervezo.Pages
             {
                 int VenID = VenueIDs[CB_Venue.SelectedIndex];
                 ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteVenue"), PackIconKind.WarningCircle);
-                Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
+                Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, true);
 
                 if (msb.ShowDialog() == true)
                 {
@@ -542,8 +543,7 @@ namespace Eskuvo_tervezo.Pages
         {
             DownloadAllVenuePicture();
         }
-
-        private void HandlePreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        void HandlePreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
 
             if(e.Delta >0)

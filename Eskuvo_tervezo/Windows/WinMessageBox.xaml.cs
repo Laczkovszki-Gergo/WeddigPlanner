@@ -32,7 +32,7 @@ namespace Eskuvo_tervezo.Windows
             ResourceNames = _ResourceNames;
             this.DataContext = WMsbI;
 
-            if(IsYesNo == false)
+            if(IsYesNo == false || IsYesNo == null)
             {
                 BT_Yes.Visibility = Visibility.Hidden;
                 BT_No.Visibility = Visibility.Hidden;

@@ -216,7 +216,7 @@ namespace Eskuvo_tervezo.Pages
             Int32.TryParse((string)(sender as PackIcon).DataContext, out id);
 
             ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem((rm as ResourceManager).GetString("Message_Delete_Title"), (rm as ResourceManager).GetString("Message_DeleteContact"), PackIconKind.WarningCircle);
-            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames,null);
+            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames,true);
 
             if (msb.ShowDialog() == true)
             {

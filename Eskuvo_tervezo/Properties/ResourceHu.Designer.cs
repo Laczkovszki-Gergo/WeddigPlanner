@@ -1323,6 +1323,15 @@ namespace Eskuvo_tervezo.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Idézet.
+        /// </summary>
+        public static string Tbl_Quote {
+            get {
+                return ResourceManager.GetString("Tbl_Quote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Regisztráció.
         /// </summary>
         public static string Tbl_Reg {

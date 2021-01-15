@@ -149,7 +149,7 @@
 
             <Border Margin="10,0,10,5" Grid.Row="10" Grid.Column="0" Background="{DynamicResource ButtonBackGround}" CornerRadius="30" BorderThickness="2" BorderBrush="{DynamicResource ButtonBorderBrush}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="10" Grid.Column="0" Margin="10,7,5,7"  >
-                    <TextBlock x:Name="Tbl_Qoute" Text="{x:Static properties:ResourceHu.LB_Quote}" Style="{DynamicResource QouteTblStyle}" Margin="0" Cursor="Hand" MouseLeftButtonDown="Tbl_Qoute_MouseLeftButtonDown">
+                    <TextBlock x:Name="Tbl_Quote" Text="{x:Static properties:ResourceHu.Tbl_Quote}" Style="{DynamicResource QouteTblStyle}" Margin="0" Cursor="Hand" MouseLeftButtonDown="Tbl_Qoute_MouseLeftButtonDown">
                     </TextBlock>
                 </ScrollViewer>
             </Border>

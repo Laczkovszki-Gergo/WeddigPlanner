@@ -66,7 +66,7 @@ namespace Eskuvo_tervezo.Pages
             {
                 OpenFileDialog fldlg = new OpenFileDialog();
                 fldlg.InitialDirectory = Environment.SpecialFolder.MyPictures.ToString();
-                fldlg.Filter = (rm as ResourceManager).GetString("Dialog_ImageFiles") + "(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+                fldlg.Filter = (rm as ResourceManager).GetString("Dialog_ImageFiles") + "(*.jpg; *.jpeg; *.png; *.gif; *.bmp)| *.jpg; *.jpeg; *.png; *.gif; *.bmp";
                 if (fldlg.ShowDialog() == true)
                 {
                     System.Windows.Input.Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;

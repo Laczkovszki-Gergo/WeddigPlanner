@@ -587,7 +587,7 @@ WeddingPlanner.</value>
   <data name="Menu_Advices" xml:space="preserve">
     <value>Tanácsok</value>
   </data>
-  <data name="LB_Quote" xml:space="preserve">
+  <data name="Tbl_Quote" xml:space="preserve">
     <value>Idézet</value>
   </data>
   <data name="Message_InternetConnection" xml:space="preserve">
@@ -598,5 +598,8 @@ WeddingPlanner.</value>
   </data>
   <data name="BT_SaveChosenChannel" xml:space="preserve">
     <value>Mentés</value>
+  </data>
+  <data name="LB_Quote" xml:space="preserve">
+    <value>Idézet</value>
   </data>
 </root>

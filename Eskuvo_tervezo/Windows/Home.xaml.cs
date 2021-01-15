@@ -72,7 +72,6 @@ namespace Eskuvo_tervezo.Windows
             {
                 main.PlayMusicFromURL(rad.StreamLink.Trim(),sound);
                 main.RadioVolume = rad.Volume != null ? (int)rad.Volume : 100;
-
                 Tbl_Radio.Text = "♫ " + rad.ChannelName.Trim() + " ♫";
 
                 LeftToRightMarquee();
@@ -102,18 +101,18 @@ namespace Eskuvo_tervezo.Windows
             timer.Start();
 
             FrameContent.Content = new Pages.Advices(Hun);
+            LoadFormats(Hun);
 
             wedd = WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(ActualUser.IDLogin));
-
-            if(wedd != null)
+            if (wedd != null)
                 {
                 if (wedd.Image != null)
                     ImageBetrothed.Source = f.CreateBitmapFromBytes(WPE.WeddingData.FirstOrDefault(x => x.User_ID.Equals(ActualUser.IDLogin)).Image);
                 if(wedd.Quote !=null)
-                Tbl_Qoute.Text = wedd.Quote.Trim();
+                    Tbl_Quote.Text = wedd.Quote.Trim();
                 }
           
-            LoadFormats(Hun);
+
             RefreshCalendarArray();
         }
         void LoadFormats(bool hun)
@@ -391,7 +390,7 @@ namespace Eskuvo_tervezo.Windows
         internal void Exit_Click(object sender, RoutedEventArgs e)
         {
             ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("ExitWarning"), rm.GetString("Exit"), PackIconKind.QuestionMarkRhombus);
-            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
+            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, true);
 
             if (msb.ShowDialog() == true)
             {
@@ -401,7 +400,7 @@ namespace Eskuvo_tervezo.Windows
         internal void Back_Click(object sender, RoutedEventArgs e)
         {
             ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("Message_LogoutTitle"), rm.GetString("Message_LogoutText"), PackIconKind.QuestionMarkRhombus);
-            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
+            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, true);
 
             if (msb.ShowDialog() == true)
             {

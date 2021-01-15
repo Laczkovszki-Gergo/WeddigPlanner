@@ -75,7 +75,7 @@ namespace Eskuvo_tervezo.Windows
 
                 wedd.Quote = quote;
                 WPE.SaveChanges();
-                h.Tbl_Qoute.Text = quote.Trim();
+                h.Tbl_Quote.Text = quote.Trim();
                 this.Close();
             }
         }

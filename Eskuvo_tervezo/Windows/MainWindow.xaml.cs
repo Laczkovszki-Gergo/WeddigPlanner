@@ -111,7 +111,7 @@ namespace Eskuvo_tervezo
         {
             System.Windows.Input.Mouse.OverrideCursor = System.Windows.Input.Cursors.Wait;
             string ScryptedPassw = f.Encrypt(T_passwd.Password);
-            List<Models.Login> LoginData = WPE.Login.ToList();
+            List <Models.Login> LoginData = WPE.Login.ToList();
 
             if (LoginData.FirstOrDefault(x => x.User.Trim().Equals(TB_user.Text.Trim()) && x.Password.Trim().Equals(ScryptedPassw.Trim())) != null)
             {
@@ -145,7 +145,7 @@ namespace Eskuvo_tervezo
             if (f.IsName(TB_user, TB_user.Text.Trim(), rm))
             {
                 ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("Message_RenewPasswordTitle"), rm.GetString("Message_RenewPassword"), MaterialDesignThemes.Wpf.PackIconKind.WarningCircle);
-                Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, null);
+                Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames, true);
 
                 if (msb.ShowDialog() == true)
                 {
@@ -279,7 +279,7 @@ namespace Eskuvo_tervezo
         {
 
             ViewModel.WinMessageBoxItem wmsb = new ViewModel.WinMessageBoxItem(rm.GetString("ExitWarning"), rm.GetString("Exit"), MaterialDesignThemes.Wpf.PackIconKind.QuestionMarkRhombus);
-            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames,null);
+            Windows.WinMessageBox msb = new Windows.WinMessageBox(wmsb, (rm as ResourceManager), ResourceNames,true);
 
             if (msb.ShowDialog() == true)
             {

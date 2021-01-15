@@ -70,7 +70,7 @@ namespace Eskuvo_tervezo.Windows
                 if(new System.ComponentModel.DataAnnotations.EmailAddressAttribute().IsValid(emailaddress))
                     {
                         (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
-                        (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                        (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                         return true;
                     }
                 else
@@ -85,9 +85,9 @@ namespace Eskuvo_tervezo.Windows
                 var r = new Regex(@"^\(?([+]{1})?([0-9]{2})?([- ])?([0-9]{2})\)?[- ]?([0-9]{3})[- ]?([0-9]{4})$");
                 if (r.IsMatch(number))
                 {
-                    (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
-                    (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
-                    return true;
+                (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
+                (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
+                return true;
                 }
                 else
                 {
@@ -98,9 +98,11 @@ namespace Eskuvo_tervezo.Windows
         }                 
         internal bool IsName(object sender, string name, System.Resources.ResourceManager rm)
         {
-            Regex r = new Regex(@"^(.?[A-Za-z0-9u00C0-\u017F#?!@$%^&*-.äÄ€đĐłŁß;\s]){2,}$");
 
-            if ((sender as TextBox).Text.Length < 3 && !r.IsMatch(name))
+            
+            Regex r = new Regex(@"^(.?[A-Za-z0-9u00C0-\u017F#?!@$%^&*-.äÄ€đĐłŁß;\s]){3,}$");
+
+            if (!r.IsMatch(name))
             {
                 (sender as TextBox).ToolTip = rm.GetString("Tooltip_InvalidNameCharacters");
                 (sender as TextBox).BorderBrush = Brushes.Red;
@@ -109,17 +111,17 @@ namespace Eskuvo_tervezo.Windows
             else
             {
                 (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
-                (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                 return true;
             }
         }
         internal bool IsPassword(object sender, string password, System.Resources.ResourceManager rm)
         {
-            var r = new Regex(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$");
+            var r = new Regex(@"^(?=.*[a-záéúőóüö])(?=.*[A-ZÁÉÚŐÓÜÖ])(?=.*\d)[a-zA-ZáéúőóüöÁÉÚŐÓÜÖ\d]{8,}$");
             if (r.IsMatch(password))
             {
                 (sender as PasswordBox).ClearValue(PasswordBox.ToolTipProperty);
-                (sender as PasswordBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                (sender as PasswordBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                 return true;
             }
             else
@@ -137,7 +139,7 @@ namespace Eskuvo_tervezo.Windows
                 if (r.IsMatch(text))
                 {
                     (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
-                    (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                    (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                     return true;
 
                 }
@@ -153,7 +155,7 @@ namespace Eskuvo_tervezo.Windows
                 if (r.IsMatch(text))
                 {
                     (sender as RichTextBox).ClearValue(RichTextBox.ToolTipProperty);
-                    (sender as RichTextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                    (sender as RichTextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                     return true;
                 }
                 else
@@ -175,7 +177,7 @@ namespace Eskuvo_tervezo.Windows
             if (r.IsMatch(text))
             {
                 (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
-                (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                 return true;
 
             }
@@ -192,7 +194,7 @@ namespace Eskuvo_tervezo.Windows
             if (r.IsMatch(text))
             {
                 (sender as TextBox).ClearValue(TextBox.ToolTipProperty);
-                (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                (sender as TextBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                 return true;
 
             }
@@ -209,7 +211,7 @@ namespace Eskuvo_tervezo.Windows
             {
                 Convert.ToDateTime(date);
                 (sender as DatePicker).ClearValue(DatePicker.ToolTipProperty);
-                (sender as DatePicker).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                (sender as DatePicker).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                 return true;
             }
             catch {
@@ -221,9 +223,9 @@ namespace Eskuvo_tervezo.Windows
             if(firstpassword.Equals(secondpassword))
             {
                 (firstsender as PasswordBox).ClearValue(PasswordBox.ToolTipProperty);
-                (firstsender as PasswordBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                (firstsender as PasswordBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                 (secondsender as PasswordBox).ClearValue(PasswordBox.ToolTipProperty);
-                (secondsender as PasswordBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                (secondsender as PasswordBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                 return true;
             }
             else
@@ -241,7 +243,7 @@ namespace Eskuvo_tervezo.Windows
             if (ActualUser.Password.Trim().Equals(ScryptedPassw.Trim()))
             {
                 (sender as PasswordBox).ClearValue(PasswordBox.ToolTipProperty);
-                (sender as PasswordBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString("#EFE4EC");
+                (sender as PasswordBox).BorderBrush = (Brush)new BrushConverter().ConvertFromString(Application.Current.Resources["TextBorderBrush"].ToString());
                 return true;
             }
             else
